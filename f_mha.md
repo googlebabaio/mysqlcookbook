@@ -1,4 +1,3 @@
-
 <!-- toc --> 
 
 * * * * *
@@ -29,7 +28,7 @@ shell> cat /etc/hosts
 - 添加虚拟IP
 
 ## 2.1.配置3台MySQL服务器1主2从(_基于gtid_)
-### 2.1.1 在主库上创建复制用户和管理用户:  
+### 2.1.1 在主库上创建复制用户和管理用户:
 创建复制用户并授权
 ```
 SQL> GRANT REPLICATION SLAVE ON *.* TO repluser@192.168.0.176 IDENTIFIED BY  'Oracle123';
@@ -44,9 +43,9 @@ SQL> flush privileges;
 
 ### 2.1.2 在两台从库上配置主从复制
 ```
-SQL> CHANGE MASTER TO MASTER_HOST='192.168.0.175',   
-MASTER_USER='repluser',                   
-MASTER_PASSWORD='Oracle123',              
+SQL> CHANGE MASTER TO MASTER_HOST='192.168.0.175',
+MASTER_USER='repluser',
+MASTER_PASSWORD='Oracle123',
 MASTER_AUTO_POSITION=1;
 ```
 
@@ -213,10 +212,10 @@ master_binlog_dir=/u01/mysql/mysql_data     # 设置master 保存binlog的位置
 master_ip_failover_script=/etc/mha/script/master_ip_failover  # 设置自动failover时候的切换脚本
 master_ip_online_change_script=/etc/mha/script/master_ip_failover  #设置手动failover时候的切换脚本
 report_script=/etc/mha/script/sendEmail    # 设置发生切换后发送的报警的脚本
-remote_workdir=/tmp    # 设置远端mysql在发生切换时binlog的保存位置    
+remote_workdir=/tmp    # 设置远端mysql在发生切换时binlog的保存位置
 ping_interval=3        #设置监控主库，发送ping包的时间间隔，默认是3秒，尝试三次没有回应的时候自动进行railover
 
-user=mhamon     # 设置监控用户          
+user=mhamon     # 设置监控用户
 password=Oracle123    #  设置监控用户的密码
 
 repl_user=repluser        # 设置复制账号

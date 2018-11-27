@@ -1,4 +1,3 @@
-
 <!-- toc --> 
 
 * * * * *
@@ -42,7 +41,7 @@ OPTIMIZE TABLE运行过程中，MySQL会锁定表。
 innodb的引擎应该使用其他方式来完成优化，如：
 ```
 //碎片整理
-alter table table_name engine=innodb; 
+alter table table_name engine=innodb;
 
 //收集表的统计信息
 analyze table table_name；

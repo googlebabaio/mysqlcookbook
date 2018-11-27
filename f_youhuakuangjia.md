@@ -86,13 +86,3 @@ Using where：MySQL服务器将在存储引擎收到数据后进行“后过滤(
 Using index：表示所需要的数据从索引就能够全部获取到，从而不再需要从表中查询获取所需要数据，这意味着MySQL将使用覆盖索引；但如果同时还出现了Using where，则表示索引将被用于查找特定的键值；
 Using index for group-by：类似于Using index，它表示MySQL可仅通过索引中的数据完成GROUP BY或DISTINCT类的查询；
 Using filesort：表示MySQL会对结果使用一个外部索引排序，而不是从表里按索引次序来读取行；
-
-
-
-
-
-
-
-
-
-

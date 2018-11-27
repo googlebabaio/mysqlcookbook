@@ -1,11 +1,31 @@
 {
     "plugins": [
-        "highlight","atoc"
+       "prism","-highlight","atoc","-anchor-navigation-ex","tbfed-pagefooter","-search","search-pro","splitter","toggle-chapters","sectionx"
     ],
     "pluginsConfig": {
-        "atoc": {
+        "prism": {
+         "css": [
+            "prismjs/themes/prism-solarizedlight.css"
+         ]
+        },
+         "atoc": {
             "addClass": true,
             "className": "atoc"
+        },
+        "anchor-navigation-ex": {
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+        "tbfed-pagefooter": {
+            "copyright":"&copy suredandan",
+            "modify_label": "modify timestamp:",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "search-pro": {
+            "cutWordLib": "nodejieba",
+            "defineWord" : ["Gitbook Use"]
         }
-    }
+     }
 }

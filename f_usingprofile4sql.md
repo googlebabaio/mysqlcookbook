@@ -1,4 +1,3 @@
-
 <!-- toc --> 
 
 * * * * *
@@ -21,19 +20,19 @@ mysql> select @@profiling;
 
 ## 2.启用profiling
 变量profiling是session变量，每次使用都需要重新启用。
- ```
- mysql> set profiling = 1;  
+```
+ mysql> set profiling = 1;
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 
-mysql> select @@profiling; 
+mysql> select @@profiling;
 +-------------+
 | @@profiling |
 +-------------+
 |           1 |
 +-------------+
 1 row in set, 1 warning (0.00 sec)
- ```
- 
+```
+
 ## 3.使用示例
 ### 3.1 执行一个查询语句
 为避免之前已经把 SQL 存放在 QCACHE 中， 建议在执行 SQL 时， 强制 SELECT 语句不进行 QCACHE 检测。
@@ -69,7 +68,7 @@ mysql> show profile;
 12 rows in set, 1 warning (0.01 sec)
 ```
 
-### 3.3 使用show profiles查看在服务器上执行语句的列表。(查询id，花费时间，语句) 
+### 3.3 使用show profiles查看在服务器上执行语句的列表。(查询id，花费时间，语句)
 ```
 mysql> show profiles;
 +----------+------------+-----------------------------------------+
