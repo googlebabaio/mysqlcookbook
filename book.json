@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        "highlight","atoc"
+    ],
+    "pluginsConfig": {
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        }
+    }
+}
