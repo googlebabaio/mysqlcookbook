@@ -1,5 +1,7 @@
 sample数据库类似Oracle安装时候提供的sample。将最新的dump文件从github上拉下来
-```[root@nazeebo softdb]# git clone https://github.com/datacharmer/test_db.git
+
+```
+[root@nazeebo softdb]# git clone https://github.com/datacharmer/test_db.git
 Cloning into 'test_db'...
 remote: Counting objects: 102, done.
 remote: Total 102 (delta 0), reused 0 (delta 0), pack-reused 102
