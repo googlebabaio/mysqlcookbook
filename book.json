@@ -12,6 +12,7 @@
         "back-to-top-button",
         "-lunr", "-search", "search-plus",
         "favicon@^0.0.2",
+		"tbfed-pagefooter@^0.0.1",
         "theme-default",
         "sitemap-general"        
     ],
