@@ -1,31 +1,47 @@
 {
-    "plugins": [
-       "prism","-highlight","atoc","-anchor-navigation-ex","tbfed-pagefooter","-search","search-pro","splitter","toggle-chapters","sectionx"
+    "title": "MySQL搬砖",
+    "description": "MySQL进阶指南",
+    "language": "zh-hans",
+    "author": "suredandan",
+        "plugins": [
+        "prism", "prism-themes", "-highlight",
+        "codesnippet",
+        "splitter",
+        "simple-page-toc",
+        "page-toc-button",
+        "back-to-top-button",
+        "-lunr", "-search", "search-plus",
+        "favicon@^0.0.2",
+        "theme-default",
+        "sitemap-general"        
     ],
     "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
         "prism": {
-         "css": [
-            "prismjs/themes/prism-solarizedlight.css"
-         ]
+            "css": [
+				"prismjs/themes/prism-solarizedlight.css"
+            ]
         },
-         "atoc": {
-            "addClass": true,
-            "className": "atoc"
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
         },
-        "anchor-navigation-ex": {
-            "isShowTocTitleIcon": true,
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right"
+        "image-captions": {
+            "caption": "_CAPTION_"
+        },
+        "sitemap-general": {
+            "prefix": "http://www.googlebaba.io/mysql/"
         },
         "tbfed-pagefooter": {
-            "copyright":"&copy suredandan",
-            "modify_label": "modify timestamp:",
+            "copyright": "Copyright © suredandan 2018",
+            "modify_label": "UpdateTime: ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
-        "search-pro": {
-            "cutWordLib": "nodejieba",
-            "defineWord" : ["Gitbook Use"]
+        "favicon": {
+            "shortcut": "favicon.ico",
+            "bookmark": "favicon.ico"
         }
-     }
+    }
 }
