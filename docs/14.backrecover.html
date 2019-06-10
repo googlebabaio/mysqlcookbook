@@ -1,0 +1,1353 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>14.备份与恢复 · MySQL搬砖</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suredandan">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="15.backuprecoverpxb.html" />
+    
+    
+    <link rel="prev" href="13.cfqandccgc.html" />
+    
+
+    
+        <link rel="shortcut icon" href='favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.introduceandinstall.html">
+            
+                <a href="1.introduceandinstall.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    1.MySQL介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.connectandrole.html">
+            
+                <a href="2.connectandrole.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    2.MySQL的连接与权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.parameterintro.html">
+            
+                <a href="3.parameterintro.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    3.MySQL参数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.jiagoujieshao.html">
+            
+                <a href="4.jiagoujieshao.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    4.MySQL体系介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.cuncunyinqin.html">
+            
+                <a href="5.cuncunyinqin.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    5.MySQL的存储引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.duoshili.html">
+            
+                <a href="6.duoshili.html">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    6.MySQL多实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.aboutssl.html">
+            
+                <a href="7.aboutssl.html">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    7.MySQL的SSL相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.datatypeintro.html">
+            
+                <a href="8.datatypeintro.html">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    8.MySQL的数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9.createtable.html">
+            
+                <a href="9.createtable.html">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    9.表的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.sqlselect.html">
+            
+                <a href="10.sqlselect.html">
+            
+                    
+                        <b>1.11.</b>
+                    
+                    10.SQL之select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.sqldml.html">
+            
+                <a href="11.sqldml.html">
+            
+                    
+                        <b>1.12.</b>
+                    
+                    11.SQL之增删改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12.sqlextra.html">
+            
+                <a href="12.sqlextra.html">
+            
+                    
+                        <b>1.13.</b>
+                    
+                    12.SQL其他补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13.cfqandccgc.html">
+            
+                <a href="13.cfqandccgc.html">
+            
+                    
+                        <b>1.14.</b>
+                    
+                    13.触发器存储过程函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="14.backrecover.html">
+            
+                <a href="14.backrecover.html">
+            
+                    
+                        <b>1.15.</b>
+                    
+                    14.备份与恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="15.backuprecoverpxb.html">
+            
+                <a href="15.backuprecoverpxb.html">
+            
+                    
+                        <b>1.16.</b>
+                    
+                    15.备份恢复-pxb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="16.basetest.html">
+            
+                <a href="16.basetest.html">
+            
+                    
+                        <b>1.17.</b>
+                    
+                    16.基准测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="17.performancetest.html">
+            
+                <a href="17.performancetest.html">
+            
+                    
+                        <b>1.18.</b>
+                    
+                    17.性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="18.replication.html">
+            
+                <a href="18.replication.html">
+            
+                    
+                        <b>1.19.</b>
+                    
+                    18.主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="19.haintro.html">
+            
+                <a href="19.haintro.html">
+            
+                    
+                        <b>1.20.</b>
+                    
+                    19.高可用选型介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="20.performance.html">
+            
+                <a href="20.performance.html">
+            
+                    
+                        <b>1.21.</b>
+                    
+                    20.优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="21.sqltunning.html">
+            
+                <a href="21.sqltunning.html">
+            
+                    
+                        <b>1.22.</b>
+                    
+                    21.SQL优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="22.mysqlfaq.html">
+            
+                <a href="22.mysqlfaq.html">
+            
+                    
+                        <b>1.23.</b>
+                    
+                    22.MySQL_FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="fulu.html">
+            
+                <a href="fulu.html">
+            
+                    
+                        <b>1.24.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="f_lvsvsnginxvshaproxy.html">
+            
+                <a href="f_lvsvsnginxvshaproxy.html">
+            
+                    
+                        <b>1.24.1.</b>
+                    
+                    附录1-三大软负载均衡器对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" data-path="f_mysql5.7.html">
+            
+                <a href="f_mysql5.7.html">
+            
+                    
+                        <b>1.24.2.</b>
+                    
+                    附录2-MySQL5.7新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.3" data-path="f_sampleschema.html">
+            
+                <a href="f_sampleschema.html">
+            
+                    
+                        <b>1.24.3.</b>
+                    
+                    附录3-MySQL的sample数据库安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4" data-path="f_youhuakuangjia.html">
+            
+                <a href="f_youhuakuangjia.html">
+            
+                    
+                        <b>1.24.4.</b>
+                    
+                    附录4-MySQL优化框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.5" data-path="f_usingprofile4sql.html">
+            
+                <a href="f_usingprofile4sql.html">
+            
+                    
+                        <b>1.24.5.</b>
+                    
+                    附录5-使用profile分析sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6" data-path="f_mysqlcheck.html">
+            
+                <a href="f_mysqlcheck.html">
+            
+                    
+                        <b>1.24.6.</b>
+                    
+                    附录6-mysqlcheck的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.7" data-path="f_mha.html">
+            
+                <a href="f_mha.html">
+            
+                    
+                        <b>1.24.7.</b>
+                    
+                    附录7-mha配置.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >14.备份与恢复</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#%E6%A6%82%E8%A7%88">&#x6982;&#x89C8;</a><ul>
+<li><a href="#1%E5%86%B7%E5%A4%87">1.&#x51B7;&#x5907;</a></li>
+<li><a href="#2%E7%83%AD%E5%A4%87">2.&#x70ED;&#x5907;</a><ul>
+<li><a href="#21-mysqldump">2.1 mysqldump</a></li>
+<li><a href="#22-mysqlpump">2.2 mysqlpump</a></li>
+<li><a href="#23-mydumper">2.3 mydumper</a></li>
+<li><a href="#24-xtrabackup">2.4 xtrabackup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<hr>
+<h1 id="&#x6982;&#x89C8;">&#x6982;&#x89C8;</h1>
+<p><img src="images/screenshot_1531795336094.png" alt=""></p>
+<h2 id="1&#x51B7;&#x5907;">1.&#x51B7;&#x5907;</h2>
+<p>&#x5F88;&#x7B80;&#x5355;&#xFF1A;&#x5173;&#x6570;&#x636E;&#xFF0C;&#x7269;&#x7406;copy&#x3002;&#x57FA;&#x672C;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="2&#x70ED;&#x5907;">2.&#x70ED;&#x5907;</h2>
+<p><img src="images/screenshot_1531795856127.png" alt=""></p>
+<p>&#x4ECE;&#x4EE5;&#x4E0B;&#x7EF4;&#x5EA6;&#x9009;&#x62E9;&#x5907;&#x4EFD;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x5907;&#x4EFD;&#x901F;&#x5EA6;</li>
+<li>&#x6062;&#x590D;&#x901F;&#x5EA6;</li>
+<li>&#x5907;&#x4EFD;&#x5927;&#x5C0F;</li>
+<li>&#x5BF9;&#x4E1A;&#x52A1;&#x5F71;&#x54CD;</li>
+</ul>
+<p>&#x8868;&#xFF0C;&#x5305;&#x542B;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x7EA6;&#x675F;&#xFF08;&#x4E3B;&#x952E;&#xFF0C;&#x552F;&#x4E00;&#x952E;&#xFF0C;&#x5916;&#x952E;&#x7B49;&#xFF09;&#xFF0C;&#x5F53;&#x7136;&#x7D22;&#x5F15;&#x8FD9;&#x4E1C;&#x897F;&#x5B9E;&#x9645;&#x4E0A;&#x4E0D;&#x9700;&#x8981;&#x5907;&#x4EFD;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x5907;&#x4EFD;&#x3002;
+&#x89C6;&#x56FE;
+&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;
+&#x5B58;&#x50A8;&#x51FD;&#x6570;
+&#x89E6;&#x53D1;&#x5668;
+&#x4E8B;&#x4EF6;</p>
+<p>&#x4EE5;&#x4E0A;&#x5BF9;&#x8C61;&#x5728;&#x5168;&#x5E93;&#x5907;&#x4EFD;&#x65F6;&#x4E00;&#x4E2A;&#x90FD;&#x4E0D;&#x80FD;&#x5C11;&#xFF0C;&#x5426;&#x5219;&#x5168;&#x5E93;&#x5907;&#x4EFD;&#x5C31;&#x5931;&#x53BB;&#x610F;&#x4E49;&#x3002;
+&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;mysqldump&#x4EC5;&#x4EC5;&#x5907;&#x4EFD;&#x8868;&#xFF0C;&#x89C6;&#x56FE;&#x548C;&#x89E6;&#x53D1;&#x5668;&#x3002;</p>
+<p>-E&#xFF0C;&#x6307;&#x5B9A;&#x5BFC;&#x51FA;&#x4E8B;&#x4EF6;&#xFF08;events&#xFF09;&#x3002;
+-R&#xFF0C;&#x6307;&#x5B9A;&#x5BFC;&#x51FA;&#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#xFF08;&#x51FD;&#x6570;&#x548C;&#x8FC7;&#x7A0B;&#xFF09;&#x3002;</p>
+<p>mysqlpump&#x5DE5;&#x5177;&#xFF0C;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#x6240;&#x6709;&#x7684;&#x516D;&#x7C7B;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x4F46;&#x662F;mysqlpump&#x6CA1;&#x6709; --lock-all-tables &#x548C; --lock-tables &#x53C2;&#x6570;&#x3002;&#x867D;&#x7136;&#x6709; --single-transaction &#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x9ED8;&#x8BA4;&#x4E5F;off&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5F88;&#x660E;&#x663E;&#xFF0C;&#x5BFC;&#x51FA;&#x7684;&#x5907;&#x4EFD;&#x4E0D;&#x662F;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x5FEB;&#x7167;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;mysqlpump&#x5907;&#x4EFD;&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x5FEB;&#x7167;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5728;pump&#x4E4B;&#x524D;&#x624B;&#x5DE5;&#x4F7F;&#x7528; FLUSH TABLES WITH READ LOCK &#x9501;&#x4F4F;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<p>&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF1A;</p>
+<blockquote>
+<p>FTWRL(flush tables with read lock)&#xFF0C;&#x5168;&#x5C40;&#x7981;&#x6B62;&#x8BFB;&#x5199;&#x3002;&#x4E3A;&#x4E86;&#x83B7;&#x53D6;&#x4E00;&#x81F4;&#x6027;&#x4F4D;&#x70B9;&#xFF0C;&#x90FD;&#x5F3A;&#x4F9D;&#x8D56;&#x4E8E;FTWRL&#x3002;&#x8FD9;&#x4E2A;&#x9501;&#x6740;&#x4F24;&#x529B;&#x975E;&#x5E38;&#x5927;&#xFF0C;&#x56E0;&#x4E3A;&#x6301;&#x6709;&#x9501;&#x7684;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5B9E;&#x8D28;&#x4E0A;&#x4E0D;&#x80FD;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x5199;&#x670D;&#x52A1;&#x7684;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x7531;&#x4E8E;FTWRL&#x9700;&#x8981;&#x5173;&#x95ED;&#x8868;&#xFF0C;&#x5982;&#x6709;&#x5927;&#x67E5;&#x8BE2;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;FTWRL&#x7B49;&#x5F85;&#xFF0C;&#x8FDB;&#x800C;&#x5BFC;&#x81F4;DML&#x5835;&#x585E;&#x7684;&#x65F6;&#x95F4;&#x53D8;&#x957F;&#x3002;&#x5373;&#x4F7F;&#x662F;&#x5907;&#x5E93;&#xFF0C;&#x4E5F;&#x6709;SQL&#x7EBF;&#x7A0B;&#x5728;&#x590D;&#x5236;&#x6765;&#x6E90;&#x4E8E;&#x4E3B;&#x5E93;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x4E0A;&#x5168;&#x5C40;&#x9501;&#x65F6;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x4E3B;&#x5907;&#x5E93;&#x5EF6;&#x8FDF;&#x3002;&#x4ECE;&#x524D;&#x9762;&#x7684;&#x5206;&#x6790;&#x6765;&#x770B;&#xFF0C;FTWRL&#x8FD9;&#x628A;&#x9501;&#x6301;&#x6709;&#x7684;&#x65F6;&#x95F4;&#x4E3B;&#x8981;&#x4E0E;&#x975E;innodb&#x8868;&#x7684;&#x6570;&#x636E;&#x91CF;&#x6709;&#x5173;&#xFF0C;&#x5982;&#x679C;&#x975E;innodb&#x8868;&#x6570;&#x636E;&#x91CF;&#x5F88;&#x5927;&#xFF0C;&#x5907;&#x4EFD;&#x5F88;&#x6162;&#xFF0C;&#x90A3;&#x4E48;&#x6301;&#x6709;&#x9501;&#x7684;&#x65F6;&#x95F4;&#x5C31;&#x4F1A;&#x5F88;&#x957F;&#x3002;&#x5373;&#x4F7F;&#x5168;&#x90E8;&#x662F;innodb&#x8868;&#xFF0C;&#x4E5F;&#x4F1A;&#x56E0;&#x4E3A;&#x6709;mysql&#x5E93;&#x7CFB;&#x7EDF;&#x8868;&#x5B58;&#x5728;&#xFF0C;&#x5BFC;&#x81F4;&#x4F1A;&#x9501;&#x4E00;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+</blockquote>
+<h3 id="21-mysqldump">2.1 mysqldump</h3>
+<pre class="language-"><code>mysqldump [OPTIONS] --single-transaction database [tables] # &#x5907;&#x4EFD;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x4E0B;&#x7684;&#x8868;
+mysqldump [OPTIONS] --single-transaction --databases [OPTIONS] DB1 [DB2 DB3...] # &#x5907;&#x4EFD;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;
+mysqldump [OPTIONS] --single-transaction --all-databases [OPTIONS] # &#x5907;&#x4EFD;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;
+For more options, use mysqldump --help
+</code></pre><p>&#x9700;&#x8981;&#x6CE8;&#x610F;single-transaction &#xFF1A; &#x5728;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x5BFC;&#x51FA;&#xFF0C;&#x786E;&#x4FDD;&#x4EA7;&#x751F;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x5907;&#x4EFD; &#xFF0C;&#x5F53;&#x524D;&#x53EA;&#x5BF9;innodb&#x652F;&#x6301;</p>
+<h4 id="211-mysqldump&#x53C2;&#x6570;&#x8BF4;&#x660E;">2.1.1 mysqldump&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
+<pre class="language-"><code>&#x53C2;&#x6570;&#x8BF4;&#x660E;
+
+--all-databases  , -A  &#x5BFC;&#x51FA;&#x5168;&#x90E8;&#x6570;&#x636E;&#x5E93;
+eg:  mysqldump  -uroot -p123456 --all-databases
+
+
+--all-tablespaces  , -Y &#x5BFC;&#x51FA;&#x5168;&#x90E8;&#x8868;&#x7A7A;&#x95F4;
+eg:  mysqldump  -uroot -p123456 --all-databases --all-tablespaces
+
+
+--no-tablespaces  , -y &#x4E0D;&#x5BFC;&#x51FA;&#x4EFB;&#x4F55;&#x8868;&#x7A7A;&#x95F4;&#x4FE1;&#x606F;
+eg:  mysqldump  -uroot -p123456 --all-databases --no-tablespaces
+
+
+--add-drop-database &#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x4E4B;&#x524D;&#x6DFB;&#x52A0;drop&#x6570;&#x636E;&#x5E93;&#x8BED;&#x53E5;
+eg:  mysqldump  -uroot -p123456 --all-databases --add-drop-database
+
+
+--add-drop-table &#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x8868;&#x521B;&#x5EFA;&#x4E4B;&#x524D;&#x6DFB;&#x52A0;drop&#x6570;&#x636E;&#x8868;&#x8BED;&#x53E5;&#x3002;(&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-add-drop-table&#x53D6;&#x6D88;&#x9009;&#x9879;)
+eg:  mysqldump  -uroot -p123456 --all-databases  (&#x9ED8;&#x8BA4;&#x6DFB;&#x52A0;drop&#x8BED;&#x53E5;)
+eg:  mysqldump  -uroot -p123456 --all-databases &#x2013;skip-add-drop-table  (&#x53D6;&#x6D88;drop&#x8BED;&#x53E5;)
+
+
+--add-locks &#x5728;&#x6BCF;&#x4E2A;&#x8868;&#x5BFC;&#x51FA;&#x4E4B;&#x524D;&#x589E;&#x52A0;LOCK TABLES&#x5E76;&#x4E14;&#x4E4B;&#x540E;UNLOCK  TABLE&#x3002;(&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-add-locks&#x53D6;&#x6D88;&#x9009;&#x9879;)
+eg:  mysqldump  -uroot -p123456 --all-databases  (&#x9ED8;&#x8BA4;&#x6DFB;&#x52A0;LOCK&#x8BED;&#x53E5;)
+eg:  mysqldump  -uroot -p123456 --all-databases &#x2013;skip-add-locks   (&#x53D6;&#x6D88;LOCK&#x8BED;&#x53E5;)
+
+
+--allow-keywords &#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x662F;&#x5173;&#x952E;&#x8BCD;&#x7684;&#x5217;&#x540D;&#x5B57;
+eg:  mysqldump  -uroot -p123456 --all-databases --allow-keywords
+
+
+--apply-slave-statements &#x5728;&apos;CHANGE MASTER&apos;&#x524D;&#x6DFB;&#x52A0;&apos;STOP SLAVE&apos;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x5BFC;&#x51FA;&#x7684;&#x6700;&#x540E;&#x6DFB;&#x52A0;&apos;START SLAVE&apos;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --apply-slave-statements
+
+
+--character-sets-dir &#x5B57;&#x7B26;&#x96C6;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;
+eg:  mysqldump  -uroot -p123456 --all-databases  --character-sets-dir=/usr/local/mysql/share/mysql/charsets
+
+
+--comments &#x9644;&#x52A0;&#x6CE8;&#x91CA;&#x4FE1;&#x606F;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;--skip-comments&#x53D6;&#x6D88;
+eg:  mysqldump  -uroot -p123456 --all-databases  (&#x9ED8;&#x8BA4;&#x8BB0;&#x5F55;&#x6CE8;&#x91CA;)
+eg:  mysqldump  -uroot -p123456 --all-databases --skip-comments   (&#x53D6;&#x6D88;&#x6CE8;&#x91CA;)
+
+
+--compatible &#x5BFC;&#x51FA;&#x7684;&#x6570;&#x636E;&#x5C06;&#x548C;&#x5176;&#x5B83;&#x6570;&#x636E;&#x5E93;&#x6216;&#x65E7;&#x7248;&#x672C;&#x7684;MySQL &#x76F8;&#x517C;&#x5BB9;&#x3002;&#x503C;&#x53EF;&#x4EE5;&#x4E3A;ansi&#x3001;mysql323&#x3001;mysql40&#x3001;postgresql&#x3001;oracle&#x3001;mssql&#x3001;db2&#x3001;maxdb&#x3001;no_key_options&#x3001;no_tables_options&#x3001;no_field_options&#x7B49;&#xFF0C;&#x8981;&#x4F7F;&#x7528;&#x51E0;&#x4E2A;&#x503C;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x5C06;&#x5B83;&#x4EEC;&#x9694;&#x5F00;&#x3002;&#x5B83;&#x5E76;&#x4E0D;&#x4FDD;&#x8BC1;&#x80FD;&#x5B8C;&#x5168;&#x517C;&#x5BB9;&#xFF0C;&#x800C;&#x662F;&#x5C3D;&#x91CF;&#x517C;&#x5BB9;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --compatible=ansi
+
+
+--compact &#x5BFC;&#x51FA;&#x66F4;&#x5C11;&#x7684;&#x8F93;&#x51FA;&#x4FE1;&#x606F;(&#x7528;&#x4E8E;&#x8C03;&#x8BD5;)&#x3002;&#x53BB;&#x6389;&#x6CE8;&#x91CA;&#x548C;&#x5934;&#x5C3E;&#x7B49;&#x7ED3;&#x6784;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9009;&#x9879;&#xFF1A;--skip-add-drop-table  --skip-add-locks --skip-comments --skip-disable-keys
+eg:  mysqldump  -uroot -p123456 --all-databases --compact
+
+
+--complete-insert,  -c &#x4F7F;&#x7528;&#x5B8C;&#x6574;&#x7684;insert&#x8BED;&#x53E5;(&#x5305;&#x542B;&#x5217;&#x540D;&#x79F0;)&#x3002;&#x8FD9;&#x4E48;&#x505A;&#x80FD;&#x63D0;&#x9AD8;&#x63D2;&#x5165;&#x6548;&#x7387;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x4F1A;&#x53D7;&#x5230;max_allowed_packet&#x53C2;&#x6570;&#x7684;&#x5F71;&#x54CD;&#x800C;&#x5BFC;&#x81F4;&#x63D2;&#x5165;&#x5931;&#x8D25;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --complete-insert
+
+
+--compress, -C &#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x542F;&#x7528;&#x538B;&#x7F29;&#x4F20;&#x9012;&#x6240;&#x6709;&#x4FE1;&#x606F;
+eg:  mysqldump  -uroot -p123456 --all-databases --compress
+
+
+--create-options,  -a &#x5728;CREATE TABLE&#x8BED;&#x53E5;&#x4E2D;&#x5305;&#x62EC;&#x6240;&#x6709;MySQL&#x7279;&#x6027;&#x9009;&#x9879;&#x3002;(&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;)
+eg:  mysqldump  -uroot -p123456 --all-databases
+
+
+--databases,  -B &#x5BFC;&#x51FA;&#x51E0;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x3002;&#x53C2;&#x6570;&#x540E;&#x9762;&#x6240;&#x6709;&#x540D;&#x5B57;&#x53C2;&#x91CF;&#x90FD;&#x88AB;&#x770B;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x3002;
+eg:  mysqldump  -uroot -p123456 --databases test mysql
+
+
+--debug &#x8F93;&#x51FA;debug&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#xFF1A;d:t:o , /tmp/mysqldump.trace
+eg:  mysqldump  -uroot -p123456 --all-databases --debug
+eg:  mysqldump  -uroot -p123456 --all-databases --debug=&quot;d:t:o,/tmp/debug.trace&quot;
+
+
+--debug-check &#x68C0;&#x67E5;&#x5185;&#x5B58;&#x548C;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#x5E76;&#x9000;&#x51FA;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --debug-check
+
+
+--debug-info &#x8F93;&#x51FA;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x5E76;&#x9000;&#x51FA;
+eg:  mysqldump  -uroot -p123456 --all-databases --debug-info
+
+
+--default-character-set &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;utf8
+eg:  mysqldump  -uroot -p123456 --all-databases --default-character-set=latin1
+
+
+--delayed-insert &#x91C7;&#x7528;&#x5EF6;&#x65F6;&#x63D2;&#x5165;&#x65B9;&#x5F0F;&#xFF08;INSERT DELAYED&#xFF09;&#x5BFC;&#x51FA;&#x6570;&#x636E;
+eg:  mysqldump  -uroot -p123456 --all-databases --delayed-insert
+
+
+--delete-master-logs master&#x5907;&#x4EFD;&#x540E;&#x5220;&#x9664;&#x65E5;&#x5FD7;. &#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x5C06;&#x81EA;&#x52A8;&#x6FC0;&#x6D3B;--master-data
+eg:  mysqldump  -uroot -p123456 --all-databases --delete-master-logs
+
+
+--disable-keys &#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8868;&#xFF0C;&#x7528;/*!40000 ALTER TABLE tbl_name DISABLE KEYS */;&#x548C;/*!40000 ALTER TABLE tbl_name ENABLE KEYS */;&#x8BED;&#x53E5;&#x5F15;&#x7528;INSERT&#x8BED;&#x53E5;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x66F4;&#x5FEB;&#x5730;&#x5BFC;&#x5165;dump&#x51FA;&#x6765;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x5728;&#x63D2;&#x5165;&#x6240;&#x6709;&#x884C;&#x540E;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x7684;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x53EA;&#x9002;&#x5408;MyISAM&#x8868;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases
+
+
+--dump-slave &#x8BE5;&#x9009;&#x9879;&#x5C06;&#x5BFC;&#x81F4;&#x4E3B;&#x7684;binlog&#x4F4D;&#x7F6E;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x8FFD;&#x52A0;&#x5230;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x8BBE;&#x7F6E;&#x4E3A;1&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x4EE5;CHANGE MASTER&#x547D;&#x4EE4;&#x8F93;&#x51FA;&#x5230;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF1B;&#x8BBE;&#x7F6E;&#x4E3A;2&#x65F6;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x524D;&#x589E;&#x52A0;&#x8BF4;&#x660E;&#x4FE1;&#x606F;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x5C06;&#x4F1A;&#x6253;&#x5F00;--lock-all-tables&#xFF0C;&#x9664;&#x975E;--single-transaction&#x88AB;&#x6307;&#x5B9A;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;--lock-tables&#x9009;&#x9879;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --dump-slave=1
+eg:  mysqldump  -uroot -p123456 --all-databases --dump-slave=2
+
+
+--events, -E &#x5BFC;&#x51FA;&#x4E8B;&#x4EF6;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --events
+
+
+--extended-insert,  -e &#x4F7F;&#x7528;&#x5177;&#x6709;&#x591A;&#x4E2A;VALUES&#x5217;&#x7684;INSERT&#x8BED;&#x6CD5;&#x3002;&#x8FD9;&#x6837;&#x4F7F;&#x5BFC;&#x51FA;&#x6587;&#x4EF6;&#x66F4;&#x5C0F;&#xFF0C;&#x5E76;&#x52A0;&#x901F;&#x5BFC;&#x5165;&#x65F6;&#x7684;&#x901F;&#x5EA6;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-extended-insert&#x53D6;&#x6D88;&#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases
+eg:  mysqldump  -uroot -p123456 --all-databases--skip-extended-insert   (&#x53D6;&#x6D88;&#x9009;&#x9879;)
+
+
+--fields-terminated-by &#x5BFC;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x5FFD;&#x7565;&#x7ED9;&#x5B9A;&#x5B57;&#x6BB5;&#x3002;&#x4E0E;--tab&#x9009;&#x9879;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;--databases&#x548C;--all-databases&#x9009;&#x9879;
+eg:  mysqldump  -uroot -p123456 test test --tab=&#x201D;/home/mysql&#x201D; --fields-terminated-by=&#x201D;#&#x201D;
+
+
+--fields-enclosed-by &#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x7528;&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x5305;&#x88F9;&#x3002;&#x4E0E;--tab&#x9009;&#x9879;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;--databases&#x548C;--all-databases&#x9009;&#x9879;
+eg:  mysqldump  -uroot -p123456 test test --tab=&#x201D;/home/mysql&#x201D; --fields-enclosed-by=&#x201D;#&#x201D;
+
+
+--fields-optionally-enclosed-by &#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x7528;&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x9009;&#x62E9;&#x6027;&#x5305;&#x88F9;&#x3002;&#x4E0E;--tab&#x9009;&#x9879;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;--databases&#x548C;--all-databases&#x9009;&#x9879;
+eg:  mysqldump  -uroot -p123456 test test --tab=&#x201D;/home/mysql&#x201D;  --fields-enclosed-by=&#x201D;#&#x201D; --fields-optionally-enclosed-by  =&#x201D;#&#x201D;
+
+
+--fields-escaped-by &#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x5FFD;&#x7565;&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x3002;&#x4E0E;--tab&#x9009;&#x9879;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;--databases&#x548C;--all-databases&#x9009;&#x9879;
+eg:  mysqldump  -uroot -p123456 mysql user --tab=&#x201D;/home/mysql&#x201D; --fields-escaped-by=&#x201D;#&#x201D;
+
+
+--flush-logs &#x5F00;&#x59CB;&#x5BFC;&#x51FA;&#x4E4B;&#x524D;&#x5237;&#x65B0;&#x65E5;&#x5FD7;&#x3002;
+&#x6CE8;&#x610F;&#xFF1A;&#x5047;&#x5982;&#x4E00;&#x6B21;&#x5BFC;&#x51FA;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5E93;(&#x4F7F;&#x7528;&#x9009;&#x9879;--databases&#x6216;&#x8005;--all-databases)&#xFF0C;&#x5C06;&#x4F1A;&#x9010;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5237;&#x65B0;&#x65E5;&#x5FD7;&#x3002;&#x9664;&#x4F7F;&#x7528;--lock-all-tables&#x6216;&#x8005;--master-data&#x5916;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x65E5;&#x5FD7;&#x5C06;&#x4F1A;&#x88AB;&#x5237;&#x65B0;&#x4E00;&#x6B21;&#xFF0C;&#x76F8;&#x5E94;&#x7684;&#x6240;&#x4EE5;&#x8868;&#x540C;&#x65F6;&#x88AB;&#x9501;&#x5B9A;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x6253;&#x7B97;&#x540C;&#x65F6;&#x5BFC;&#x51FA;&#x548C;&#x5237;&#x65B0;&#x65E5;&#x5FD7;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;--lock-all-tables &#x6216;&#x8005;--master-data &#x548C;--flush-logs&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --flush-logs
+
+
+--flush-p123456rivileges &#x5728;&#x5BFC;&#x51FA;mysql&#x6570;&#x636E;&#x5E93;&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x51FA;&#x4E00;&#x6761;FLUSH  PRIVILEGES &#x8BED;&#x53E5;&#x3002;&#x4E3A;&#x4E86;&#x6B63;&#x786E;&#x6062;&#x590D;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x5E94;&#x8BE5;&#x7528;&#x4E8E;&#x5BFC;&#x51FA;mysql&#x6570;&#x636E;&#x5E93;&#x548C;&#x4F9D;&#x8D56;mysql&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x7684;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --flush-p123456rivileges
+
+
+--force &#x5728;&#x5BFC;&#x51FA;&#x8FC7;&#x7A0B;&#x4E2D;&#x5FFD;&#x7565;&#x51FA;&#x73B0;&#x7684;SQL&#x9519;&#x8BEF;&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --force
+
+
+--help &#x663E;&#x793A;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#x5E76;&#x9000;&#x51FA;&#x3002;
+eg:  mysqldump  --help
+
+
+--hex-blob &#x4F7F;&#x7528;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x5BFC;&#x51FA;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x6BB5;&#x3002;&#x5982;&#x679C;&#x6709;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x5C31;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x8BE5;&#x9009;&#x9879;&#x3002;&#x5F71;&#x54CD;&#x5230;&#x7684;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x6709;BINARY&#x3001;VARBINARY&#x3001;BLOB&#x3002;
+eg:  mysqldump  -uroot -p123456 --all-databases --hex-blob
+
+
+--host, -h &#x9700;&#x8981;&#x5BFC;&#x51FA;&#x7684;&#x4E3B;&#x673A;&#x4FE1;&#x606F;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases
+
+
+--ignore-table &#x4E0D;&#x5BFC;&#x51FA;&#x6307;&#x5B9A;&#x8868;&#x3002;&#x6307;&#x5B9A;&#x5FFD;&#x7565;&#x591A;&#x4E2A;&#x8868;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x590D;&#x591A;&#x6B21;&#xFF0C;&#x6BCF;&#x6B21;&#x4E00;&#x4E2A;&#x8868;&#x3002;&#x6BCF;&#x4E2A;&#x8868;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x548C;&#x8868;&#x540D;&#x3002;&#x4F8B;&#x5982;&#xFF1A;--ignore-table=database.table1 --ignore-table=database.table2 &#x2026;&#x2026;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --ignore-table=mysql.user
+
+
+--include-master-host-p123456ort &#x5728;--dump-slave&#x4EA7;&#x751F;&#x7684;&apos;CHANGE  MASTER TO..&apos;&#x8BED;&#x53E5;&#x4E2D;&#x589E;&#x52A0;&apos;MASTER_HOST=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>host</span><span class="token punctuation">&gt;</span></span>&#xFF0C;MASTER_PORT=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>port</span><span class="token punctuation">&gt;</span></span>&apos;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --include-master-host-p123456ort
+
+
+--insert-ignore &#x5728;&#x63D2;&#x5165;&#x884C;&#x65F6;&#x4F7F;&#x7528;INSERT IGNORE&#x8BED;&#x53E5;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --insert-ignore
+
+
+--lines-terminated-by &#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x6BCF;&#x884C;&#x7528;&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x5212;&#x5206;&#x3002;&#x4E0E;--tab&#x9009;&#x9879;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;--databases&#x548C;--all-databases&#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock test test --tab=&#x201D;/tmp/mysql&#x201D;  --lines-terminated-by=&#x201D;##&#x201D;
+
+
+--lock-all-tables,  -x &#x63D0;&#x4EA4;&#x8BF7;&#x6C42;&#x9501;&#x5B9A;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8868;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x8BFB;&#x9501;&#xFF0C;&#x5E76;&#x4E14;&#x81EA;&#x52A8;&#x5173;&#x95ED;--single-transaction &#x548C;--lock-tables &#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --lock-all-tables
+
+
+--lock-tables,  -l &#x5F00;&#x59CB;&#x5BFC;&#x51FA;&#x524D;&#xFF0C;&#x9501;&#x5B9A;&#x6240;&#x6709;&#x8868;&#x3002;&#x7528;READ  LOCAL&#x9501;&#x5B9A;&#x8868;&#x4EE5;&#x5141;&#x8BB8;MyISAM&#x8868;&#x5E76;&#x884C;&#x63D2;&#x5165;&#x3002;&#x5BF9;&#x4E8E;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x7684;&#x8868;&#x4F8B;&#x5982;InnoDB&#x548C;BDB&#xFF0C;--single-transaction&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x6839;&#x672C;&#x4E0D;&#x9700;&#x8981;&#x9501;&#x5B9A;&#x8868;&#x3002;
+&#x6CE8;&#x610F;&#x5F53;&#x5BFC;&#x51FA;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x65F6;&#xFF0C;--lock-tables&#x5206;&#x522B;&#x4E3A;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x9501;&#x5B9A;&#x8868;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5BFC;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8868;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E4B;&#x95F4;&#x7684;&#x903B;&#x8F91;&#x4E00;&#x81F4;&#x6027;&#x3002;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7684;&#x5BFC;&#x51FA;&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --lock-tables
+
+
+--log-error &#x9644;&#x52A0;&#x8B66;&#x544A;&#x548C;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x5230;&#x7ED9;&#x5B9A;&#x6587;&#x4EF6;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases  --log-error=/tmp/mysqldump_error_log.err
+
+
+--master-data
+&#x8BE5;&#x9009;&#x9879;&#x5C06;binlog&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x8FFD;&#x52A0;&#x5230;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x4E3A;1&#xFF0C;&#x5C06;&#x4F1A;&#x8F93;&#x51FA;CHANGE MASTER &#x547D;&#x4EE4;&#xFF1B;&#x5982;&#x679C;&#x4E3A;2&#xFF0C;&#x8F93;&#x51FA;&#x7684;CHANGE  MASTER&#x547D;&#x4EE4;&#x524D;&#x6DFB;&#x52A0;&#x6CE8;&#x91CA;&#x4FE1;&#x606F;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x5C06;&#x6253;&#x5F00;--lock-all-tables &#x9009;&#x9879;&#xFF0C;&#x9664;&#x975E;--single-transaction&#x4E5F;&#x88AB;&#x6307;&#x5B9A;&#xFF08;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5168;&#x5C40;&#x8BFB;&#x9501;&#x5728;&#x5F00;&#x59CB;&#x5BFC;&#x51FA;&#x65F6;&#x83B7;&#x5F97;&#x5F88;&#x77ED;&#x7684;&#x65F6;&#x95F4;&#xFF1B;&#x5176;&#x4ED6;&#x5185;&#x5BB9;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x7684;--single-transaction&#x9009;&#x9879;&#xFF09;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x81EA;&#x52A8;&#x5173;&#x95ED;--lock-tables&#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --master-data=1;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --master-data=2;
+
+
+--max_allowed_packet &#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x53D7;&#x7684;&#x6700;&#x5927;&#x5305;&#x957F;&#x5EA6;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --max_allowed_packet=10240
+
+
+--net_buffer_length TCP/IP&#x548C;socket&#x8FDE;&#x63A5;&#x7684;&#x7F13;&#x5B58;&#x5927;&#x5C0F;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --net_buffer_length=1024
+
+
+--no-autocommit &#x4F7F;&#x7528;autocommit/commit &#x8BED;&#x53E5;&#x5305;&#x88F9;&#x8868;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --no-autocommit
+
+
+--no-create-db,  -n &#x53EA;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x6DFB;&#x52A0;CREATE DATABASE &#x8BED;&#x53E5;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --no-create-db
+
+
+--no-create-info,  -t &#x53EA;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x6DFB;&#x52A0;CREATE TABLE &#x8BED;&#x53E5;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --no-create-info
+
+
+--no-data, -d &#x4E0D;&#x5BFC;&#x51FA;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --no-data
+
+
+--no-set-names,  -N &#x7B49;&#x540C;&#x4E8E;--skip-set-charset
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --no-set-names
+
+
+--opt &#x7B49;&#x540C;&#x4E8E;--add-drop-table,  --add-locks, --create-options, --quick, --extended-insert, --lock-tables,  --set-charset, --disable-keys &#x8BE5;&#x9009;&#x9879;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;,  &#x53EF;&#x4EE5;&#x7528;--skip-opt&#x7981;&#x7528;.
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --opt
+
+
+--order-by-p123456rimary &#x5982;&#x679C;&#x5B58;&#x5728;&#x4E3B;&#x952E;&#xFF0C;&#x6216;&#x8005;&#x7B2C;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x952E;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E2A;&#x8868;&#x7684;&#x8BB0;&#x5F55;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x5728;&#x5BFC;&#x51FA;MyISAM&#x8868;&#x5230;InnoDB&#x8868;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x4F46;&#x4F1A;&#x4F7F;&#x5F97;&#x5BFC;&#x51FA;&#x5DE5;&#x4F5C;&#x82B1;&#x8D39;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --order-by-p123456rimary
+
+
+--p123456ipe(windows&#x7CFB;&#x7EDF;&#x53EF;&#x7528;) &#x4F7F;&#x7528;&#x547D;&#x540D;&#x7BA1;&#x9053;&#x8FDE;&#x63A5;mysql
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --p123456ipe
+
+
+--p123456ort, -p123456 &#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x7AEF;&#x53E3;&#x53F7;
+
+
+--p123456rotocol &#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x534F;&#x8BAE;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;tcp, socket, pipe, memory.
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --p123456rotocol=tcp
+
+
+--quick, -q &#x4E0D;&#x7F13;&#x51B2;&#x67E5;&#x8BE2;&#xFF0C;&#x76F4;&#x63A5;&#x5BFC;&#x51FA;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-quick&#x53D6;&#x6D88;&#x8BE5;&#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --skip-quick
+
+
+--quote-names,-Q &#x4F7F;&#x7528;&#xFF08;`&#xFF09;&#x5F15;&#x8D77;&#x8868;&#x548C;&#x5217;&#x540D;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-quote-names&#x53D6;&#x6D88;&#x8BE5;&#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --skip-quote-names
+
+
+--replace &#x4F7F;&#x7528;REPLACE INTO &#x53D6;&#x4EE3;INSERT INTO.
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --replace
+
+
+--result-file,  -r &#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x5E94;&#x8BE5;&#x7528;&#x5728;&#x4F7F;&#x7528;&#x56DE;&#x8F66;&#x6362;&#x884C;&#x5BF9;&#xFF08;\\r\\n&#xFF09;&#x6362;&#x884C;&#x7684;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;DOS&#xFF0C;Windows&#xFF09;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x786E;&#x4FDD;&#x53EA;&#x6709;&#x4E00;&#x884C;&#x88AB;&#x4F7F;&#x7528;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --result-file=/tmp/mysqldump_result_file.txt
+
+
+--routines, -R &#x5BFC;&#x51FA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4EE5;&#x53CA;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --routines
+
+
+--set-charset &#x6DFB;&#x52A0;&apos;SET NAMES  default_character_set&apos;&#x5230;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-set-charset&#x5173;&#x95ED;&#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --skip-set-charset
+
+
+--single-transaction &#x8BE5;&#x9009;&#x9879;&#x5728;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x4E4B;&#x524D;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;BEGIN SQL&#x8BED;&#x53E5;&#xFF0C;BEGIN &#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E14;&#x80FD;&#x4FDD;&#x8BC1;&#x5BFC;&#x51FA;&#x65F6;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x72B6;&#x6001;&#x3002;&#x5B83;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x591A;&#x7248;&#x672C;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#xFF0C;&#x4EC5;InnoDB&#x3002;&#x672C;&#x9009;&#x9879;&#x548C;--lock-tables &#x9009;&#x9879;&#x662F;&#x4E92;&#x65A5;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;LOCK  TABLES &#x4F1A;&#x4F7F;&#x4EFB;&#x4F55;&#x6302;&#x8D77;&#x7684;&#x4E8B;&#x52A1;&#x9690;&#x542B;&#x63D0;&#x4EA4;&#x3002;&#x8981;&#x60F3;&#x5BFC;&#x51FA;&#x5927;&#x8868;&#x7684;&#x8BDD;&#xFF0C;&#x5E94;&#x7ED3;&#x5408;&#x4F7F;&#x7528;--quick &#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --single-transaction
+
+
+--dump-date &#x5C06;&#x5BFC;&#x51FA;&#x65F6;&#x95F4;&#x6DFB;&#x52A0;&#x5230;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-dump-date&#x5173;&#x95ED;&#x9009;&#x9879;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --skip-dump-date
+
+
+--skip-opt &#x7981;&#x7528;&#x2013;opt&#x9009;&#x9879;.
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --skip-opt
+
+
+--socket,-S &#x6307;&#x5B9A;&#x8FDE;&#x63A5;mysql&#x7684;socket&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;/tmp/mysql.sock
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --socket=/tmp/mysqld.sock
+
+
+--tab,-T &#x4E3A;&#x6BCF;&#x4E2A;&#x8868;&#x5728;&#x7ED9;&#x5B9A;&#x8DEF;&#x5F84;&#x521B;&#x5EFA;tab&#x5206;&#x5272;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x4EC5;&#x4EC5;&#x7528;&#x4E8E;mysqldump&#x548C;mysqld&#x670D;&#x52A1;&#x5668;&#x8FD0;&#x884C;&#x5728;&#x76F8;&#x540C;&#x673A;&#x5668;&#x4E0A;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock test test --tab=&quot;/home/mysql&quot;
+
+
+--tables &#x8986;&#x76D6;--databases (-B)&#x53C2;&#x6570;&#xFF0C;&#x6307;&#x5B9A;&#x9700;&#x8981;&#x5BFC;&#x51FA;&#x7684;&#x8868;&#x540D;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --databases test --tables test
+
+
+--triggers &#x5BFC;&#x51FA;&#x89E6;&#x53D1;&#x5668;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x9ED8;&#x8BA4;&#x542F;&#x7528;&#xFF0C;&#x7528;--skip-triggers&#x7981;&#x7528;&#x5B83;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --triggers
+
+--tz-utc &#x5728;&#x5BFC;&#x51FA;&#x9876;&#x90E8;&#x8BBE;&#x7F6E;&#x65F6;&#x533A;TIME_ZONE=&apos;+00:00&apos; &#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x5728;&#x4E0D;&#x540C;&#x65F6;&#x533A;&#x5BFC;&#x51FA;&#x7684;TIMESTAMP &#x6570;&#x636E;&#x6216;&#x8005;&#x6570;&#x636E;&#x88AB;&#x79FB;&#x52A8;&#x5176;&#x4ED6;&#x65F6;&#x533A;&#x65F6;&#x7684;&#x6B63;&#x786E;&#x6027;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --tz-utc
+
+
+--user, -u &#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x7684;&#x7528;&#x6237;&#x540D;&#x3002;
+
+
+--verbose, --v &#x8F93;&#x51FA;&#x591A;&#x79CD;&#x5E73;&#x53F0;&#x4FE1;&#x606F;&#x3002;
+
+
+--version, -V &#x8F93;&#x51FA;mysqldump&#x7248;&#x672C;&#x4FE1;&#x606F;&#x5E76;&#x9000;&#x51FA;
+
+
+--where, -w &#x53EA;&#x8F6C;&#x50A8;&#x7ED9;&#x5B9A;&#x7684;WHERE&#x6761;&#x4EF6;&#x9009;&#x62E9;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x5305;&#x542B;&#x547D;&#x4EE4;&#x89E3;&#x91CA;&#x7B26;&#x4E13;&#x7528;&#x7A7A;&#x683C;&#x6216;&#x5B57;&#x7B26;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x5C06;&#x6761;&#x4EF6;&#x5F15;&#x7528;&#x8D77;&#x6765;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --where=&#x201D; user=&#x2019;root&#x2019;&#x201D;
+
+
+--xml, -X &#x5BFC;&#x51FA;XML&#x683C;&#x5F0F;.
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --xml
+
+
+--p123456lugin_dir &#x5BA2;&#x6237;&#x7AEF;&#x63D2;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7528;&#x4E8E;&#x517C;&#x5BB9;&#x4E0D;&#x540C;&#x7684;&#x63D2;&#x4EF6;&#x7248;&#x672C;&#x3002;
+eg:  mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --p123456lugin_dir=&#x201D;/usr/local/lib/plugin&#x201D;
+
+
+--default_auth &#x5BA2;&#x6237;&#x7AEF;&#x63D2;&#x4EF6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x6743;&#x9650;&#x3002;
+</code></pre><h4 id="212-&#x91CD;&#x8981;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;">2.1.2 &#x91CD;&#x8981;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;</h4>
+<p>&#x4EE5;&#x4E0A;&#x662F;&#x6839;&#x636E; --help&#x5F97;&#x5230;&#x7684;&#x53C2;&#x6570;
+&#x4E0B;&#x9762;&#x5C06;&#x91CD;&#x70B9;&#x5217;&#x4E3E;&#x51E0;&#x4E2A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x53C2;&#x6570;</p>
+<h5 id="single-transaction">single-transaction</h5>
+<ol>
+<li>&#x5F53;&#x5F00;&#x59CB;&#x5907;&#x4EFD;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5907;&#x4EFD;&#x7684;&#x662F;&#x5907;&#x4EFD;&#x70B9;&#xFF08;&#x5907;&#x4EFD;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x523B;&#xFF09; &#x65F6;&#x7684;&#x6570;&#x636E;&#xFF08;&#x5373;&#x4F7F;&#x5728;&#x5907;&#x4EFD;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#xFF09;</li>
+<li>&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF1A;&#x5728;&#x5F00;&#x542F;&#x4E8B;&#x7269;&#x524D;&#xFF0C;&#x5148;&#x8BBE;&#x7F6E;&#x4E3A; RR &#x9694;&#x79BB;&#x7EA7;&#x522B;&#xFF08; &#x4E8B;&#x7269;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#x662F;&#x4F1A;&#x8BDD;&#x7EA7;&#x522B;&#xFF0C;&#x7531; mysqldump &#x81EA;&#x5DF1;&#x8BBE;&#x7F6E; &#xFF09;&#xFF0C;&#x56E0;&#x4E3A;RR&#x7EA7;&#x522B; &#x89E3;&#x51B3; &#x4E86; &#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB; &#x548C; &#x5E7B;&#x8BFB; &#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5907;&#x4EFD;&#x7684;&#x65F6;&#x523B;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x540E;&#xFF0C;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;&#x662F;&#x80FD;&#x4FDD;&#x8BC1;&#x4E00;&#x81F4;&#x6027;&#x7684;</li>
+</ol>
+<pre class="language-"><code>mysql&gt; show variables like &apos;%socket%&apos;;
++-----------------------------------------+-----------------+
+| Variable_name                           | Value           |
++-----------------------------------------+-----------------+
+| performance_schema_max_socket_classes   | 10              |
+| performance_schema_max_socket_instances | -1              |
+| socket                                  | /tmp/mysql.sock |
++-----------------------------------------+-----------------+
+3 rows in set (0.00 sec)
+
+mysql&gt; exit
+Bye
+
+[root@nazeebo ~]# mysqldump -uroot -p --single-transaction --databases employees -S /tmp/mysql.sock &gt; employees_bak.sql
+Enter password:
+Warning: A partial dump from a server that has GTIDs will by default include the GTIDs of all transactions, even those that changed suppressed parts of the database. If you don&apos;t want to restore GTIDs, pass --set-gtid-purged=OFF. To make a complete dump, pass --all-databases --triggers --routines --events.
+[root@nazeebo ~]# ll
+total 164432
+-rw-r--r-- 1 root root 168376235 Jul 17 11:41 employees_bak.sql
+</code></pre><h5 id="master-data">master-data</h5>
+<p>&#x5907;&#x4EFD;&#x7684;&#x65F6;&#x5019;dump&#x51FA; CHANGE MASTER &#x4FE1;&#x606F;&#xFF08;file  &#x548C; pos&#xFF09;&#xFF0C;&#x53EF;&#x4F9B; &#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#xFF0C; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1 &#x3002; &#x5F53;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; 2 &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x4F1A;dump&#x51FA;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x88AB; &#x6CE8;&#x91CA; &#x6389;</p>
+<pre class="language-"><code>[root@nazeebo ~]# mysqldump -uroot -p --single-transaction --master-data=1 --databases test -S /tmp/mysql.sock &gt; test_bak_1.sql
+Enter password:
+Warning: A partial dump from a server that has GTIDs will by default include the GTIDs of all transactions, even those that changed suppressed parts of the database. If you don&apos;t want to restore GTIDs, pass --set-gtid-purged=OFF. To make a complete dump, pass --all-databases --triggers --routines --events.
+[root@nazeebo ~]# mysqldump -uroot -p --single-transaction --master-data=2 --databases test -S /tmp/mysql.sock &gt; test_bak_2.sql
+Enter password:
+Warning: A partial dump from a server that has GTIDs will by default include the GTIDs of all transactions, even those that changed suppressed parts of the database. If you don&apos;t want to restore GTIDs, pass --set-gtid-purged=OFF. To make a complete dump, pass --all-databases --triggers --routines --events.
+[root@nazeebo ~]#
+[root@nazeebo ~]# diff test_bak_1.sql test_bak_2.sql
+30c30
+&lt; CHANGE MASTER TO MASTER_LOG_FILE=&apos;bin.000006&apos;, MASTER_LOG_POS=21135;
+---
+&gt; -- CHANGE MASTER TO MASTER_LOG_FILE=&apos;bin.000006&apos;, MASTER_LOG_POS=21135;
+1024c1024
+&lt; -- Dump completed on 2018-07-17 11:44:52
+---
+&gt; -- Dump completed on 2018-07-17 11:45:02
+</code></pre><p>CHANGE MASTER &#x4FE1;&#x606F;&#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x4E2A;mysqldump&#x51FA;&#x6765;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x662F;&#x5728;&#x8FD9;&#x4E2A; MASTER_LOG_FILE &#x6587;&#x4EF6;&#x7684; MASTER_LOG_POS &#x4F4D;&#x7F6E;&#x5907;&#x4EFD;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x662F;&#x4E00;&#x4E2A; &#x8D77;&#x59CB;&#x4F4D;&#x7F6E; &#x4FE1;&#x606F;</p>
+<h5 id="dump-slave">dump-slave</h5>
+<p>&#x8BE5;&#x9009;&#x9879;&#x5C06;&#x5BFC;&#x81F4;&#x4E3B;&#x7684;binlog&#x4F4D;&#x7F6E;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x8FFD;&#x52A0;&#x5230;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;
+&#x8BBE;&#x7F6E;&#x4E3A;1&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x4EE5;CHANGE MASTER&#x547D;&#x4EE4;&#x8F93;&#x51FA;&#x5230;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF1B;
+&#x8BBE;&#x7F6E;&#x4E3A;2&#x65F6;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x524D;&#x589E;&#x52A0;&#x8BF4;&#x660E;&#x4FE1;&#x606F;&#x3002;
+&#x8BE5;&#x9009;&#x9879;&#x5C06;&#x4F1A;&#x6253;&#x5F00;--lock-all-tables&#xFF0C;&#x9664;&#x975E;--single-transaction&#x88AB;&#x6307;&#x5B9A;&#x3002;&#x8BE5;&#x9009;&#x9879;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;--lock-tables&#x9009;&#x9879;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0&#x3002;</p>
+<pre class="language-"><code>mysqldump  -uroot -p123456 --all-databases --dump-slave=1 -S /tmp/mysql.sock &gt; full_bak.sql
+mysqldump  -uroot -p123456 --all-databases --dump-slave=2 -S /tmp/mysql.sock &gt; full_bak.sql
+</code></pre><h5 id="no-data">no-data</h5>
+<p>&#x4E0D;&#x5BFC;&#x51FA;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;&#x3002;</p>
+<pre class="language-"><code>[root@nazeebo ~]# mysqldump -uroot -p123456 --no-data --databases test -S /tmp/mysql.sock &gt; test_bak_3.sql
+</code></pre><h5 id="no-create-info">no-create-info</h5>
+<p>&#x4E0E;no-data&#x76F8;&#x53CD;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x53EA;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x4E0D;&#x5305;&#x542B;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x8868;&#x7ED3;&#x6784;</p>
+<h5 id="quick">quick</h5>
+<p>&#x4E0D;&#x7F13;&#x51B2;&#x67E5;&#x8BE2;&#xFF0C;&#x76F4;&#x63A5;&#x5BFC;&#x51FA;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;--skip-quick&#x53D6;&#x6D88;&#x8BE5;&#x9009;&#x9879;</p>
+<pre class="language-"><code> mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases
+ mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --skip-quick
+</code></pre><h5 id="default-character-set">default-character-set</h5>
+<p>&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;utf8, &#xFF0C;&#x8981;&#x4E0E;&#x5907;&#x4EFD;&#x51FA;&#x7684;&#x8868;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x4FDD;&#x6301;&#x4E00;&#x81F4;</p>
+<pre class="language-"><code>mysqldump  -uroot -p123456 --all-databases --default-character-set=latin1
+</code></pre><h5 id="complete-insert">complete-insert</h5>
+<p>&#x4F7F;&#x7528;&#x5B8C;&#x6574;&#x7684;insert&#x8BED;&#x53E5;(&#x5305;&#x542B;&#x5217;&#x540D;&#x79F0;)&#x3002;&#x8FD9;&#x4E48;&#x505A;&#x80FD;&#x63D0;&#x9AD8;&#x63D2;&#x5165;&#x6548;&#x7387;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x4F1A;&#x53D7;&#x5230;max_allowed_packet&#x53C2;&#x6570;&#x7684;&#x5F71;&#x54CD;&#x800C;&#x5BFC;&#x81F4;&#x63D2;&#x5165;&#x5931;&#x8D25;&#x3002;</p>
+<pre class="language-"><code>mysqldump  -uroot -p123456 --all-databases --complete-insert -S /tmp/mysql.sock &gt; test_bak.sql
+</code></pre><h5 id="all-databases">all-databases</h5>
+<p>&#x5BFC;&#x51FA;&#x5168;&#x90E8;&#x6570;&#x636E;&#x5E93;</p>
+<pre class="language-"><code>mysqldump  -uroot -p123456 --all-databases -S /tmp/mysql.sock &gt; test_bak.sql
+</code></pre><h5 id="databases">databases</h5>
+<p>&#x5BFC;&#x51FA;&#x51E0;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x3002;&#x53C2;&#x6570;&#x540E;&#x9762;&#x6240;&#x6709;&#x540D;&#x5B57;&#x53C2;&#x91CF;&#x90FD;&#x88AB;&#x770B;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x540D;&#x3002;</p>
+<pre class="language-"><code>mysqldump  -uroot -p123456 --databases test mysql -S /tmp/mysql.sock &gt; somedb_bak.sql
+</code></pre><h4 id="213-flush-logs">2.1.3 flush-logs</h4>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5047;&#x5982;&#x4E00;&#x6B21;&#x5BFC;&#x51FA;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5E93;(&#x4F7F;&#x7528;&#x9009;&#x9879;--databases&#x6216;&#x8005;--all-databases)&#xFF0C;&#x5C06;&#x4F1A;&#x9010;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5237;&#x65B0;&#x65E5;&#x5FD7;&#x3002;&#x9664;&#x4F7F;&#x7528;--lock-all-tables&#x6216;&#x8005;--master-data&#x5916;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x65E5;&#x5FD7;&#x5C06;&#x4F1A;&#x88AB;&#x5237;&#x65B0;&#x4E00;&#x6B21;&#xFF0C;&#x76F8;&#x5E94;&#x7684;&#x6240;&#x4EE5;&#x8868;&#x540C;&#x65F6;&#x88AB;&#x9501;&#x5B9A;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x6253;&#x7B97;&#x540C;&#x65F6;&#x5BFC;&#x51FA;&#x548C;&#x5237;&#x65B0;&#x65E5;&#x5FD7;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;--lock-all-tables &#x6216;&#x8005;--master-data &#x548C;--flush-logs&#x3002;</p>
+<pre class="language-"><code>mysqldump  -uroot -p123456 --all-databases --flush-logs
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x8981;&#x91CD;&#x70B9;&#x63D0;&#x4E00;&#x53E5;&#xFF1A;
+&#x4ECE;mysqldump&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x6062;&#x590D;&#x6570;&#x636E;&#x4F1A;&#x4E22;&#x5931;&#x6389;&#x4ECE;&#x5907;&#x4EFD;&#x70B9;&#x5F00;&#x59CB;&#x7684;&#x66F4;&#x65B0;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x9700;&#x8981;&#x7ED3;&#x5408;mysqlbinlog&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x589E;&#x91CF;&#x5907;&#x4EFD;&#x3002;&#x786E;&#x4FDD;my.cnf&#x4E2D;&#x5305;&#x542B;&#x4E0B;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x4EE5;&#x542F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#xFF0C;&#x6216;&#x8005;<code>mysqld ---log-bin</code>&#xFF1A;
+mysqldump&#x547D;&#x4EE4;&#x5FC5;&#x987B;&#x5E26;&#x4E0A;<code>--flush-logs</code> &#x4EE5;&#x4FBF;&#x751F;&#x6210;&#x65B0;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF1A;&#x8FD9;&#x6837;&#x751F;&#x6210;&#x7684;&#x589E;&#x91CF;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x6BD4;&#x5982;&#x4E3A;mysql-bin.00000X&#xFF0C;&#x90A3;&#x4E48;&#x6062;&#x590D;&#x6570;&#x636E;&#x65F6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>--&#x5148;&#x8FDB;&#x884C;&#x5168;&#x5907;&#x6062;&#x590D;
+mysql -uroot -p123456 &lt; backup_full.sql
+
+--&#x518D;&#x8FDB;&#x884C;&#x589E;&#x91CF;&#x6062;&#x590D;
+mysqlbinlog mysql-bin.00000X | mysql -uroot -p123456
+</code></pre><p>&#x6B64;&#x5916;&#xFF0C;mysqlbinlog&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;--start-date&#x3001;--stop-date&#x3001;--start-position&#x548C;--stop-position&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x7CBE;&#x786E;&#x6062;&#x590D;&#x6570;&#x636E;&#x5230;&#x67D0;&#x4E2A;&#x65F6;&#x523B;&#x4E4B;&#x524D;&#x6216;&#x8005;&#x8DF3;&#x8FC7;&#x4E2D;&#x95F4;&#x67D0;&#x4E2A;&#x51FA;&#x95EE;&#x9898;&#x65F6;&#x95F4;&#x6BB5;&#x6062;&#x590D;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x53C2;&#x8003;MySQL_FAQ&#x4E00;&#x7AE0;&#x4E2D;&#x7684;&#x300A;&#x6062;&#x590D;&#x88AB;&#x8BEF;&#x5220;&#x7684;&#x8868;&#x300B;</p>
+<h5 id="where">where</h5>
+<p>&#x53EA;&#x8F6C;&#x50A8;&#x7ED9;&#x5B9A;&#x7684;WHERE&#x6761;&#x4EF6;&#x9009;&#x62E9;&#x7684;&#x8BB0;&#x5F55;&#x3002;
+&#x8BF7;&#x6CE8;&#x610F;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x5305;&#x542B;&#x547D;&#x4EE4;&#x89E3;&#x91CA;&#x7B26;&#x4E13;&#x7528;&#x7A7A;&#x683C;&#x6216;&#x5B57;&#x7B26;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x5C06;&#x6761;&#x4EF6;&#x5F15;&#x7528;&#x8D77;&#x6765;&#x3002;</p>
+<pre class="language-"><code>mysqldump  -uroot -p123456 -S /tmp/mysql.sock --all-databases --where=&#x201D; user=&apos;root&apos;&#x201D;
+</code></pre><h5 id="set-gtid-purged">set-gtid-purged</h5>
+<p>&#x4EE5;&#x4E0A;&#x7684;&#x5907;&#x4EFD;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x5E93;&#x5F00;&#x542F;&#x4E86;gtid&#x7684;&#x9009;&#x9879;&#xFF0C;&#x4F46;&#x5907;&#x4EFD;&#x8FC7;&#x7A0B;&#x4E2D;&#x53C8;&#x4E0D;&#x60F3;&#x5E26;gtid&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+--set-gtid-purged=off&#x53C2;&#x6570;&#x6765;&#x8FBE;&#x5230;&#x6548;&#x679C;</p>
+<h4 id="214-&#x6062;&#x590D;&#x64CD;&#x4F5C;">2.1.4 &#x6062;&#x590D;&#x64CD;&#x4F5C;</h4>
+<p>&#x5907;&#x4EFD;&#x4E0E;&#x6062;&#x590D;&#x662F;&#x5339;&#x914D;&#x7684;&#xFF0C;&#x6062;&#x590D;&#x64CD;&#x4F5C;&#x66F4;&#x7B80;&#x5355;&#x4E00;&#x4E9B;
+&#x76F4;&#x63A5;&#x5229;&#x7528;<code>mysql  -uroot -p &lt; &#x5907;&#x4EFD;&#x7684;.sql</code> &#x6765;&#x8FDB;&#x884C;&#x6062;&#x590D;&#x5373;&#x53EF;</p>
+<h5 id="&#x6062;&#x590D;&#x5168;&#x5E93;">&#x6062;&#x590D;&#x5168;&#x5E93;</h5>
+<pre class="language-"><code>&#x5907;&#x4EFD;&#x5168;&#x5E93;&#xFF1A;
+mysqldump -uroot -p123456  --single-transaction -S /tmp/mysql.sock &gt; all_bak.sql
+
+&#x6062;&#x590D;&#x5168;&#x5E93;&#xFF1A;
+mysql -uroot -p123456 -S /tmp/mysql.sock &lt; all_bak.sql
+</code></pre><h5 id="&#x6062;&#x590D;&#x5355;&#x5E93;">&#x6062;&#x590D;&#x5355;&#x5E93;</h5>
+<pre class="language-"><code>&#x5907;&#x4EFD;&#x5E93;employee&#xFF1A;
+mysqldump  --single-transaction -S /tmp/mysql.sock -uroot -p123456  employee &gt; employee_bak.sql
+
+&#x6062;&#x590D;employee&#x5E93;&#xFF1A;
+mysql -uroot -p123456 employee -S /tmp/mysql.sock &lt; employee_bak.sql
+
+--&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5E93;employee&#x4EE5;&#x53CA;&#x88AB;drop&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x5728;&#x6062;&#x590D;&#x524D;&#xFF0C;&#x5148;&#x53BB;&#x6570;&#x636E;&#x5E93;&#x4E2D;cretae database employee&#xFF1B;
+</code></pre><h5 id="&#x6062;&#x590D;&#x5355;&#x8868;">&#x6062;&#x590D;&#x5355;&#x8868;</h5>
+<pre class="language-"><code>&#x5907;&#x4EFD;&#x8868; employee.dept&#xFF1A;
+mysqldump  --single-transaction -S /tmp/mysql.sock -uroot -p123456  employee dept &gt; employee_dept_bak.sql
+
+&#x6062;&#x590D;&#x8868;employee.dept&#xFF1A;
+mysql -uroot -p123456 employee -S /tmp/mysql.sock &lt; employee_dept_bak.sql
+
+--&#x6CE8;&#x610F;&#xFF1A;&#x6062;&#x590D;&#x5355;&#x8868;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x5199;&#x8868;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5199;&#x5E93;&#x7684;&#x540D;&#x5B57;&#x5373;&#x53EF;
+</code></pre><h4 id="215-&#x4F7F;&#x7528;mysqldump&#x6CE8;&#x610F;&#x4E8B;&#x9879;">2.1.5 &#x4F7F;&#x7528;mysqldump&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h4>
+<p>&#x5907;&#x4EFD;&#x5305;&#x62EC;&#x516D;&#x5927;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x8868;&#xFF0C;&#x5305;&#x542B;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x7EA6;&#x675F;&#xFF08;&#x4E3B;&#x952E;&#xFF0C;&#x552F;&#x4E00;&#x952E;&#xFF0C;&#x5916;&#x952E;&#x7B49;&#xFF09;&#xFF0C;&#x5F53;&#x7136;&#x7D22;&#x5F15;&#x8FD9;&#x4E1C;&#x897F;&#x5B9E;&#x9645;&#x4E0A;&#x4E0D;&#x9700;&#x8981;&#x5907;&#x4EFD;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x5907;&#x4EFD;&#x3002;</li>
+<li>&#x89C6;&#x56FE;</li>
+<li>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</li>
+<li>&#x5B58;&#x50A8;&#x51FD;&#x6570;</li>
+<li>&#x89E6;&#x53D1;&#x5668;</li>
+<li>&#x4E8B;&#x4EF6;</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x5BF9;&#x8C61;&#x5728;&#x5168;&#x5E93;&#x5907;&#x4EFD;&#x65F6;&#x4E00;&#x4E2A;&#x90FD;&#x4E0D;&#x80FD;&#x5C11;&#xFF0C;&#x5426;&#x5219;&#x5168;&#x5E93;&#x5907;&#x4EFD;&#x5C31;&#x5931;&#x53BB;&#x610F;&#x4E49;&#x3002;
+&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;mysqldump&#x4EC5;&#x4EC5; <strong><em>&#x5907;&#x4EFD;&#x8868;&#xFF0C;&#x89C6;&#x56FE;&#x548C;&#x89E6;&#x53D1;&#x5668;&#x3002;</em></strong>
+&#x5982;&#x679C;&#x9700;&#x8981;&#x5907;&#x4EFD;&#x4E8B;&#x4EF6;&#x548C;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x53C2;&#x6570;</p>
+<ul>
+<li>-E&#xFF0C;&#x6307;&#x5B9A;&#x5BFC;&#x51FA;&#x4E8B;&#x4EF6;&#xFF08;events&#xFF09;</li>
+<li>-R&#xFF0C;&#x6307;&#x5B9A;&#x5BFC;&#x51FA;&#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#xFF08;&#x51FD;&#x6570;&#x548C;&#x8FC7;&#x7A0B;&#xFF09;</li>
+</ul>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5728;&#x5907;&#x4EFD;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x6027;&#x80FD;&#x7684;&#x6296;&#x52A8;&#xFF0C;&#x51FA;&#x73B0;&#x6027;&#x80FD;&#x6025;&#x5267;&#x4E0B;&#x964D;&#x7684;&#x73B0;&#x8C61;&#x3002;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;mysqldump&#x662F;&#x5148;&#x4ECE;buffer&#x91CC;&#x9762;&#x627E;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x679C;buffer&#x4E2D;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x53BB;&#x8BBF;&#x95EE;&#x78C1;&#x76D8;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6570;&#x636E;&#x8C03;&#x56DE;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x518D;&#x5F62;&#x6210;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x3002;&#x800C;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x70ED;&#x70B9;&#x6570;&#x636E;&#x4ECE;buffer&#x4E2D;&#x5237;&#x8D70;&#xFF0C;&#x6545;&#x5F71;&#x54CD;&#x4E86;&#x6027;&#x80FD;&#x3002;
+&#x5728;MySQL5.7&#xFF0C;&#x65B0;&#x589E;&#x4E86;&#x4E00;&#x4E2A;&#x53C2;&#x6570;innodb_buffer_pool_dump_pct&#xFF0C;&#x7528;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x6765;&#x63A7;&#x5236;&#x6BCF;&#x4E2A;innodb buffer&#x4E2D;&#x8F6C;&#x50A8;&#x6D3B;&#x8DC3;&#x4F7F;&#x7528;&#x7684;innodb buffer pages&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x6570;&#x636E;&#x5728;1&#x79D2;&#x5185;&#x518D;&#x6B21;&#x88AB;&#x8BBF;&#x95EE;&#x65F6;&#xFF0C;&#x624D;&#x80FD;&#x653E;&#x5230;&#x70ED;&#x533A;&#x57DF;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x907F;&#x514D;&#x4E86;&#x70ED;&#x6570;&#x636E;&#x88AB;&#x51B2;&#x8D70;&#x7684;&#x60C5;&#x51B5;</p>
+<h3 id="22-mysqlpump">2.2 mysqlpump</h3>
+<p>&#x5728; MySQL5.7 &#x7248;&#x672C;&#x63A8;&#x51FA;&#x4E86; mysqlpump&#x5DE5;&#x5177; &#x3002;
+&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x5B83;&#x662F;mysqldump&#x7684;&#x52A0;&#x5F3A;&#x7248;&#xFF0C;&#x51E0;&#x5927;&#x63D0;&#x5347;&#xFF1A;</p>
+<ul>
+<li>&#x5E76;&#x884C;&#x5907;&#x4EFD;&#x6570;&#x636E;&#x5E93;&#x548C;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#xFF0C;&#x52A0;&#x5FEB;&#x5907;&#x4EFD;&#x8FC7;&#x7A0B;&#x3002;</li>
+<li>&#x66F4;&#x597D;&#x7684;&#x63A7;&#x5236;&#x6570;&#x636E;&#x5E93;&#x548C;&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;&#xFF08;&#x8868;&#xFF0C;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x6237;&#x5E10;&#x6237;&#xFF09;&#x7684;&#x5907;&#x4EFD;&#xFF0C;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#x6240;&#x6709;&#x7684;&#x516D;&#x7C7B;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x5907;&#x4EFD;&#x7528;&#x6237;&#x8D26;&#x53F7;&#x4F5C;&#x4E3A;&#x5E10;&#x6237;&#x7BA1;&#x7406;&#x8BED;&#x53E5;&#xFF08;CREATE USER&#xFF0C;GRANT&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x5230;MySQL&#x7684;&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>&#x5907;&#x4EFD;&#x51FA;&#x6765;&#x76F4;&#x63A5;&#x751F;&#x6210;&#x538B;&#x7F29;&#x540E;&#x7684;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x5907;&#x4EFD;&#x8FDB;&#x5EA6;&#x6307;&#x793A;&#xFF08;&#x4F30;&#x8BA1;&#x503C;&#xFF09;&#x3002;</li>
+<li>&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#xFF08;&#x8FD8;&#x539F;&#xFF09;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#xFF0C;&#x5148;&#x5EFA;&#x8868;&#x540E;&#x63D2;&#x5165;&#x6570;&#x636E;&#x6700;&#x540E;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x7D22;&#x5F15;&#x7EF4;&#x62A4;&#x5F00;&#x9500;&#xFF0C;&#x52A0;&#x5FEB;&#x4E86;&#x8FD8;&#x539F;&#x901F;&#x5EA6;&#x3002;</li>
+<li>&#x5907;&#x4EFD;&#x53EF;&#x4EE5;&#x6392;&#x9664;&#x6216;&#x5219;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+</ul>
+<hr>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x8981;&#x786E;&#x4FDD;&#x4F7F;&#x7528;mysqlpump&#x7684;&#x7248;&#x672C;&#x5728;5.7.11&#x53CA;&#x4EE5;&#x4E0A;&#xFF08;&#x5728;5.7.11&#x4EE5;&#x524D;&#xFF0C;mysqlpump&#x548C;&#x5E76;&#x884C;&#x53C2;&#x6570;&#x662F;&#x6709;&#x51B2;&#x7A81;&#x7684;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x540E;&#x505A;&#x4E86;&#x4FEE;&#x590D;&#xFF09;</li>
+<li>mysqlpump&#x6CA1;&#x6709; <code>--lock-all-tables</code> &#x548C; <code>--lock-tables</code> &#x53C2;&#x6570;&#x3002;&#x867D;&#x7136;&#x6709; <code>--single-transaction</code> &#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x9ED8;&#x8BA4;&#x4E5F;off&#x3002;&#x6240;&#x4EE5;&#x5F88;&#x660E;&#x663E;&#xFF0C;&#x5BFC;&#x51FA;&#x7684;&#x5907;&#x4EFD;&#x4E0D;&#x662F;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x5FEB;&#x7167;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;mysqlpump&#x5907;&#x4EFD;&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x5FEB;&#x7167;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5728;pump&#x4E4B;&#x524D;&#x624B;&#x5DE5;&#x4F7F;&#x7528; <code>FLUSH TABLES WITH READ LOCK</code> &#x9501;&#x4F4F;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>mysqlpump &#x662F;&#x591A;&#x7EBF;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x5230; &#x8868;&#x7EA7;&#x522B; &#xFF0C;&#x5BF9;&#x4E8E; &#x4E00;&#x5F20;&#x8868; &#x6765;&#x8BF4;&#xFF0C;&#x8FD8;&#x662F; &#x5355;&#x7EBF;&#x7A0B;&#x7684;</li>
+<li>mysqlpump &#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x961F;&#x5217;&#xFF08;default&#xFF09;&#xFF0C;&#x961F;&#x5217;&#x4E0B;&#x9762;&#x53EF;&#x4EE5;&#x6709;N&#x4E2A;&#x7EBF;&#x7A0B;&#x53BB;&#x5907;&#x4EFD;&#x6570;&#x636E;&#x5E93;/&#x6570;&#x636E;&#x5E93;&#x4E0B;&#x7684;&#x8868;</li>
+<li>mysqlpump &#x53EF;&#x4EE5;&#x5F00;&#x591A;&#x4E2A;&#x961F;&#x5217;&#xFF08;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x5E93;/&#x8868;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x6BCF;&#x4E2A;&#x961F;&#x5217;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#xFF0C;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x5907;&#x4EFD;</li>
+<li>mysqlpump &#x4F1A;&#x5148;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15; &#xFF1B;&#x800C;mysqldump&#x5728;&#x5EFA;&#x7ACB;&#x8868;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x628A;&#x7D22;&#x5F15;&#x52A0;&#x4E0A;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;mysqlpump&#x5728;&#x5BFC;&#x5165;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x6BD4;mysqldump&#x8981;&#x5FEB;</li>
+<li>mysqlpump &#x76EE;&#x524D; &#x5BFC;&#x5165; &#x7684;&#x65F6;&#x5019;&#x662F; &#x5355;&#x7EBF;&#x7A0B; &#x7684;</li>
+</ul>
+<h4 id="221-mysqlpump&#x91CD;&#x8981;&#x53C2;&#x6570;">2.2.1 mysqlpump&#x91CD;&#x8981;&#x53C2;&#x6570;</h4>
+<p>mysqlpump&#x53C2;&#x6570;&#x5E38;&#x7520;&#x53C2;&#x6570;&#x540C;mysqldump&#x7C7B;&#x4F3C;&#xFF0C;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#x548C;&#x5E76;&#x53D1;&#x76F8;&#x5173;&#x7684;</p>
+<pre class="language-"><code>--default-parallelism=4 #&#x7EBF;&#x7A0B;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x5F00; 2 &#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x5907;&#x4EFD;
+--parallel-schemas=name #&#x54EA;&#x4E9B;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x5907;&#x4EFD;
+--compress-output #mysqlpump  &#x652F;&#x6301;&#x538B;&#x7F29; &#x529F;&#x80FD;&#xFF0C;&#x652F;&#x6301; LZ4 &#x548C; ZLIB &#x3002;ZLIB &#x538B;&#x7F29;&#x6BD4;&#x4F8B;&#x5BF9;&#x8F83;&#x9AD8;&#xFF0C;&#x4F46;&#x662F;&#x901F;&#x5EA6;&#x8F83;&#x6162;
+</code></pre><h4 id="222-mysqlpump&#x793A;&#x4F8B;">2.2.2 mysqlpump&#x793A;&#x4F8B;</h4>
+<pre class="language-"><code>mysqlpump --single-transaction --databases employees -S /tmp/mysql.sock &gt; employees_pump_1.sql
+</code></pre><pre class="language-"><code>mysqlpump -S /tmp/mysql.sock --single-transaction --parallel-schemas=2:employees --parallel-schemas=4:dbt3 --databases employees dbt3 &gt; backup.sql
+
+ --parallel-schemas=2:employees &#x8868;&#x793A;&#x5907;&#x4EFD;employees&#x5E93;&#x4F7F;&#x7528;2&#x4E2A;&#x7EBF;&#x7A0B;
+ --parallel-schemas=4:dbt3 &#x8868;&#x793A;&#x5907;&#x4EFD;dbt3&#x5E93;&#x4F7F;&#x7528;4&#x4E2A;&#x7EBF;&#x7A0B;
+ --databases employees dbt3 &#x8868;&#x793A;&#x6307;&#x5B9A;&#x5907;&#x4EFD; employees &#x548C; dbt3 &#x8FD9;&#x4E24;&#x4E2A;&#x5E93;
+</code></pre><h4 id="223-mysqlpump&#x6062;&#x590D;">2.2.3 mysqlpump&#x6062;&#x590D;</h4>
+<p>&#x6062;&#x590D;&#x6CA1;&#x6709;&#x88AB;&#x538B;&#x7F29;&#x7684;&#x5E93;</p>
+<pre class="language-"><code>mysql &lt; backup.sql # mysql -u root -p -S /tmp/mysql.sock
+</code></pre><p>&#x6062;&#x590D;&#x538B;&#x7F29;&#x7684;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x5C06;&#x538B;&#x7F29;&#x7684;&#x5E93;&#x89E3;&#x538B;<code>lz4_decompress backup.sql.lz4 backup.sql</code>&#xFF0C;&#x518D;&#x8FDB;&#x884C;&#x6062;&#x590D;</p>
+<pre class="language-"><code>mysql &lt; backup.sql # mysql -u root -p -S /tmp/mysql.sock
+</code></pre><h3 id="23-mydumper">2.3 mydumper</h3>
+<p>mydumper&#x662F;&#x4E00;&#x4E2A;&#x9488;&#x5BF9;MySQL&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x5907;&#x4EFD;&#x5DE5;&#x5177;&#xFF0C;&#x4E5F;&#x5C5E;&#x4E8E;&#x903B;&#x8F91;&#x5907;&#x4EFD;&#xFF0C;&#x6062;&#x590D;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;myloader&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x6062;&#x590D;&#x3002;</p>
+<h4 id="231-mydumper&#x7279;&#x70B9;&#xFF1A;">2.3.1 mydumper&#x7279;&#x70B9;&#xFF1A;</h4>
+<ol>
+<li>&#x652F;&#x6301;&#x591A;&#x7EBF;&#x7A0B;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x901F;&#x5EA6;&#x6BD4;mysqldump&#x5FEB;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x4E00;&#x81F4;&#x6027;&#x5907;&#x4EFD;&#xFF0C;&#x4F7F;&#x7528;FTWRL(FLUSH TABLES WITH READ LOCK)&#x4F1A;&#x963B;&#x585E;DML&#x8BED;&#x53E5;,&#x4FDD;&#x8BC1;&#x5907;&#x4EFD;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x5C06;&#x5BFC;&#x51FA;&#x6587;&#x4EF6;&#x538B;&#x7F29;&#xFF0C;&#x8282;&#x7EA6;&#x7A7A;&#x95F4;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x591A;&#x7EBF;&#x7A0B;&#x6062;&#x590D;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x4EE5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B9A;&#x65F6;&#x5FEB;&#x7167;&#x548C;&#x8FDE;&#x7EED;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;</li>
+<li>&#x652F;&#x6301;&#x6309;&#x7167;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x5C06;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x5207;&#x5272;&#x3002;</li>
+<li>&#x6570;&#x636E;&#x4E0E;&#x5EFA;&#x8868;&#x8BED;&#x53E5;&#x5206;&#x79BB;&#x3002;</li>
+</ol>
+<hr>
+<h4 id="232-mydumper&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x6B65;&#x9AA4;&#xFF1A;">2.3.2 mydumper&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x6B65;&#x9AA4;&#xFF1A;</h4>
+<ol>
+<li>&#x4E3B;&#x7EBF;&#x7A0B; FLUSH TABLES WITH READ LOCK, &#x65BD;&#x52A0;&#x5168;&#x5C40;&#x53EA;&#x8BFB;&#x9501;&#xFF0C;&#x4EE5;&#x963B;&#x6B62;DML&#x8BED;&#x53E5;&#x5199;&#x5165;&#xFF0C;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;</li>
+<li>&#x8BFB;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x65E5;&#x5FD7;&#x5199;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x5E76;&#x8BB0;&#x5F55;&#x5728;metadata&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4EE5;&#x4F9B;&#x5373;&#x4F7F;&#x70B9;&#x6062;&#x590D;&#x4F7F;&#x7528;</li>
+<li>START TRANSACTION WITH CONSISTENT SNAPSHOT; &#x5F00;&#x542F;&#x8BFB;&#x4E00;&#x81F4;&#x4E8B;&#x52A1;</li>
+<li>&#x542F;&#x7528;N&#x4E2A;&#xFF08;&#x7EBF;&#x7A0B;&#x6570;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;4&#xFF09;dump&#x7EBF;&#x7A0B;&#x5BFC;&#x51FA;&#x8868;&#x548C;&#x8868;&#x7ED3;&#x6784;</li>
+<li>&#x5907;&#x4EFD;&#x975E;&#x4E8B;&#x52A1;&#x7C7B;&#x578B;&#x7684;&#x8868;</li>
+<li>&#x4E3B;&#x7EBF;&#x7A0B; UNLOCK TABLES&#xFF0C;&#x5907;&#x4EFD;&#x5B8C;&#x6210;&#x975E;&#x4E8B;&#x52A1;&#x7C7B;&#x578B;&#x7684;&#x8868;&#x4E4B;&#x540E;&#xFF0C;&#x91CA;&#x653E;&#x5168;&#x5C40;&#x53EA;&#x8BFB;&#x9501;</li>
+<li>dump InnoDB tables, &#x57FA;&#x4E8E;&#x4E8B;&#x7269;&#x5BFC;&#x51FA;InnoDB&#x8868;</li>
+<li>&#x4E8B;&#x7269;&#x7ED3;&#x675F;</li>
+</ol>
+<hr>
+<h4 id="233-&#x53C2;&#x6570;&#x8BF4;&#x660E;">2.3.3 &#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
+<p>mydumper &#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;</p>
+<pre class="language-"><code>-B, --database &#x8981;&#x5BFC;&#x51FA;&#x7684;dbname
+-T, --tables-list &#x9700;&#x8981;&#x5BFC;&#x51FA;&#x7684;&#x8868;&#x540D;,&#x5BFC;&#x51FA;&#x591A;&#x4E2A;&#x8868;&#x9700;&#x8981;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF0C;t1[,t2,t3 ....]
+-o, --outputdir &#x5BFC;&#x51FA;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x76EE;&#x5F55;&#xFF0C;mydumper&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;
+-s, --statement-size &#x751F;&#x6210;&#x63D2;&#x5165;&#x8BED;&#x53E5;&#x7684;&#x5B57;&#x8282;&#x6570;, &#x9ED8;&#x8BA4;1000000&#x5B57;&#x8282;
+-r, --rows Try to split tables into chunks of this many rows. This option turns off --chunk-filesize
+-F, --chunk-filesize &#x5207;&#x5272;&#x8868;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x5355;&#x4F4D;&#x662F; MB &#xFF0C;&#x5982;&#x679C;&#x8868;&#x5927;&#x4E8E;
+-c, --compress &#x538B;&#x7F29;&#x5BFC;&#x51FA;&#x7684;&#x6587;&#x4EF6;
+-e, --build-empty-files &#x5373;&#x4F7F;&#x662F;&#x7A7A;&#x8868;&#x4E5F;&#x4E3A;&#x8868;&#x521B;&#x5EFA;&#x6587;&#x4EF6;
+-x, --regex &#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D; db.table
+-i, --ignore-engines &#x5FFD;&#x7565;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#xFF0C;&#x591A;&#x4E2A;&#x503C;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;
+-m, --no-schemas &#x53EA;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x5BFC;&#x51FA;&#x5EFA;&#x5E93;&#x5EFA;&#x8868;&#x8BED;&#x53E5;
+-d, --no-data &#x4EC5;&#x4EC5;&#x5BFC;&#x51FA;&#x5EFA;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x521B;&#x5EFA;db&#x7684;&#x8BED;&#x53E5;
+-G, --triggers &#x5BFC;&#x51FA;&#x89E6;&#x53D1;&#x5668;
+-E, --events &#x5BFC;&#x51FA;events
+-R, --routines &#x5BFC;&#x51FA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x548C;&#x51FD;&#x6570;
+-k, --no-locks &#x4E0D;&#x6267;&#x884C;&#x4E34;&#x65F6;&#x7684;&#x53EA;&#x8BFB;&#x9501;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x5907;&#x4EFD;&#x4E0D;&#x4E00;&#x81F4; &#x3002;WARNING: This will cause inconsistent backups
+--less-locking &#x6700;&#x5C0F;&#x5316;&#x5728;innodb&#x8868;&#x4E0A;&#x7684;&#x9501;&#x8868;&#x65F6;&#x95F4; --butai
+-l, --long-query-guard &#x8BBE;&#x7F6E;&#x957F;&#x65F6;&#x95F4;&#x6267;&#x884C;&#x7684;sql &#x7684;&#x65F6;&#x95F4;&#x6807;&#x51C6;
+-K, --kill-long-queries &#x5C06;&#x957F;&#x65F6;&#x95F4;&#x6267;&#x884C;&#x7684;sql kill
+-D, --daemon &#x4EE5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x6267;&#x884C;
+-I, --snapshot-interval &#x521B;&#x5EFA;&#x5BFC;&#x51FA;&#x5FEB;&#x7167;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; 60s &#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x53EA;&#x6709;&#x5728;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x6709;&#x7528;&#x3002;
+-L, --logfile &#x6307;&#x5B9A;mydumper&#x8F93;&#x51FA;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#x3002;
+--tz-utc SET TIME_ZONE=&apos;+00:00&apos; at top of dump to allow dumping of TIMESTAMP data when a server has data in different time zones or data is being moved between servers with different time zones, defaults to on use --skip-tz-utc to disable.
+--skip-tz-utc
+--use-savepoints &#x4F7F;&#x7528;savepoints &#x51CF;&#x5C11;MDL &#x9501;&#x4E8B;&#x4EF6; &#x9700;&#x8981; SUPER &#x6743;&#x9650;
+--success-on-1146 Not increment error count and Warning instead of Critical in case of table doesn
+</code></pre><p>myloader&#x4F7F;&#x7528;&#x53C2;&#x6570;</p>
+<pre class="language-"><code>-d, --directory &#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x5939;
+-q, --queries-per-transaction &#x6BCF;&#x6B21;&#x4E8B;&#x7269;&#x6267;&#x884C;&#x7684;&#x67E5;&#x8BE2;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;1000
+-o, --overwrite-tables &#x5982;&#x679C;&#x8981;&#x6062;&#x590D;&#x7684;&#x8868;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5148;drop&#x6389;&#x8BE5;&#x8868;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x53C2;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x5907;&#x4EFD;&#x65F6;&#x5019;&#x8981;&#x5907;&#x4EFD;&#x8868;&#x7ED3;&#x6784;
+-B, --database &#x9700;&#x8981;&#x8FD8;&#x539F;&#x7684;&#x6570;&#x636E;&#x5E93;
+-e, --enable-binlog &#x542F;&#x7528;&#x8FD8;&#x539F;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;
+-h, --host The host to connect to
+-u, --user Username with privileges to run the dump
+-p, --password User password
+-P, --port TCP/IP port to connect to
+-S, --socket UNIX domain socket file to use for connection
+-t, --threads &#x8FD8;&#x539F;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;4
+-C, --compress-protocol &#x538B;&#x7F29;&#x534F;&#x8BAE;
+-V, --version &#x663E;&#x793A;&#x7248;&#x672C;
+-v, --verbose &#x8F93;&#x51FA;&#x6A21;&#x5F0F;, 0 = silent, 1 = errors, 2 = warnings, 3 = info, &#x9ED8;&#x8BA4;&#x4E3A;2
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;mydumper&#x6CA1;&#x6709;&#x2014;where&#x53C2;&#x6570;&#xFF0C;&#x90E8;&#x5206;&#x573A;&#x666F;&#x4E0D;&#x9002;&#x7528;</p>
+<hr>
+<h4 id="234-mydumper&#x4F7F;&#x7528;&#x793A;&#x4F8B;">2.3.4 mydumper&#x4F7F;&#x7528;&#x793A;&#x4F8B;</h4>
+<p>&#x5BFC;&#x51FA;&#x6574;&#x4E2A;&#x5E93;</p>
+<pre class="language-"><code>mydumper -u root -S /tmp/mysql.sock -B employee -o /bak/employee
+</code></pre><p>&#x5BFC;&#x51FA;platform&#x7684;ddl&#x8BED;&#x53E5;&#x4E0D;&#x5305;&#x542B;&#x6570;&#x636E;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55; /bak/employee</p>
+<pre class="language-"><code>mydumper -u root -S /tmp/mysql.sock -B employee -m -o /bak/employee
+</code></pre><p>&#x4EE5;&#x538B;&#x7F29;&#x7684;&#x65B9;&#x5F0F;&#x5BFC;&#x51FA;&#x7684;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>mydumper -u root -S /tmp/mysql.sock -B employee -c -o /bak/employee
+</code></pre><p>&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; ,--regex=order.*  &#x5BFC;&#x51FA;&#x6240;&#x6709;order &#x5F00;&#x5934;&#x7684;&#x8868;</p>
+<pre class="language-"><code>mydumper -u root -S /tmp/mysql.sock --regex=&apos;^(?!(mysql|test))&apos; -o /bak/bktest20180717
+</code></pre><p>mydumper &#x5BFC;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5206;&#x4E3A;:</p>
+<pre class="language-"><code>metadata :&#x5305;&#x542B;&#x5BFC;&#x51FA;&#x65F6;&#x523B;&#x7684;binlog &#x4F4D;&#x70B9;&#x4FE1;&#x606F; &#xFF0C;&#x5982;&#x679C;&#x542F;&#x7528;gtid &#xFF0C;&#x5219;&#x8BB0;&#x5F55;gtid&#x4FE1;&#x606F;&#x3002;
+db.table.sql        :&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;insert&#x8BED;&#x53E5;
+db.table-schema.sql :&#x5305;&#x542B;&#x5EFA;&#x8868;&#x8BED;&#x53E5;
+db-schema.sql       :&#x5305;&#x542B;&#x5EFA;&#x5E93;&#x8BED;&#x53E5;
+</code></pre><h3 id="24-xtrabackup">2.4 xtrabackup</h3>
+<p>&#x5185;&#x5BB9;&#x8F83;&#x591A;&#xFF0C;&#x5355;&#x72EC;&#x5199;&#x4E00;&#x7AE0;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; suredandan 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">UpdateTime: 
+2018-11-28 08:44:58
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="13.cfqandccgc.html" class="navigation navigation-prev " aria-label="Previous page: 13.触发器存储过程函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="15.backuprecoverpxb.html" class="navigation navigation-next " aria-label="Next page: 15.备份恢复-pxb">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"14.备份与恢复","level":"1.15","depth":1,"next":{"title":"15.备份恢复-pxb","level":"1.16","depth":1,"path":"15.backuprecoverpxb.md","ref":"15.backuprecoverpxb.md","articles":[]},"previous":{"title":"13.触发器存储过程函数","level":"1.14","depth":1,"path":"13.cfqandccgc.md","ref":"13.cfqandccgc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","prism-themes","-highlight","codesnippet","splitter","simple-page-toc","page-toc-button","back-to-top-button","-lunr","-search","search-plus","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","theme-default","sitemap-general"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © suredandan 2018","modify_label":"UpdateTime: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"http://www.googlebaba.io/mysql/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"_CAPTION_"}},"theme":"default","author":"suredandan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"MySQL搬砖","language":"zh-hans","gitbook":"*","description":"MySQL进阶指南"},"file":{"path":"14.backrecover.md","mtime":"2018-11-28T00:44:58.089Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T13:30:33.979Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

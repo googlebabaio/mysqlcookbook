@@ -1,0 +1,1637 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>16.基准测试 · MySQL搬砖</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suredandan">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="17.performancetest.html" />
+    
+    
+    <link rel="prev" href="15.backuprecoverpxb.html" />
+    
+
+    
+        <link rel="shortcut icon" href='favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.introduceandinstall.html">
+            
+                <a href="1.introduceandinstall.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    1.MySQL介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.connectandrole.html">
+            
+                <a href="2.connectandrole.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    2.MySQL的连接与权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.parameterintro.html">
+            
+                <a href="3.parameterintro.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    3.MySQL参数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.jiagoujieshao.html">
+            
+                <a href="4.jiagoujieshao.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    4.MySQL体系介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.cuncunyinqin.html">
+            
+                <a href="5.cuncunyinqin.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    5.MySQL的存储引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.duoshili.html">
+            
+                <a href="6.duoshili.html">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    6.MySQL多实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.aboutssl.html">
+            
+                <a href="7.aboutssl.html">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    7.MySQL的SSL相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.datatypeintro.html">
+            
+                <a href="8.datatypeintro.html">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    8.MySQL的数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9.createtable.html">
+            
+                <a href="9.createtable.html">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    9.表的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.sqlselect.html">
+            
+                <a href="10.sqlselect.html">
+            
+                    
+                        <b>1.11.</b>
+                    
+                    10.SQL之select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.sqldml.html">
+            
+                <a href="11.sqldml.html">
+            
+                    
+                        <b>1.12.</b>
+                    
+                    11.SQL之增删改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12.sqlextra.html">
+            
+                <a href="12.sqlextra.html">
+            
+                    
+                        <b>1.13.</b>
+                    
+                    12.SQL其他补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13.cfqandccgc.html">
+            
+                <a href="13.cfqandccgc.html">
+            
+                    
+                        <b>1.14.</b>
+                    
+                    13.触发器存储过程函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14.backrecover.html">
+            
+                <a href="14.backrecover.html">
+            
+                    
+                        <b>1.15.</b>
+                    
+                    14.备份与恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="15.backuprecoverpxb.html">
+            
+                <a href="15.backuprecoverpxb.html">
+            
+                    
+                        <b>1.16.</b>
+                    
+                    15.备份恢复-pxb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="16.basetest.html">
+            
+                <a href="16.basetest.html">
+            
+                    
+                        <b>1.17.</b>
+                    
+                    16.基准测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="17.performancetest.html">
+            
+                <a href="17.performancetest.html">
+            
+                    
+                        <b>1.18.</b>
+                    
+                    17.性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="18.replication.html">
+            
+                <a href="18.replication.html">
+            
+                    
+                        <b>1.19.</b>
+                    
+                    18.主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="19.haintro.html">
+            
+                <a href="19.haintro.html">
+            
+                    
+                        <b>1.20.</b>
+                    
+                    19.高可用选型介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="20.performance.html">
+            
+                <a href="20.performance.html">
+            
+                    
+                        <b>1.21.</b>
+                    
+                    20.优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="21.sqltunning.html">
+            
+                <a href="21.sqltunning.html">
+            
+                    
+                        <b>1.22.</b>
+                    
+                    21.SQL优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="22.mysqlfaq.html">
+            
+                <a href="22.mysqlfaq.html">
+            
+                    
+                        <b>1.23.</b>
+                    
+                    22.MySQL_FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="fulu.html">
+            
+                <a href="fulu.html">
+            
+                    
+                        <b>1.24.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="f_lvsvsnginxvshaproxy.html">
+            
+                <a href="f_lvsvsnginxvshaproxy.html">
+            
+                    
+                        <b>1.24.1.</b>
+                    
+                    附录1-三大软负载均衡器对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" data-path="f_mysql5.7.html">
+            
+                <a href="f_mysql5.7.html">
+            
+                    
+                        <b>1.24.2.</b>
+                    
+                    附录2-MySQL5.7新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.3" data-path="f_sampleschema.html">
+            
+                <a href="f_sampleschema.html">
+            
+                    
+                        <b>1.24.3.</b>
+                    
+                    附录3-MySQL的sample数据库安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4" data-path="f_youhuakuangjia.html">
+            
+                <a href="f_youhuakuangjia.html">
+            
+                    
+                        <b>1.24.4.</b>
+                    
+                    附录4-MySQL优化框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.5" data-path="f_usingprofile4sql.html">
+            
+                <a href="f_usingprofile4sql.html">
+            
+                    
+                        <b>1.24.5.</b>
+                    
+                    附录5-使用profile分析sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6" data-path="f_mysqlcheck.html">
+            
+                <a href="f_mysqlcheck.html">
+            
+                    
+                        <b>1.24.6.</b>
+                    
+                    附录6-mysqlcheck的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.7" data-path="f_mha.html">
+            
+                <a href="f_mha.html">
+            
+                    
+                        <b>1.24.7.</b>
+                    
+                    附录7-mha配置.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >16.基准测试</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#%E4%B8%80%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%A6%82%E5%BF%B5">&#x4E00;&#x3001;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x6982;&#x5FF5;</a><ul>
+<li><a href="#1%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95">1.&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF1A;</a></li>
+<li><a href="#2%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E7%9A%84%E4%BD%9C%E7%94%A8">2.&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x4F5C;&#x7528;</a></li>
+<li><a href="#3%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E6%8C%87%E6%A0%87%E5%8C%85%E6%8B%AC">3.&#x5E38;&#x89C1;&#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x6307;&#x6807;&#x5305;&#x62EC;&#xFF1A;</a></li>
+<li><a href="#4%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E7%9A%84%E5%88%86%E7%B1%BB">4.&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x5206;&#x7C7B;</a></li>
+<li><a href="#5mysql%E7%9A%84%E7%9B%B8%E5%85%B3tpsqps%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95">5.MySQL&#x7684;&#x76F8;&#x5173;tps/qps&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;</a><ul>
+<li><a href="#51-mysql%E7%9A%84qps%E8%AE%A1%E7%AE%97">5.1 MySQL&#x7684;QPS&#x8BA1;&#x7B97;</a></li>
+<li><a href="#52-mysql%E7%9A%84tps%E8%AE%A1%E7%AE%97">5.2 MySQL&#x7684;TPS&#x8BA1;&#x7B97;</a></li>
+</ul>
+</li>
+<li><a href="#6%E7%A3%81%E7%9B%98%E7%9A%84iops%E8%AE%A1%E7%AE%97">6.&#x78C1;&#x76D8;&#x7684;IOPS&#x8BA1;&#x7B97;</a><ul>
+<li><a href="#61-%E4%BC%A0%E7%BB%9F%E6%9C%BA%E6%A2%B0%E7%A1%AC%E7%9B%98%E7%9A%84iops%E5%80%BC%E8%AE%A1%E7%AE%97">6.1 &#x4F20;&#x7EDF;&#x673A;&#x68B0;&#x786C;&#x76D8;&#x7684;IOPS&#x503C;&#x8BA1;&#x7B97;</a></li>
+<li><a href="#62-iostat-%E5%91%BD%E4%BB%A4">6.2 iostat &#x547D;&#x4EE4;</a></li>
+<li><a href="#63-iotop">6.3 iotop</a></li>
+</ul>
+</li>
+<li><a href="#7%E6%8F%90%E5%8D%87iops%E6%80%A7%E8%83%BD%E7%9A%84%E6%89%8B%E6%AE%B5">7.&#x63D0;&#x5347;IOPS&#x6027;&#x80FD;&#x7684;&#x624B;&#x6BB5;</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8Csysbench">&#x4E8C;&#x3001;sysbench</a><ul>
+<li><a href="#1%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D">1.&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</a></li>
+<li><a href="#2sysbench%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6">2.sysbench&#x6D4B;&#x8BD5;&#x6846;&#x67B6;</a></li>
+<li><a href="#3sysbench%E7%9A%84%E5%AE%89%E8%A3%85">3.sysbench&#x7684;&#x5B89;&#x88C5;</a><ul>
+<li><a href="#31-%E4%B8%8B%E8%BD%BDsysbench">3.1 &#x4E0B;&#x8F7D;sysbench</a></li>
+<li><a href="#32-%E8%BF%9B%E5%85%A5%E7%9B%AE%E5%BD%95%E7%94%9F%E6%88%90%E7%9B%B8%E5%85%B3%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">3.2 &#x8FDB;&#x5165;&#x76EE;&#x5F55;&#xFF0C;&#x751F;&#x6210;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li>
+<li><a href="#33-%E5%85%B3%E8%81%94mysql%E7%9A%84%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C%E5%BA%93">3.3 &#x5173;&#x8054;mysql&#x7684;&#x5934;&#x6587;&#x4EF6;&#x548C;&#x5E93;</a></li>
+<li><a href="#34-%E5%B8%B8%E8%A7%84%E6%80%A7%E7%9A%84make--make-install">3.4 &#x5E38;&#x89C4;&#x6027;&#x7684;make &amp;&amp; make install</a></li>
+<li><a href="#35-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC">3.5 &#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x67E5;&#x770B;&#x7248;&#x672C;</a></li>
+</ul>
+</li>
+<li><a href="#4sysbench%E7%9A%84%E4%BD%BF%E7%94%A8">4.sysbench&#x7684;&#x4F7F;&#x7528;</a><ul>
+<li><a href="#41-sysbench%E9%80%89%E9%A1%B9%E8%AF%B4%E6%98%8E">4.1 sysbench&#x9009;&#x9879;&#x8BF4;&#x660E;</a></li>
+<li><a href="#42-cpu%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95">4.2 cpu&#x6027;&#x80FD;&#x6D4B;&#x8BD5;</a></li>
+<li><a href="#43-%E7%BA%BF%E7%A8%8B%E6%B5%8B%E8%AF%95">4.3 &#x7EBF;&#x7A0B;&#x6D4B;&#x8BD5;</a></li>
+<li><a href="#44-%E7%A3%81%E7%9B%98io%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95">4.4 &#x78C1;&#x76D8;IO&#x6027;&#x80FD;&#x6D4B;&#x8BD5;</a></li>
+<li><a href="#45-%E5%86%85%E5%AD%98%E6%B5%8B%E8%AF%95">4.5 &#x5185;&#x5B58;&#x6D4B;&#x8BD5;</a></li>
+<li><a href="#46-oltp%E6%B5%8B%E8%AF%95">4.6 OLTP&#x6D4B;&#x8BD5;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<hr>
+<h1 id="&#x4E00;&#x3001;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x6982;&#x5FF5;">&#x4E00;&#x3001;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x6982;&#x5FF5;</h1>
+<h2 id="1&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF1A;">1.&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF1A;</h2>
+<p>&#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x662F;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;&#x8FDB;&#x884C;&#x5B9A;&#x91CF;&#x7684;&#x3001;&#x53EF;&#x590D;&#x73B0;&#x7684;&#x3001;&#x53EF;&#x5BF9;&#x6BD4;&#x7684;&#x6D4B;&#x8BD5;&#x3002;
+&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x9488;&#x5BF9;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x79CD;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x3002;&#x4F46;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x4E0D;&#x5173;&#x5FC3;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x3001;&#x76F4;&#x63A5;&#x3001;&#x6613;&#x4E8E;&#x6D4B;&#x8BD5;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x7531;&#x5DE5;&#x5177;&#x751F;&#x6210;&#xFF0C;&#x4E0D;&#x8981;&#x6C42;&#x771F;&#x5B9E;&#xFF1B;&#x800C;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x4E00;&#x822C;&#x8003;&#x8651;&#x4E1A;&#x52A1;&#x903B;&#x8F91;(&#x5982;&#x8D2D;&#x7269;&#x8F66;&#x4E1A;&#x52A1;)&#xFF0C;&#x8981;&#x6C42;&#x771F;&#x5B9E;&#x7684;&#x6570;&#x636E;&#x3002;
+&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x6709;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<ol>
+<li>&#x9A8C;&#x8BC1;&#x5047;&#x8BBE;</li>
+<li>&#x91CD;&#x73B0;&#x5F02;&#x5E38;</li>
+<li>&#x6D4B;&#x8BD5;&#x7CFB;&#x7EDF;</li>
+<li>&#x9884;&#x6D4B;&#x6269;&#x5C55;&#x6027;&#x74F6;&#x9888;</li>
+<li>&#x89C4;&#x5212;&#x672A;&#x6765;&#x7684;&#x4E1A;&#x52A1;&#x589E;&#x957F;&#xFF0C;&#x8BC4;&#x4F30;&#x6240;&#x9700;&#x8D44;&#x6E90;</li>
+<li>&#x6D4B;&#x8BD5;&#x5E94;&#x7528;&#x9002;&#x5E94;&#x53EF;&#x53D8;&#x73AF;&#x5883;&#x7684;&#x80FD;&#x529B;</li>
+<li>&#x6D4B;&#x8BD5;&#x4E0D;&#x540C;&#x7684;&#x786C;&#x4EF6;&#x3001;&#x8F6F;&#x4EF6;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;</li>
+<li>&#x8BC1;&#x660E;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x914D;&#x7F6E;&#x6B63;&#x786E;</li>
+</ol>
+<h2 id="2&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x4F5C;&#x7528;">2.&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x4F5C;&#x7528;</h2>
+<p>&#x5BF9;&#x4E8E;&#x591A;&#x6570;Web&#x5E94;&#x7528;&#xFF0C;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x74F6;&#x9888;&#x5728;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#xFF1B;&#x539F;&#x56E0;&#x5F88;&#x7B80;&#x5355;&#xFF1A;Web&#x5E94;&#x7528;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x56E0;&#x7D20;&#xFF0C;&#x4F8B;&#x5982;&#x7F51;&#x7EDC;&#x5E26;&#x5BBD;&#x3001;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x8282;&#x70B9;&#x3001;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x5305;&#x62EC;CPU&#x3001;&#x5185;&#x5B58;&#x3001;&#x786C;&#x76D8;&#x706F;&#x3001;&#x8FDE;&#x63A5;&#x6570;&#x7B49;&#xFF09;&#x3001;&#x7F13;&#x5B58;&#xFF0C;&#x90FD;&#x5F88;&#x5BB9;&#x6613;&#x901A;&#x8FC7;&#x6C34;&#x5E73;&#x7684;&#x6269;&#x5C55;&#xFF08;&#x4FD7;&#x79F0;&#x52A0;&#x673A;&#x5668;&#xFF09;&#x6765;&#x5B9E;&#x73B0;&#x6027;&#x80FD;&#x7684;&#x63D0;&#x9AD8;&#x3002;&#x800C;&#x5BF9;&#x4E8E;MySQL&#xFF0C;&#x7531;&#x4E8E;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x589E;&#x52A0;&#x673A;&#x5668;&#x6765;&#x5206;&#x6563;&#x5411;&#x6570;&#x636E;&#x5E93;&#x5199;&#x6570;&#x636E;&#x5E26;&#x6765;&#x7684;&#x538B;&#x529B;&#xFF1B;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x524D;&#x7F6E;&#x7F13;&#x5B58;&#xFF08;Redis&#x7B49;&#xFF09;&#x3001;&#x8BFB;&#x5199;&#x5206;&#x79BB;&#x3001;&#x5206;&#x5E93;&#x5206;&#x8868;&#x6765;&#x51CF;&#x8F7B;&#x538B;&#x529B;&#xFF0C;&#x4F46;&#x662F;&#x4E0E;&#x7CFB;&#x7EDF;&#x5176;&#x5B83;&#x7EC4;&#x4EF6;&#x7684;&#x6C34;&#x5E73;&#x6269;&#x5C55;&#x76F8;&#x6BD4;&#xFF0C;&#x53D7;&#x5230;&#x4E86;&#x592A;&#x591A;&#x7684;&#x9650;&#x5236;&#x3002;</p>
+<p>&#x800C;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x5206;&#x6790;&#x5728;&#x5F53;&#x524D;&#x7684;&#x914D;&#x7F6E;&#x4E0B;&#xFF08;&#x5305;&#x62EC;&#x786C;&#x4EF6;&#x914D;&#x7F6E;&#x3001;OS&#x3001;&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x7F6E;&#x7B49;&#xFF09;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6027;&#x80FD;&#x8868;&#x73B0;&#xFF0C;&#x4ECE;&#x800C;&#x627E;&#x51FA;MySQL&#x7684;&#x6027;&#x80FD;&#x9608;&#x503C;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x7CFB;&#x7EDF;&#x7684;&#x8981;&#x6C42;&#x8C03;&#x6574;&#x914D;&#x7F6E;&#x3002;</p>
+<h2 id="3&#x5E38;&#x89C1;&#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x6307;&#x6807;&#x5305;&#x62EC;&#xFF1A;">3.&#x5E38;&#x89C1;&#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x6307;&#x6807;&#x5305;&#x62EC;&#xFF1A;</h2>
+<ul>
+<li>1.&#x5904;&#x7406;&#x80FD;&#x529B;<ul>
+<li>&#x6570;&#x636E;&#x541E;&#x5410;&#x91CF;(Throughput)&#xFF0C;&#x6307;&#x5355;&#x4F4D;&#x65F6;&#x95F4;&#x5185;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x6570;&#x91CF;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x91CF;&#x987A;&#x5E8F;&#x8BFB;&#x5199;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5982;VOD(Video On Demand)&#xFF0C;&#x5219;&#x66F4;&#x5173;&#x6CE8;&#x541E;&#x5410;&#x91CF;&#x6307;&#x6807;&#x3002; </li>
+<li>&#x6BCF;&#x79D2;&#x4E8B;&#x52A1;&#x6570;(TPS) &#xFF1A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x5904;&#x7406;&#x80FD;&#x529B;&#x7684;&#xFF0C;&#x6700;&#x76F4;&#x63A5;&#x6307;&#x6807;&#xFF0C;&#x4E00;&#x822C;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF0C;&#x90FD;&#x4F1A;&#x91CD;&#x70B9;&#x6D4B;&#x8BD5;&#x8FD9;&#x4E2A;&#x6307;&#x6807;&#x3002;&#x4E2A;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x4E2D;&#x7684;&#x4E8B;&#x7269;&#x6807;&#x51C6;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x3002; --&#x7528;&#x4E8E;&#x8861;&#x91CF;&#x541E;&#x5410;&#x91CF; </li>
+<li>QPS &#x6BCF;&#x79D2;&#x5904;&#x7406;&#x7684;&#x67E5;&#x8BE2;&#x6570; --&#x7528;&#x4E8E;&#x8861;&#x91CF;&#x541E;&#x5410;&#x91CF;</li>
+<li>TPM &#x6BCF;&#x5206;&#x949F;&#x4E8B;&#x52A1;&#x6570;</li>
+<li>IOPS&#xFF0C;&#x6BCF;&#x79D2;&#x78C1;&#x76D8;&#x8FDB;&#x884C;&#x7684;I/O&#x64CD;&#x4F5C;&#x6B21;&#x6570;&#x3002;&#x968F;&#x673A;&#x8BFB;&#x5199;&#x9891;&#x7E41;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5982;OLTP&#xFF0C;IOPS&#x662F;&#x5173;&#x952E;&#x8861;&#x91CF;&#x6307;&#x6807;&#x3002;</li>
+</ul>
+</li>
+<li>2.&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x6216;&#x5EF6;&#x8FDF;<ul>
+<li>&#x4EFB;&#x52A1;&#x6240;&#x9700;&#x7684;&#x6574;&#x4F53;&#x65F6;&#x95F4;</li>
+<li>&#x5E38;&#x7528;&#x6D4B;&#x8BD5;&#x6307;&#x6807;&#xFF1A;<ul>
+<li>&#x5E73;&#x5747;&#x54CD;&#x5E94;&#x65F6;&#x95F4;</li>
+<li>&#x6700;&#x5C0F;&#x54CD;&#x5E94;&#x65F6;&#x95F4;</li>
+<li>&#x6700;&#x5927;&#x54CD;&#x5E94;&#x65F6;&#x95F4;</li>
+<li>&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;</li>
+<li>&#x5176;&#x4E2D;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;&#x53C2;&#x8003;&#x610F;&#x4E49;&#x8F83;&#x5927;&#xFF0C;&#x5982;&#x524D;95%&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x6700;&#x5927;&#x54CD;&#x5E94;&#x65F6;&#x95F4;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3.&#x5E76;&#x53D1;&#x91CF;&#xFF1A;&#x540C;&#x65F6;&#x5904;&#x7406;&#x7684;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x91CF;&#x3002;<ul>
+<li>&#x4E3A;&#x4E86;&#x6D4B;&#x8BD5;&#x5E94;&#x7528;&#x5728;&#x4E0D;&#x540C;&#x5E76;&#x53D1;&#x4E0B;&#x7684;&#x6027;&#x80FD;</li>
+</ul>
+</li>
+<li>4.&#x53EF;&#x6269;&#x5C55;&#x6027;<ul>
+<li>&#x7ED9;&#x7CFB;&#x7EDF;&#x589E;&#x52A0;&#x4E00;&#x500D;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x5728;&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x4E0B;&#x83B7;&#x5F97;&#x4E24;&#x500D;&#x7684;&#x7ED3;&#x679C;(&#x541E;&#x5410;&#x91CF;)</li>
+</ul>
+</li>
+</ul>
+<h2 id="4&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x5206;&#x7C7B;">4.&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x5206;&#x7C7B;</h2>
+<p>&#x5BF9;MySQL&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF0C;&#x6709;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x601D;&#x8DEF;&#xFF1A;</p>
+<ol>
+<li><p>&#x9488;&#x5BF9;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF1A;&#x901A;&#x8FC7;http&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x5982;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x3001;APP&#x6216;postman&#x7B49;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x3002;&#x8BE5;&#x65B9;&#x6848;&#x7684;&#x4F18;&#x70B9;&#x662F;&#x80FD;&#x591F;&#x66F4;&#x597D;&#x7684;&#x9488;&#x5BF9;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x66F4;&#x52A0;&#x51C6;&#x786E;&#xFF1B;&#x7F3A;&#x70B9;&#x662F;&#x8BBE;&#x8BA1;&#x590D;&#x6742;&#x5B9E;&#x73B0;&#x56F0;&#x96BE;&#x3002;</p>
+</li>
+<li><p>&#x53EA;&#x9488;&#x5BF9;MySQL&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#xFF1A;&#x4F18;&#x70B9;&#x548C;&#x7F3A;&#x70B9;&#x4E0E;&#x9488;&#x5BF9;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x6D4B;&#x8BD5;&#x6070;&#x597D;&#x76F8;&#x53CD;&#x3002;</p>
+</li>
+</ol>
+<p>&#x5728;&#x9488;&#x5BF9;MySQL&#x8FDB;&#x884C;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x65F6;&#xFF0C;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x4E13;&#x95E8;&#x7684;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#xFF0C;&#x4F8B;&#x5982;mysqlslap&#x3001;sysbench&#x7B49;&#x3002;&#x5176;&#x4E2D;&#xFF0C;sysbench&#x6BD4;mysqlslap&#x66F4;&#x901A;&#x7528;&#x3001;&#x66F4;&#x5F3A;&#x5927;&#xFF0C;&#x4E14;&#x66F4;&#x9002;&#x5408;Innodb&#xFF08;&#x56E0;&#x4E3A;&#x6A21;&#x62DF;&#x4E86;&#x8BB8;&#x591A;Innodb&#x7684;IO&#x7279;&#x6027;&#xFF09;&#xFF0C;&#x540E;&#x9762;&#x4E5F;&#x5C06;&#x4ECB;&#x7ECD;&#x4F7F;&#x7528;sysbench&#x8FDB;&#x884C;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><img src="images/screenshot_1535590858126.png" alt=""></p>
+<h2 id="5mysql&#x7684;&#x76F8;&#x5173;tpsqps&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;">5.MySQL&#x7684;&#x76F8;&#x5173;tps/qps&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;</h2>
+<h3 id="51-mysql&#x7684;qps&#x8BA1;&#x7B97;">5.1 MySQL&#x7684;QPS&#x8BA1;&#x7B97;</h3>
+<p>show global status where Variable_name in(&apos;com_select&apos;,&apos;com_insert&apos;,&apos;com_delete&apos;,&apos;com_update&apos;); 
+&#x7B49;&#x5F85;10&#x79D2; 
+show global status where Variable_name in(&apos;com_select&apos;,&apos;com_insert&apos;,&apos;com_delete&apos;,&apos;com_update&apos;); 
+&#x8BA1;&#x7B97;&#x5DEE;&#x503C; </p>
+<h3 id="52-mysql&#x7684;tps&#x8BA1;&#x7B97;">5.2 MySQL&#x7684;TPS&#x8BA1;&#x7B97;</h3>
+<p>show global status where Variable_name in(&apos;com_insert&apos;,&apos;com_delete&apos;,&apos;com_update&apos;); 
+&#x7B49;&#x5F85;10&#x79D2; 
+show global status where Variable_name in(&apos;com_insert&apos;,&apos;com_delete&apos;,&apos;com_update&apos;); 
+&#x8BA1;&#x7B97;&#x5DEE;&#x503C; </p>
+<h2 id="6&#x78C1;&#x76D8;&#x7684;iops&#x8BA1;&#x7B97;">6.&#x78C1;&#x76D8;&#x7684;IOPS&#x8BA1;&#x7B97;</h2>
+<p>IOPS &#x662F;&#x6307;&#x5355;&#x4F4D;&#x65F6;&#x95F4;&#x5185;&#x7CFB;&#x7EDF;&#x80FD;&#x5904;&#x7406;&#x7684;I/O&#x8BF7;&#x6C42;&#x6570;&#x91CF;&#xFF0C;&#x4E00;&#x822C;&#x4EE5;&#x6BCF;&#x79D2;&#x5904;&#x7406;&#x7684;I/O&#x8BF7;&#x6C42;&#x6570;&#x91CF;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;I/O&#x8BF7;&#x6C42;&#x901A;&#x5E38;&#x4E3A;&#x8BFB;&#x6216;&#x5199;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BF7;&#x6C42;&#x3002;</p>
+<h3 id="61-&#x4F20;&#x7EDF;&#x673A;&#x68B0;&#x786C;&#x76D8;&#x7684;iops&#x503C;&#x8BA1;&#x7B97;">6.1 &#x4F20;&#x7EDF;&#x673A;&#x68B0;&#x786C;&#x76D8;&#x7684;IOPS&#x503C;&#x8BA1;&#x7B97;</h3>
+<p>&#x78C1;&#x76D8;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;I/O&#x8BF7;&#x6C42;&#x6240;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5B83;&#x7531;<code>&#x5BFB;&#x9053;&#x65F6;&#x95F4;&#x3001;&#x65CB;&#x8F6C;&#x5EF6;&#x8FDF;&#x548C;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x65F6;&#x95F4;</code>&#x4E09;&#x90E8;&#x5206;&#x6784;&#x6210;&#x3002; </p>
+<ul>
+<li>&#x5BFB;&#x9053;&#x65F6;&#x95F4;Tseek<ul>
+<li>&#x662F;&#x6307;&#x5C06;&#x8BFB;&#x5199;&#x78C1;&#x5934;&#x79FB;&#x52A8;&#x81F3;&#x6B63;&#x786E;&#x7684;&#x78C1;&#x9053;&#x4E0A;&#x6240;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x5BFB;&#x9053;&#x65F6;&#x95F4;&#x8D8A;&#x77ED;&#xFF0C;I/O&#x64CD;&#x4F5C;&#x8D8A;&#x5FEB;&#xFF0C;&#x76EE;&#x524D;&#x78C1;&#x76D8;&#x7684;&#x5E73;&#x5747;&#x5BFB;&#x9053;&#x65F6;&#x95F4;&#x4E00;&#x822C;&#x5728;3&#xFF0D;15ms&#x3002; </li>
+</ul>
+</li>
+<li>&#x65CB;&#x8F6C;&#x5EF6;&#x8FDF;Trotation<ul>
+<li>&#x662F;&#x6307;&#x76D8;&#x7247;&#x65CB;&#x8F6C;&#x5C06;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x6240;&#x5728;&#x6247;&#x533A;&#x79FB;&#x81F3;&#x8BFB;&#x5199;&#x78C1;&#x5934;&#x4E0B;&#x65B9;&#x6240;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x65CB;&#x8F6C;&#x5EF6;&#x8FDF;&#x53D6;&#x51B3;&#x4E8E;&#x78C1;&#x76D8;&#x8F6C;&#x901F;&#xFF0C;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x78C1;&#x76D8;&#x65CB;&#x8F6C;&#x4E00;&#x5468;&#x6240;&#x9700;&#x65F6;&#x95F4;&#x7684;1/2&#x8868;&#x793A;&#x3002;&#x6BD4;&#x5982;&#xFF0C;7200 rpm&#x7684;&#x78C1;&#x76D8;&#x5E73;&#x5747;&#x65CB;&#x8F6C;&#x5EF6;&#x8FDF;&#x5927;&#x7EA6;&#x4E3A;60*1000/7200/2 = 4.17ms&#xFF0C;&#x800C;&#x8F6C;&#x901F;&#x4E3A;15000 rpm&#x7684;&#x78C1;&#x76D8;&#x5176;&#x5E73;&#x5747;&#x65CB;&#x8F6C;&#x5EF6;&#x8FDF;&#x7EA6;&#x4E3A;2ms&#x3002; </li>
+</ul>
+</li>
+<li>&#x6570;&#x636E;&#x4F20;&#x8F93;&#x65F6;&#x95F4;Ttransfer<ul>
+<li>&#x662F;&#x6307;&#x5B8C;&#x6210;&#x4F20;&#x8F93;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#x6240;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5B83;&#x53D6;&#x51B3;&#x4E8E;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7387;&#xFF0C;&#x5176;&#x503C;&#x7B49;&#x4E8E;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x9664;&#x4EE5;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7387;&#x3002;</li>
+<li>&#x76EE;&#x524D;IDE/ATA&#x80FD;&#x8FBE;&#x5230;133MB/s&#xFF0C;SATA II&#x53EF;&#x8FBE;&#x5230;300MB/s&#x7684;&#x63A5;&#x53E3;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7387;&#xFF0C;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x65F6;&#x95F4;&#x901A;&#x5E38;&#x8FDC;&#x5C0F;&#x4E8E;&#x524D;&#x4E24;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x3002; </li>
+</ul>
+</li>
+</ul>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x78C1;&#x76D8;&#x7684;&#x5E73;&#x5747;&#x6700;&#x5927;IOPS&#xFF0C;&#x5373;IOPS = 1000 ms/ (Tseek + Troatation)&#xFF0C;&#x5FFD;&#x7565;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x65F6;&#x95F4;&#x3002;&#x5047;&#x8BBE;&#x78C1;&#x76D8;&#x5E73;&#x5747;&#x7269;&#x7406;&#x5BFB;&#x9053;&#x65F6;&#x95F4;&#x4E3A;3ms, &#x78C1;&#x76D8;&#x8F6C;&#x901F;&#x4E3A;7200,10K,15K rpm&#xFF0C;&#x5219;&#x78C1;&#x76D8;IOPS&#x7406;&#x8BBA;&#x6700;&#x5927;&#x503C;&#x5206;&#x522B;&#x4E3A;&#xFF0C; 
+IOPS = 1000 / (3 + 60000/7200/2)  = 140 
+IOPS = 1000 / (3 + 60000/10000/2) = 167 
+IOPS = 1000 / (3 + 60000/15000/2) = 200 </p>
+<h3 id="62-iostat-&#x547D;&#x4EE4;">6.2 iostat &#x547D;&#x4EE4;</h3>
+<pre class="language-"><code>[root@nazeebo ~]# iostat -xm 2  --x&#x8868;&#x793A;&#x663E;&#x793A;&#x6269;&#x5C55;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;m&#x8868;&#x793A;&#x4EE5;&#x5146;&#x4E3A;&#x5355;&#x4F4D;&#x663E;&#x793A;&#xFF0C;2&#x8868;&#x793A;&#x6BCF;&#x9694;2&#x79D2;&#x663E;&#x793A;
+Linux 3.10.0-693.2.2.el7.x86_64 (nazeebo)     07/24/2018     _x86_64_    (2 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.08    0.00    0.07    0.01    0.00   99.84
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rMB/s    wMB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util
+vda               0.00     0.07    0.03    0.26     0.00     0.01    70.07     0.02   58.27   41.96   60.14   0.87   0.03
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.25    0.00    0.00   99.75
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rMB/s    wMB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util
+vda               0.00     0.00    0.00    0.00     0.00     0.00     0.00     0.00    0.00    0.00    0.00   0.00   0.00
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.25    0.00    0.00    0.00    0.00   99.75
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rMB/s    wMB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util
+vda               0.00     0.00    0.00    0.00     0.00     0.00     0.00     0.00    0.00    0.00    0.00   0.00   0.00
+</code></pre><h4 id="621-cpu&#x5C5E;&#x6027;&#x8BF4;&#x660E;">6.2.1 CPU&#x5C5E;&#x6027;&#x8BF4;&#x660E;:</h4>
+<ul>
+<li>%user CPU&#x5904;&#x5728;&#x7528;&#x6237;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;</li>
+<li>%nice CPU&#x5904;&#x5728;&#x5E26;NICE&#x503C;&#x7684;&#x7528;&#x6237;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;</li>
+<li>%sys CPU&#x5904;&#x5728;&#x7CFB;&#x7EDF;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;</li>
+<li>%iowait CPU&#x7B49;&#x5F85;IO&#x5B8C;&#x6210;&#x65F6;&#x95F4;&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li>%steal &#x7BA1;&#x7406;&#x7A0B;&#x5E8F;&#x7EF4;&#x62A4;&#x53E6;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x5904;&#x7406;&#x5668;&#x65F6;&#xFF0C;&#x865A;&#x62DF;CPU&#x7684;&#x65E0;&#x610F;&#x7684;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li>%idle &#x95F2;&#x7F6E;cpu&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+</ul>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;%iowait&#x7684;&#x503C;&#x8FC7;&#x9AD8;&#xFF0C;&#x8868;&#x793A;&#x786C;&#x76D8;&#x5B58;&#x5728;I/O&#x74F6;&#x9888;;</li>
+<li>&#x5982;&#x679C;%idle&#x503C;&#x9AD8;&#xFF0C;&#x8868;&#x793A;CPU&#x8F83;&#x7A7A;&#x95F2;&#xFF0C;&#x5982;&#x679C;%idle&#x503C;&#x9AD8;&#x4F46;&#x7CFB;&#x7EDF;&#x54CD;&#x5E94;&#x6162;&#x65F6;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x662F;CPU&#x7B49;&#x5F85;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x6B64;&#x65F6;&#x5E94;&#x52A0;&#x5927;&#x5185;&#x5B58;&#x5BB9;&#x91CF;&#x3002;</li>
+<li>&#x5982;&#x679C;%idle&#x503C;&#x5982;&#x679C; &#x6301;&#x7EED; &#x5F88;&#x4F4E;&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x7684;CPU&#x5904;&#x7406;&#x80FD;&#x529B;&#x76F8;&#x5BF9;&#x8F83;&#x4F4E;&#xFF0C;&#x8868;&#x660E;&#x7CFB;&#x7EDF;&#x4E2D;&#x6700;&#x9700;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x8D44;&#x6E90;&#x662F;CPU&#x3002;</li>
+</ul>
+<h4 id="622-device&#x5C5E;&#x6027;&#x8BF4;&#x660E;">6.2.2 Device&#x5C5E;&#x6027;&#x8BF4;&#x660E;:</h4>
+<ul>
+<li>rrqm/s &#x6BCF;&#x79D2;&#x8FDB;&#x884C; merge &#x7684;&#x8BFB;&#x64CD;&#x4F5C;&#x6570;&#x76EE;</li>
+<li>wrqm/s &#x6BCF;&#x79D2;&#x8FDB;&#x884C; merge &#x7684;&#x5199;&#x64CD;&#x4F5C;&#x6570;&#x76EE;</li>
+<li>r/s &#x6BCF;&#x79D2;&#x5B8C;&#x6210;&#x7684;&#x8BFB; I/O &#x8BBE;&#x5907;&#x6B21;&#x6570;</li>
+<li>w/s &#x6BCF;&#x79D2;&#x5B8C;&#x6210;&#x7684;&#x5199; I/O &#x8BBE;&#x5907;&#x6B21;&#x6570;</li>
+<li>rsec/s &#x6BCF;&#x79D2;&#x8BFB;&#x6247;&#x533A;&#x6570;</li>
+<li>wsec/s &#x6BCF;&#x79D2;&#x5199;&#x6247;&#x533A;&#x6570;</li>
+<li>rkB/s &#x6BCF;&#x79D2;&#x8BFB;K&#x5B57;&#x8282;&#x6570;</li>
+<li>wkB/s &#x6BCF;&#x79D2;&#x5199;K&#x5B57;&#x8282;&#x6570;</li>
+<li>avgrq-sz &#x5E73;&#x5747;&#x6BCF;&#x6B21;&#x8BBE;&#x5907;I/O&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F; (&#x6247;&#x533A;)</li>
+<li>avgqu-sz &#x5E73;&#x5747;I/O&#x961F;&#x5217;&#x957F;&#x5EA6;</li>
+<li>await &#x5E73;&#x5747;&#x6BCF;&#x6B21;&#x8BBE;&#x5907;I/O&#x64CD;&#x4F5C;&#x7684;&#x7B49;&#x5F85;&#x65F6;&#x95F4; (&#x6BEB;&#x79D2;)</li>
+<li>svctm &#x5E73;&#x5747;&#x6BCF;&#x6B21;&#x8BBE;&#x5907;I/O&#x64CD;&#x4F5C;&#x7684;&#x670D;&#x52A1;&#x65F6;&#x95F4; (&#x6BEB;&#x79D2;)</li>
+<li>%util &#x4E00;&#x79D2;&#x4E2D;&#x6709;&#x767E;&#x5206;&#x4E4B;&#x591A;&#x5C11;&#x7684;&#x65F6;&#x95F4;&#x7528;&#x4E8E; I/O &#x64CD;&#x4F5C;&#xFF0C;&#x5373;&#x88AB;io&#x6D88;&#x8017;&#x7684;cpu&#x767E;&#x5206;&#x6BD4;</li>
+</ul>
+<hr>
+<ul>
+<li>rrqm/s &#x548C; wrqm/s<ul>
+<li>Merge &#x5C06;&#x82E5;&#x5E72;&#x4E2A;&#x8FDE;&#x7EED;&#x5730;&#x5740;&#x7684;IO&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x3002;&#x6765;&#x63D0;&#x9AD8;IO&#x7684;&#x6548;&#x7387;</li>
+<li>rrqm/s &#x662F;&#x6BCF;&#x79D2;&#x8BFB;&#xFF08;read&#xFF09;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x6B21;&#x6570;</li>
+<li>wrqm/s &#x662F;&#x6BCF;&#x79D2;&#x5199;&#xFF08;write&#xFF09;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x6B21;&#x6570;</li>
+</ul>
+</li>
+<li>r/s&#x548C;w/s<ul>
+<li>&#x5728; &#x5408;&#x5E76;&#x4E4B;&#x540E;&#xFF08;after merge&#xFF09; IO&#x8BF7;&#x6C42;&#x7684;&#x6B21;&#x6570;</li>
+<li>r/s &#x5408;&#x5E76;&#x4E4B;&#x540E;&#x6BCF;&#x79D2;&#x8BFB;IO&#x7684;&#x6B21;&#x6570;</li>
+<li>w/s &#x5408;&#x5E76;&#x4E4B;&#x540E;&#x6BCF;&#x79D2;&#x5199;IO&#x7684;&#x6B21;&#x6570;</li>
+<li>r/s + w/s = IOPS</li>
+</ul>
+</li>
+<li>rsec/s&#xFF08;rKB/s&#x3001;rMB/s&#xFF09;&#x548C; wsec/s&#xFF08;wKB/s&#x3001;wMB/s&#xFF09;<ul>
+<li>sec &#x662F; Sector&#xFF08;&#x6247;&#x533A;&#xFF09; &#xFF0C;&#x4E3A; 512Byte</li>
+<li>KB &#x548C; MB &#x662F;&#x901A;&#x8FC7;&#x6247;&#x533A;&#x7684; 512Byte &#x8FDB;&#x884C;&#x7684;&#x6362;&#x7B97;</li>
+</ul>
+</li>
+<li>avgrq-sz<ul>
+<li>&#x4E00;&#x5757;&#x78C1;&#x76D8;&#x53EF;&#x80FD;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x540C;&#x65F6;&#x8FD8;&#x5B58;&#x50A8;&#x65E5;&#x5FD7;&#xFF0C;&#x6240;&#x4EE5;&#x8BF7;&#x6C42;&#x7684;IO&#x5927;&#x5C0F;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;</li>
+<li>&#x8BE5;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x5E73;&#x5747;&#x7684;&#x8BF7;&#x6C42;&#x6570;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x8BE5;&#x503C;&#x9700;&#x8981; * 512Byte &#x624D;&#x662F;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x56E0;&#x4E3A;&#x8BE5;&#x503C;&#x662F;&#x4EE5;&#x6247;&#x533A;&#x4E3A;&#x5355;&#x4F4D;&#x7684;</li>
+</ul>
+</li>
+<li>avgqu-sz<ul>
+<li>&#x8BF7;&#x6C42;&#x7684;IO&#x961F;&#x5217;&#x7684;&#x5E73;&#x5747;&#x957F;&#x5EA6; &#xFF08;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#xFF09;</li>
+<li>HDD&#x53EF;&#x80FD;&#x5728;4&#x5DE6;&#x53F3;&#xFF0C;SSD&#x53EF;&#x4EE5;&#x8FBE;&#x5230;30&#x5DE6;&#x53F3;</li>
+</ul>
+</li>
+<li>await&#x3001;r_await&#x3001;w_await<ul>
+<li>IO&#x8BF7;&#x6C42;&#x5E73;&#x5747;&#x7B49;&#x5F85;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x662F;ms</li>
+<li>r_await &#x548C; w_await &#x5206;&#x522B;&#x5BF9;&#x5E94; &#x8BFB;IO&#x8BF7;&#x6C42;&#x7684;&#x7B49;&#x5F85; &#x548C; &#x5199;IO&#x8BF7;&#x6C42;&#x7684;&#x7B49;&#x5F85;</li>
+</ul>
+</li>
+<li>svctm<ul>
+<li>&#x670D;&#x52A1;&#x4E8E;IO&#x8BF7;&#x6C42;&#x7684;&#x5E73;&#x5747;&#x65F6;&#x95F4;</li>
+<li>man&#x6587;&#x6863;&#x4E2D;&#x63D0;&#x793A;&#x4E0D;&#x8981;&#x76F8;&#x4FE1;&#x8BE5;&#x503C;&#xFF0C;&#x4EE5;&#x540E;&#x4F1A;&#x88AB;&#x79FB;&#x9664;</li>
+</ul>
+</li>
+<li>%util<ul>
+<li>&#x78C1;&#x76D8;&#x662F;&#x5426;&#x7A7A;&#x95F2;&#xFF1B;&#x4E0D;&#x80FD;&#x7B80;&#x5355;&#x7684;&#x7B49;&#x540C;&#x4E8E;IO&#x7684;&#x4F7F;&#x7528;&#x7387;&#xFF1B;&#x8BE5;&#x503C;&#x53EF;&#x4EE5;&#x89E3;&#x91CA;&#x4E3A;&#x78C1;&#x76D8;&#x662F;&#x5426;&#x7E41;&#x5FD9;</li>
+<li>&#x5982;&#x679C;&#x8BE5;&#x503C;100% &#x4E0D;&#x80FD;&#x7B80;&#x5355;&#x7684;&#x7B49;&#x540C;&#x4E8E;&#x78C1;&#x76D8;&#x7684;&#x8D1F;&#x8F7D;&#x6EE1;&#x4E86;&#xFF0C;&#x8FBE;&#x5230;&#x4E86;&#x74F6;&#x9888;</li>
+<li>&#x9700;&#x8981;&#x7EFC;&#x5408; avgqu-sz &#x3001; await &#x7B49;&#x5176;&#x4ED6;&#x6307;&#x6807;&#x8FDB;&#x884C;&#x7EFC;&#x5408;&#x5224;&#x65AD;&#x78C1;&#x76D8;&#x662F;&#x5426;&#x8FBE;&#x5230;&#x74F6;&#x9888;</li>
+</ul>
+</li>
+</ul>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C; %util &#x63A5;&#x8FD1; 100%&#xFF0C;&#x8BF4;&#x660E;&#x4EA7;&#x751F;&#x7684;I/O&#x8BF7;&#x6C42;&#x592A;&#x591A;&#xFF0C;I/O&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x6EE1;&#x8D1F;&#x8377;&#xFF0C;&#x8BE5;&#x78C1;&#x76D8;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x74F6;&#x9888;&#x3002;</li>
+<li>&#x5982;&#x679C; svctm &#x6BD4;&#x8F83;&#x63A5;&#x8FD1; await&#xFF0C;&#x8BF4;&#x660E; I/O &#x51E0;&#x4E4E;&#x6CA1;&#x6709;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#xFF1B;</li>
+<li>&#x5982;&#x679C; await &#x8FDC;&#x5927;&#x4E8E; svctm&#xFF0C;&#x8BF4;&#x660E;I/O&#x961F;&#x5217;&#x592A;&#x957F;&#xFF0C;io&#x54CD;&#x5E94;&#x592A;&#x6162;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5FC5;&#x8981;&#x4F18;&#x5316;&#x3002;</li>
+<li>&#x5982;&#x679C;avgqu-sz&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x4E5F;&#x8868;&#x793A;&#x6709;&#x5F53;&#x91CF;io&#x5728;&#x7B49;&#x5F85;&#x3002;</li>
+</ul>
+<h3 id="63-iotop">6.3 iotop</h3>
+<pre class="language-"><code>iotop -u mysql   # -u &#x8868;&#x793A;&#x76D1;&#x63A7;&#x54EA;&#x4E2A;user&#x7684;&#x8FDB;&#x7A0B;
+</code></pre><p>&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x770B;&#x5230;MySQL&#x7684;&#x7EBF;&#x7A0B;ID&#xFF08;Thread ID&#xFF09;
+&#x9700;&#x8981;&#x7ED3;&#x5408; performance_schema.threads&#x8868; &#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x7ED3;&#x5408; iotop -u mysql &#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x67D0;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;io&#x4F7F;&#x7528;&#x60C5;&#x51B5;</p>
+<h4 id="631-thread-id-&#x3001;pid&#x7684;&#x5173;&#x7CFB;&#x67E5;&#x8BE2;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;oracle&#x7684;pid&#x4E8E;sid&#x7684;&#x5173;&#x7CFB;&#xFF09;">6.3.1 thread id &#x3001;pid&#x7684;&#x5173;&#x7CFB;&#x67E5;&#x8BE2;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;Oracle&#x7684;pid&#x4E8E;sid&#x7684;&#x5173;&#x7CFB;&#xFF09;</h4>
+<pre class="language-"><code>mysql&gt;  use performance_schema;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql&gt; desc threads;
++---------------------+---------------------+------+-----+---------+-------+
+| Field               | Type                | Null | Key | Default | Extra |
++---------------------+---------------------+------+-----+---------+-------+
+| THREAD_ID           | bigint(20) unsigned | NO   |     | NULL    |       | -- MySQL&#x5185;&#x90E8;&#x7EBF;&#x7A0B;ID
+| NAME                | varchar(128)        | NO   |     | NULL    |       |
+| TYPE                | varchar(10)         | NO   |     | NULL    |       |
+| PROCESSLIST_ID      | bigint(20) unsigned | YES  |     | NULL    |       |
+| PROCESSLIST_USER    | varchar(32)         | YES  |     | NULL    |       |
+| PROCESSLIST_HOST    | varchar(60)         | YES  |     | NULL    |       |
+| PROCESSLIST_DB      | varchar(64)         | YES  |     | NULL    |       |
+| PROCESSLIST_COMMAND | varchar(16)         | YES  |     | NULL    |       |
+| PROCESSLIST_TIME    | bigint(20)          | YES  |     | NULL    |       |
+| PROCESSLIST_STATE   | varchar(64)         | YES  |     | NULL    |       |
+| PROCESSLIST_INFO    | longtext            | YES  |     | NULL    |       |
+| PARENT_THREAD_ID    | bigint(20) unsigned | YES  |     | NULL    |       |
+| ROLE                | varchar(64)         | YES  |     | NULL    |       |
+| INSTRUMENTED        | enum(&apos;YES&apos;,&apos;NO&apos;)    | NO   |     | NULL    |       |
+| HISTORY             | enum(&apos;YES&apos;,&apos;NO&apos;)    | NO   |     | NULL    |       |
+| CONNECTION_TYPE     | varchar(16)         | YES  |     | NULL    |       |
+| THREAD_OS_ID        | bigint(20) unsigned | YES  |     | NULL    |       | -- &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x7EBF;&#x7A0B;ID
++---------------------+---------------------+------+-----+---------+-------+
+17 rows in set (0.00 sec)
+
+--thread_id&#xFF0C;thread_os_id&#xFF0C;processid
+mysql&gt; select name,type,thread_id,thread_os_id,processlist_id from threads;
++----------------------------------------+------------+-----------+--------------+----------------+
+| name                                   | type       | thread_id | thread_os_id | processlist_id |
++----------------------------------------+------------+-----------+--------------+----------------+
+| thread/sql/main                        | BACKGROUND |         1 |         8947 |           NULL |
+| thread/sql/thread_timer_notifier       | BACKGROUND |         2 |         8948 |           NULL |
+| thread/innodb/io_ibuf_thread           | BACKGROUND |         3 |         8951 |           NULL |
+| thread/innodb/io_log_thread            | BACKGROUND |         4 |         8952 |           NULL |
+| thread/innodb/io_read_thread           | BACKGROUND |         5 |         8953 |           NULL |
+| thread/innodb/io_read_thread           | BACKGROUND |         6 |         8954 |           NULL |
+| thread/innodb/io_read_thread           | BACKGROUND |         7 |         8955 |           NULL |
+| thread/innodb/io_read_thread           | BACKGROUND |         8 |         8956 |           NULL |
+| thread/innodb/io_write_thread          | BACKGROUND |         9 |         8957 |           NULL |
+| thread/innodb/io_write_thread          | BACKGROUND |        10 |         8958 |           NULL |
+| thread/innodb/io_write_thread          | BACKGROUND |        11 |         8959 |           NULL |
+| thread/innodb/io_write_thread          | BACKGROUND |        12 |         8960 |           NULL |
+| thread/innodb/page_cleaner_thread      | BACKGROUND |        13 |         8961 |           NULL |
+| thread/innodb/srv_lock_timeout_thread  | BACKGROUND |        15 |         8968 |           NULL |
+| thread/innodb/srv_error_monitor_thread | BACKGROUND |        16 |         8969 |           NULL |
+| thread/innodb/srv_monitor_thread       | BACKGROUND |        17 |         8970 |           NULL |
+| thread/innodb/srv_master_thread        | BACKGROUND |        18 |         8971 |           NULL |
+| thread/innodb/srv_purge_thread         | BACKGROUND |        19 |         8972 |           NULL |
+| thread/innodb/srv_worker_thread        | BACKGROUND |        20 |         8973 |           NULL |
+| thread/innodb/srv_worker_thread        | BACKGROUND |        21 |         8974 |           NULL |
+| thread/innodb/srv_worker_thread        | BACKGROUND |        22 |         8975 |           NULL |
+| thread/innodb/buf_dump_thread          | BACKGROUND |        23 |         8976 |           NULL |
+| thread/innodb/dict_stats_thread        | BACKGROUND |        24 |         8977 |           NULL |
+| thread/semisync/Ack_receiver           | BACKGROUND |        25 |         8980 |           NULL |
+| thread/sql/signal_handler              | BACKGROUND |        26 |         8987 |           NULL |
+| thread/sql/compress_gtid_table         | FOREGROUND |        27 |         8988 |              1 |
+| thread/sql/one_connection              | FOREGROUND |       142 |         9019 |            116 |  -- FOREGROUND&#x524D;&#x53F0;&#x7EBF;&#x7A0B;
++----------------------------------------+------------+-----------+--------------+----------------+
+27 rows in set (0.00 sec)
+
+--processid
+mysql&gt; show processlist;
++-----+------+-----------+--------------------+---------+------+----------+------------------+
+| Id  | User | Host      | db                 | Command | Time | State    | Info             |
++-----+------+-----------+--------------------+---------+------+----------+------------------+
+| 116 | root | localhost | performance_schema | Query   |    0 | starting | show processlist |
++-----+------+-----------+--------------------+---------+------+----------+------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; select connection_id();
++-----------------+
+| connection_id() |
++-----------------+
+|             116 |
++-----------------+
+1 row in set (0.00 sec)
+</code></pre><p>&#x901A;&#x8FC7; threads&#x8868; &#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x7ED3;&#x5408; iotop -u mysql &#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x67D0;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;io&#x4F7F;&#x7528;&#x60C5;&#x51B5;</p>
+<h4 id="632-innodbflushmethod&#x53C2;&#x6570;">6.3.2 innodb_flush_method&#x53C2;&#x6570;</h4>
+<pre class="language-"><code>mysql&gt; show variables like &apos;%innodb_flush_method%&apos;;
++---------------------+----------+
+| Variable_name       | Value    |
++---------------------+----------+
+| innodb_flush_method | O_DIRECT |
++---------------------+----------+
+1 row in set (0.00 sec)
+</code></pre><ul>
+<li>fwrite / fsync<ul>
+<li>fwrite &#x662F;&#x628A;&#x6570;&#x636E;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5C42;&#xFF08;Filesystem&#xFF09;&#xFF08;&#x53EF;&#x80FD;&#x6709;cache&#xFF09;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5199;&#x5165;Disk</li>
+<li>fsync &#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x628A;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;Disk&#xFF08;&#x6570;&#x636E;&#x843D;&#x76D8;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<p>&#x53EA;&#x901A;&#x8FC7; fwrite &#x5199;&#x5165;&#x6570;&#x636E;&#x7279;&#x522B;&#x5FEB;&#xFF08;&#x56E0;&#x4E3A;&#x6709;&#x7F13;&#x5B58;&#xFF09;&#xFF0C;&#x4F46;&#x968F;&#x540E;&#x8C03;&#x7528; fsync &#x5C31;&#x4F1A;&#x5F88;&#x6162;&#xFF0C;&#x8FD9;&#x4E2A;&#x901F;&#x5EA6;&#x53D6;&#x51B3;&#x4E8E;&#x78C1;&#x76D8;&#x7684; IOPS
+&#x5982;&#x679C;&#x4E0D;&#x624B;&#x5DE5;&#x6267;&#x884C; fysnc &#xFF0C;&#x5F53;Filesystem&#x7684; cache &#x5C0F;&#x4E8E; 10% &#x65F6;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x624D;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x5237;&#x5165;&#x78C1;&#x76D8;&#x3002;&#x6240;&#x4EE5;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x6570;&#x636E;&#x4E22;&#x5931;&#x7684;&#x98CE;&#x9669;&#xFF0C;&#x6BD4;&#x5982;&#x6389;&#x7535;
+<img src="images/screenshot_1532412291300.png" alt="">
+O_DIRECT &#x7684;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x662F;&#x544A;&#x8BC9;&#x7CFB;&#x7EDF; &#x76F4;&#x63A5;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x78C1;&#x76D8; &#xFF0C;&#x8DF3;&#x8FC7;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x7F13;&#x5B58;&#x3002;&#x7B49;&#x540C;&#x4E8E;&#x4F7F;&#x7528; &#x88F8;&#x8BBE;&#x5907; &#x7684;&#x6548;&#x679C;</p>
+<h2 id="7&#x63D0;&#x5347;iops&#x6027;&#x80FD;&#x7684;&#x624B;&#x6BB5;">7.&#x63D0;&#x5347;IOPS&#x6027;&#x80FD;&#x7684;&#x624B;&#x6BB5;</h2>
+<ul>
+<li>&#x901A;&#x8FC7; RAID &#x6280;&#x672F;<ul>
+<li>&#x529F;&#x8017;&#x8F83;&#x9AD8;</li>
+<li>IOPS&#x5728;2000&#x5DE6;&#x53F3;</li>
+</ul>
+</li>
+<li>&#x901A;&#x8FC7;&#x8D2D;&#x4E70;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x8BBE;&#x5907;<ul>
+<li>&#x4EF7;&#x683C;&#x975E;&#x5E38;&#x6602;&#x8D35;</li>
+<li>&#x4F46;&#x662F;&#x6BD4;&#x8F83;&#x7A33;&#x5B9A;</li>
+<li>&#x5E95;&#x5C42;&#x8FD8;&#x662F;&#x901A;&#x8FC7;RAID&#x5B9E;&#x73B0;</li>
+</ul>
+</li>
+<li>&#x76F4;&#x63A5;&#x4F7F;&#x7528;SSD<ul>
+<li>&#x6027;&#x80FD;&#x8F83;&#x597D;&#x7684;SSD&#x53EF;&#x4EE5;&#x8FBE;&#x5230; &#x4E07;&#x7EA7;&#x522B;&#x7684;IOPS</li>
+<li>&#x5EFA;&#x8BAE;&#x53EF;&#x4EE5;&#x7528;SSD + RAID5&#xFF0C;RAID1+0&#x592A;&#x5962;&#x4F88;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>SSD&#x7684;IOPS&#x503C;&#x8BA1;&#x7B97;
+SSD&#x907F;&#x514D;&#x4E86;&#x4F20;&#x7EDF;&#x78C1;&#x76D8;&#x5728;&#x5BFB;&#x9053;&#x548C;&#x65CB;&#x8F6C;&#x4E0A;&#x7684;&#x65F6;&#x95F4;&#x82B1;&#x8D39;&#xFF0C;&#x5B58;&#x50A8;&#x5355;&#x5143;&#x5BFB;&#x5740;&#x5F00;&#x9500;&#x5927;&#x5927;&#x964D;&#x4F4E;&#xFF0C;&#x56E0;&#x6B64;IOPS&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x9AD8;&#xFF0C;&#x80FD;&#x591F;&#x8FBE;&#x5230;&#x6570;&#x4E07;&#x751A;&#x81F3;&#x6570;&#x5341;&#x4E07;&#x3002;&#x5B9E;&#x9645;&#x6D4B;&#x91CF;&#x4E2D;&#xFF0C;IOPS&#x6570;&#x503C;&#x4F1A;&#x53D7;&#x5230;&#x5F88;&#x591A;&#x56E0;&#x7D20;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x5305;&#x62EC;I/O&#x8D1F;&#x8F7D;&#x7279;&#x5F81;(&#x8BFB;&#x5199;&#x6BD4;&#x4F8B;&#xFF0C;&#x987A;&#x5E8F;&#x548C;&#x968F;&#x673A;&#xFF0C;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x6570;&#xFF0C;&#x961F;&#x5217;&#x6DF1;&#x5EA6;&#xFF0C;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x5927;&#x5C0F;)&#x3001;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x3001;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3001;&#x78C1;&#x76D8;&#x9A71;&#x52A8;&#x7B49;&#x7B49;&#x3002; 
+&#x56E0;&#x6B64;&#x5BF9;&#x6BD4;&#x6D4B;&#x91CF;&#x78C1;&#x76D8;IOPS&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x540C;&#x6837;&#x7684;&#x6D4B;&#x8BD5;&#x57FA;&#x51C6;&#x4E0B;&#x8FDB;&#x884C;&#xFF0C;&#x5373;&#x4FBF;&#x5982;&#x4F55;&#x4E5F;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x5B9A;&#x7684;&#x968F;&#x673A;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;IOPS&#x53EF;&#x7EC6;&#x5206;&#x4E3A;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x6307;&#x6807;&#xFF1A; </p>
+<ul>
+<li>Toatal IOPS&#xFF0C;&#x6DF7;&#x5408;&#x8BFB;&#x5199;&#x548C;&#x987A;&#x5E8F;&#x968F;&#x673A;I/O&#x8D1F;&#x8F7D;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x78C1;&#x76D8;IOPS&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0E;&#x5B9E;&#x9645;I/O&#x60C5;&#x51B5;&#x6700;&#x4E3A;&#x76F8;&#x7B26;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x5E94;&#x7528;&#x5173;&#x6CE8;&#x6B64;&#x6307;&#x6807;&#x3002; </li>
+<li>Random Read IOPS&#xFF0C;100%&#x968F;&#x673A;&#x8BFB;&#x8D1F;&#x8F7D;&#x60C5;&#x51B5;&#x4E0B;&#x7684;IOPS&#x3002; </li>
+<li>Random Write IOPS&#xFF0C;100%&#x968F;&#x673A;&#x5199;&#x8D1F;&#x8F7D;&#x60C5;&#x51B5;&#x4E0B;&#x7684;IOPS&#x3002; </li>
+<li>Sequential Read IOPS&#xFF0C;100%&#x987A;&#x5E8F;&#x8D1F;&#x8F7D;&#x8BFB;&#x60C5;&#x51B5;&#x4E0B;&#x7684;IOPS&#x3002; </li>
+<li>Sequential Write IOPS&#xFF0C;100%&#x987A;&#x5E8F;&#x5199;&#x8D1F;&#x8F7D;&#x60C5;&#x51B5;&#x4E0B;&#x7684;IOPS&#x3002; </li>
+</ul>
+<p>IOPS&#x7684;&#x6D4B;&#x8BD5;benchmark&#x5DE5;&#x5177;&#x4E3B;&#x8981;&#x6709;Iometer, IoZone, FIO&#x7B49;&#xFF0C;&#x53EF;&#x4EE5;&#x7EFC;&#x5408;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x78C1;&#x76D8;&#x5728;&#x4E0D;&#x540C;&#x60C5;&#x5F62;&#x4E0B;&#x7684;IOPS&#x3002;&#x5BF9;&#x4E8E;&#x5E94;&#x7528;&#x7CFB;&#x7EDF;&#xFF0C;&#x9700;&#x8981;&#x9996;&#x5148;&#x786E;&#x5B9A;&#x6570;&#x636E;&#x7684;&#x8D1F;&#x8F7D;&#x7279;&#x5F81;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;&#x5408;&#x7406;&#x7684;IOPS&#x6307;&#x6807;&#x8FDB;&#x884C;&#x6D4B;&#x91CF;&#x548C;&#x5BF9;&#x6BD4;&#x5206;&#x6790;&#xFF0C;&#x636E;&#x6B64;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x5B58;&#x50A8;&#x4ECB;&#x8D28;&#x548C;&#x8F6F;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x78C1;&#x76D8;IOPS&#x6570;&#x636E;&#x6765;&#x81EA;<a href="http://en.wikipedia.org/wiki/IOPS" target="_blank">http://en.wikipedia.org/wiki/IOPS</a> [1]&#xFF0C;&#x4F9B;&#x57FA;&#x672C;&#x53C2;&#x8003;&#x3002;</p>
+<h1 id="&#x4E8C;&#x3001;sysbench">&#x4E8C;&#x3001;sysbench</h1>
+<h2 id="1&#x57FA;&#x672C;&#x4ECB;&#x7ECD;">1.&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</h2>
+<p>&#x7B80;&#x5355;&#x9AD8;&#x6548;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</p>
+<ul>
+<li>Oracle&#x5B98;&#x65B9;&#x4E5F;&#x4F7F;&#x7528;&#x8BE5;&#x5DE5;&#x5177;&#x5BF9;MySQL&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</li>
+<li>&#x6839;&#x636E;&#x4E92;&#x8054;&#x7F51;&#x5E94;&#x7528;&#x7279;&#x70B9;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</li>
+<li>&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x67D0;&#x4E2A;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</li>
+<li>&#x6700;&#x65B0;&#x7248;&#x672C;1.1</li>
+<li><a href="https://github.com/akopytov/sysbench" target="_blank">https://github.com/akopytov/sysbench</a></li>
+<li>&#x8FD8;&#x652F;&#x6301;Oracle&#x3001;PostgreSQL&#x7684;&#x6D4B;&#x8BD5;</li>
+</ul>
+<p>&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<ol>
+<li>cpu&#x6027;&#x80FD;</li>
+<li>&#x78C1;&#x76D8;io&#x6027;&#x80FD;</li>
+<li>&#x8C03;&#x5EA6;&#x7A0B;&#x5E8F;&#x6027;&#x80FD;</li>
+<li>&#x5185;&#x5B58;&#x5206;&#x914D;&#x53CA;&#x4F20;&#x8F93;&#x901F;&#x5EA6;</li>
+<li>POSIX&#x7EBF;&#x7A0B;&#x6027;&#x80FD;</li>
+<li>&#x6570;&#x636E;&#x5E93;&#x6027;&#x80FD;(OLTP&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;)</li>
+</ol>
+<h2 id="2sysbench&#x6D4B;&#x8BD5;&#x6846;&#x67B6;">2.sysbench&#x6D4B;&#x8BD5;&#x6846;&#x67B6;</h2>
+<p><img src="images/screenshot_1531934958464.png" alt="">
+&#x5E38;&#x7528;&#x6D4B;&#x8BD5;&#x811A;&#x672C;&#xFF1A;</p>
+<ul>
+<li>oltp.lua &#x2013; &#x8BFB;&#x5199;&#x6DF7;&#x5408;&#x6D4B;&#x8BD5;</li>
+<li>select.lua &#x2013; &#x8BFB;&#x7684;&#x6D4B;&#x8BD5;</li>
+<li>update_index.lua &#x2013; &#x66F4;&#x65B0;&#x7D22;&#x5F15;&#x9875;&#x6D4B;&#x8BD5;</li>
+<li>update_non_index.lua &#x2013; &#x66F4;&#x65B0;&#x975E;&#x7D22;&#x5F15;&#x9875;&#x6D4B;&#x8BD5;</li>
+<li>insert.lua &#x2013; &#x63D2;&#x5165;&#x6D4B;&#x8BD5;</li>
+<li>delete.lua &#x2013; &#x5220;&#x9664;&#x6D4B;&#x8BD5;</li>
+</ul>
+<h2 id="3sysbench&#x7684;&#x5B89;&#x88C5;">3.sysbench&#x7684;&#x5B89;&#x88C5;</h2>
+<h3 id="31-&#x4E0B;&#x8F7D;sysbench">3.1 &#x4E0B;&#x8F7D;sysbench</h3>
+<pre class="language-"><code>git clone  https://github.com/akopytov/sysbench.git
+</code></pre><h3 id="32-&#x8FDB;&#x5165;&#x76EE;&#x5F55;&#xFF0C;&#x751F;&#x6210;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">3.2 &#x8FDB;&#x5165;&#x76EE;&#x5F55;&#xFF0C;&#x751F;&#x6210;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<pre class="language-"><code>cd sysbench
+./autogen.sh
+</code></pre><p>&#x5728;&#x8FD9;&#x513F;&#x6709;&#x4E2A;&#x5C0F;&#x63D2;&#x66F2;&#xFF0C;&#x6267;&#x884C;autogen.sh&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;</p>
+<pre class="language-"><code>[root@nazeebo sysbench]# ./autogen.sh 
+autoreconf: Entering directory `.&apos;
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal -I m4 --output=aclocal.m4t
+Can&apos;t exec &quot;aclocal&quot;: No such file or directory at /usr/share/autoconf/Autom4te/FileUtils.pm line 326.
+autoreconf: failed to run aclocal: No such file or directory
+</code></pre><p>autogen.sh&#x811A;&#x672C;&#x4F9D;&#x8D56;&#x4E8E;autoreconf&#x6765;&#x8C03;&#x7528;autoconf&#xFF0C;automake&#xFF0C;aclocal&#x548C;&#x5176;&#x5B83;&#x76F8;&#x5173;&#x5DE5;&#x5177;
+&#x6240;&#x4EE5;&#x4E0A;&#x8FF0;&#x7684;&#x62A5;&#x9519;&#x53EA;&#x9700;&#x8981; &#x5B89;&#x88C5;&#x76F8;&#x5E94;&#x7684;rpm&#x5305;&#x65E2;&#x53EF;</p>
+<pre class="language-"><code>[root@nazeebo sysbench]# 
+[root@nazeebo sysbench]# ./autogen.sh 
+autoreconf: Entering directory `.&apos;
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal -I m4
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: running: /usr/bin/autoconf
+configure.ac:61: error: possibly undefined macro: AC_PROG_LIBTOOL
+      If this token and others are legitimate, please use m4_pattern_allow.
+      See the Autoconf documentation.
+autoreconf: /usr/bin/autoconf failed with exit status: 1
+
+[root@nazeebo sysbench]# yum install libtool libsysfs-devel
+</code></pre><p>&#x5B89;&#x88C5;&#x4E86;automake&#xFF0C;libtool libsysfs-devel&#x540E;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x7684;&#x6267;&#x884C;&#x4E86;</p>
+<pre class="language-"><code>
+[root@nazeebo sysbench]# ./autogen.sh 
+autoreconf: Entering directory `.&apos;
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, `config&apos;.
+libtoolize: copying file `config/ltmain.sh&apos;
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4&apos;.
+libtoolize: copying file `m4/libtool.m4&apos;
+libtoolize: copying file `m4/ltoptions.m4&apos;
+libtoolize: copying file `m4/ltsugar.m4&apos;
+libtoolize: copying file `m4/ltversion.m4&apos;
+libtoolize: copying file `m4/lt~obsolete.m4&apos;
+autoreconf: running: /usr/bin/autoconf
+autoreconf: running: /usr/bin/autoheader
+autoreconf: running: automake --add-missing --copy --no-force
+configure.ac:59: installing &apos;config/ar-lib&apos;
+configure.ac:45: installing &apos;config/compile&apos;
+configure.ac:27: installing &apos;config/config.guess&apos;
+configure.ac:27: installing &apos;config/config.sub&apos;
+configure.ac:32: installing &apos;config/install-sh&apos;
+configure.ac:32: installing &apos;config/missing&apos;
+src/Makefile.am: installing &apos;config/depcomp&apos;
+parallel-tests: installing &apos;config/test-driver&apos;
+autoreconf: Leaving directory `.&apos;
+</code></pre><h3 id="33-&#x5173;&#x8054;mysql&#x7684;&#x5934;&#x6587;&#x4EF6;&#x548C;&#x5E93;">3.3 &#x5173;&#x8054;mysql&#x7684;&#x5934;&#x6587;&#x4EF6;&#x548C;&#x5E93;</h3>
+<pre class="language-"><code>[root@nazeebo sysbench]# ./configure --with-mysql-includes=/usr/local/mysql/include/ --with-mysql-libs=/usr/local/mysql/lib/ 
+...
+===============================================================================
+sysbench version   : 1.1.0-7c366c6
+CC                 : gcc -std=gnu99
+CFLAGS             : -O3 -funroll-loops -ggdb3  -march=core2 -Wall -Wextra -Wpointer-arith -Wbad-function-cast -Wstrict-prototypes -Wnested-externs -Wno-format-zero-length -Wundef -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wcast-align   -pthread
+CPPFLAGS           : -D_GNU_SOURCE   -I$(top_srcdir)/src -I$(abs_top_builddir)/third_party/luajit/inc -I$(abs_top_builddir)/third_party/concurrency_kit/include
+LDFLAGS            : -L/usr/local/lib 
+LIBS               : -lm 
+
+prefix             : /usr/local
+bindir             : ${prefix}/bin
+libexecdir         : ${prefix}/libexec
+mandir             : ${prefix}/share/man
+datadir            : ${prefix}/share
+
+MySQL support      : yes
+PostgreSQL support : no
+
+LuaJIT             : bundled
+LUAJIT_CFLAGS      : -I$(abs_top_builddir)/third_party/luajit/inc
+LUAJIT_LIBS        : $(abs_top_builddir)/third_party/luajit/lib/libluajit-5.1.a -ldl
+LUAJIT_LDFLAGS     : -rdynamic
+
+Concurrency Kit    : bundled
+CK_CFLAGS          : -I$(abs_top_builddir)/third_party/concurrency_kit/include
+CK_LIBS            : $(abs_top_builddir)/third_party/concurrency_kit/lib/libck.a
+configure flags    : 
+===============================================================================
+</code></pre><h3 id="34-&#x5E38;&#x89C4;&#x6027;&#x7684;make--make-install">3.4 &#x5E38;&#x89C4;&#x6027;&#x7684;make &amp;&amp; make install</h3>
+<pre class="language-"><code>[root@nazeebo sysbench]#  make  #make -j 2 &#xFF0C;&#x5176;&#x4E2D;2&#x8868;&#x793A;&#x7528;&#x51E0;&#x4E2A;cpu&#x6838;&#x5FC3;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;
+[root@nazeebo sysbench]#  make install
+</code></pre><h3 id="35-&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x67E5;&#x770B;&#x7248;&#x672C;">3.5 &#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x67E5;&#x770B;&#x7248;&#x672C;</h3>
+<pre class="language-"><code>[root@nazeebo sysbench]#  echo &quot;export LD_LIBRARY_PATH=/usr/local/mysql/lib/:$LD_LIBRARY_PATH&quot; &gt;&gt; ~/.bashrc 
+[root@nazeebo sysbench]# source ~/.bashrc 
+[root@nazeebo sysbench]# sysbench --version
+sysbench 1.1.0-7c366c6
+</code></pre><h2 id="4sysbench&#x7684;&#x4F7F;&#x7528;">4.sysbench&#x7684;&#x4F7F;&#x7528;</h2>
+<h3 id="41-sysbench&#x9009;&#x9879;&#x8BF4;&#x660E;">4.1 sysbench&#x9009;&#x9879;&#x8BF4;&#x660E;</h3>
+<pre class="language-"><code>--oltp-test-mode=STRING                    &#x6D4B;&#x8BD5;&#x7C7B;&#x578B;&#xFF1A;simple(&#x7B80;&#x5355;select&#x6D4B;&#x8BD5;),complex(&#x4E8B;&#x52A1;&#x6D4B;&#x8BD5;),nontrx(&#x975E;&#x4E8B;&#x52A1;&#x6D4B;&#x8BD5;),sp(&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;) &#xFF1B;&#x9ED8;&#x8BA4;complex
+  --oltp-reconnect-mode=STRING             &#x8FDE;&#x63A5;&#x7C7B;&#x578B;&#xFF1A;session(&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x5230;&#x6D4B;&#x8BD5;&#x7ED3;&#x675F;&#x4E0D;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;),transaction(&#x6267;&#x884C;&#x6BCF;&#x4E2A;&#x4E8B;&#x52A1;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;),query(&#x6BCF;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;),random(&#x968F;&#x673A;)&#xFF1B;&#x9ED8;&#x8BA4; [session]
+  --oltp-sp-name=STRING                    &#x6307;&#x5B9A;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;
+  --oltp-read-only=[on|off]                &#x4EC5;&#x6267;&#x884C;select&#x6D4B;&#x8BD5;&#xFF0C;&#x9ED8;&#x8BA4;&#x5173;&#x95ED;
+  --oltp-avoid-deadlocks=[on|off]          &#x66F4;&#x65B0;&#x8FC7;&#x7A0B;&#x4E2D;&#x5FFD;&#x7565;&#x6B7B;&#x9501;&#xFF0C;&#x9ED8;&#x8BA4;[off]
+  --oltp-skip-trx=[on|off]                 &#x8BED;&#x53E5;&#x4EE5;bigin/commit&#x5F00;&#x59CB;&#x7ED3;&#x5C3E;&#xFF0C;&#x9ED8;&#x8BA4;[off]
+  --oltp-range-size=N                      &#x8303;&#x56F4;&#x67E5;&#x8BE2;&#x7684;&#x8303;&#x56F4;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4; [100]&#xFF0C;&#x4F8B;&#x5982;begin 100 and 200
+  --oltp-point-selects=N                   &#x5355;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;select&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4; [10]
+  --oltp-use-in-statement=N                &#x6BCF;&#x4E2A;&#x67E5;&#x8BE2;&#x4E2D;&#x4E3B;&#x952E;&#x67E5;&#x627E;(in 10&#x4E2A;&#x503C;)&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4; [0]
+  --oltp-simple-ranges=N                   &#x5355;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x6267;&#x884C;&#x8303;&#x56F4;&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x91CF;(SELECT c  FROM sbtest WHERE id BETWEEN  N AND  M)&#xFF0C;&#x9ED8;&#x8BA4;[1]
+  --oltp-sum-ranges=N                      &#x5355;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x6267;&#x884C;&#x8303;&#x56F4;sum&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4; [1]
+  --oltp-order-ranges=N                    &#x5355;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x6267;&#x884C;&#x8303;&#x56F4;order by&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;[1]
+  --oltp-distinct-ranges=N                 &#x5355;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x6267;&#x884C;&#x8303;&#x56F4;distinct&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;[1]
+  --oltp-index-updates=N                   &#x5355;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x6267;&#x884C;&#x7D22;&#x5F15;&#x66F4;&#x65B0;&#x7684;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;[1]
+  --oltp-non-index-updates=N               &#x5355;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x6267;&#x884C;&#x975E;&#x7D22;&#x5F15;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;[1]
+  --oltp-nontrx-mode=STRING                &#x6307;&#x5B9A;&#x5355;&#x72EC;&#x975E;&#x4E8B;&#x52A1;&#x6D4B;&#x8BD5;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x9ED8;&#x8BA4;select {select, update_key, update_nokey, insert, delete} [select]
+  --oltp-auto-inc=[on|off]                 id&#x5217;&#x9ED8;&#x8BA4;&#x81EA;&#x589E;&#xFF0C;&#x9ED8;&#x8BA4;[on]
+  --oltp-connect-delay=N                   &#x6307;&#x5B9A;&#x6BCF;&#x4E00;&#x6B21;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x5EF6;&#x65F6;&#x7684;&#x65F6;&#x957F;&#xFF0C;&#x9ED8;&#x8BA4;1&#x79D2; [10000]
+  --oltp-user-delay-min=N                  minimum time in microseconds to sleep after each request [0]
+  --oltp-user-delay-max=N                  maximum time in microseconds to sleep after each request [0]
+  --oltp-table-name=STRING                 &#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x7684;&#x8868;&#x540D;&#xFF0C;&#x9ED8;&#x8BA4;[sbtest]
+  --oltp-table-size=N                      &#x6307;&#x5B9A;&#x8868;&#x7684;&#x8BB0;&#x5F55;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;[10000]
+  --oltp-dist-type=STRING                  &#x968F;&#x673A;&#x6570;&#x5206;&#x5E03;&#x72B6;&#x6001;&#x3002;uniform(&#x5747;&#x5300;&#x5206;&#x5E03;)&#x3001;gauss(&#x9AD8;&#x65AF;&#x5206;&#x5E03;)&#x3001;special(&#x7279;&#x6B8A;&#x5206;&#x5E03;)&#xFF0C;&#x9ED8;&#x8BA4; [special]
+  --oltp-dist-iter=N                       number of iterations used for numbers generation [12]
+  --oltp-dist-pct=N                        &#x542F;&#x7528;&#x767E;&#x5206;&#x6BD4;&#x7279;&#x6B8A;&#x5206;&#x5E03;&#xFF0C;&#x9ED8;&#x8BA4; [1]
+  --oltp-dist-res=N                        special &#x767E;&#x5206;&#x6BD4;[75]
+  --oltp-point-select-mysql-handler=[on|off] Use MySQL HANDLER for point select [off]
+  --oltp-point-select-all-cols=[on|off]    select&#x67E5;&#x8BE2;&#x6D4B;&#x8BD5;&#x65F6;select&#x6240;&#x6709;&#x5217;&#xFF0C;&#x9ED8;&#x8BA4;[off]
+  --oltp-secondary=[on|off]                &#x7D22;&#x5F15;&#x4E0D;&#x662F;&#x4E3B;&#x952E;&#x7D22;&#x5F15;&#x800C;&#x662F;&#x4E8C;&#x7EA7;&#x7D22;&#x5F15;&#xFF0C;&#x9ED8;&#x8BA4;[off]
+  --oltp-num-partitions=N                  &#x6307;&#x5B9A;&#x8868;&#x5206;&#x533A;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4; [0]
+  --oltp-num-tables=N                      &#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x8868;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;[1]
+General database options:
+  --db-driver=STRING  &#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;mysql
+  --db-ps-mode=STRING prepared statements usage mode {auto, disable} [auto]
+
+mysql options:
+  --mysql-host=[LIST,...]       MySQL server host [localhost]
+  --mysql-port=N                MySQL server port [3306]
+  --mysql-socket=STRING         MySQL socket
+  --mysql-user=STRING           MySQL user [sbtest]
+  --mysql-password=STRING       MySQL password []
+  --mysql-db=STRING             MySQL database name [sbtest]
+  --mysql-table-engine=STRING   storage engine to use for the test table {myisam,innodb,bdb,heap,ndbcluster,federated} [innodb]
+  --mysql-engine-trx=STRING     whether storage engine used is transactional or not {yes,no,auto} [auto]
+  --mysql-ssl=[on|off]          use SSL connections, if available in the client library [off]
+  --myisam-max-rows=N           max-rows parameter for MyISAM tables [1000000]
+  --mysql-create-options=STRING additional options passed to CREATE TABLE []
+</code></pre><p>oltp&#x6D4B;&#x8BD5;&#x4E3B;&#x8981;&#x4F1A;&#x6709;&#x4EE5;&#x4E0B;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x7684;&#x6D4B;&#x8BD5;,,&#x5176;&#x5B83;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x5373;&#x53EF;&#xFF0C;&#x6709;&#x9700;&#x6C42;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre class="language-"><code>--mysql-engine-trx=STRING     &#x6307;&#x5B9A;&#x4E0D;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x6D4B;&#x8BD5;&#x3002;
+--oltp-test-mode=STRING       &#x6D4B;&#x8BD5;&#x7C7B;&#x578B;&#xFF1A;simple(&#x7B80;&#x5355;select&#x6D4B;&#x8BD5;),complex(&#x4E8B;&#x52A1;&#x6D4B;&#x8BD5;),nontrx(&#x975E;&#x4E8B;&#x52A1;&#x6D4B;&#x8BD5;),sp(&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;) &#xFF1B;&#x9ED8;&#x8BA4;complex
+--oltp-sp-name=STRING         &#x6307;&#x5B9A;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x8FDB;&#x884C;&#x8BED;&#x53E5;&#x6D4B;&#x8BD5;
+--oltp-table-size=N           &#x6307;&#x5B9A;&#x8868;&#x7684;&#x8BB0;&#x5F55;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;[10000]
+--oltp-num-tables=N           &#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x8868;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;[1]
+</code></pre><h3 id="42-cpu&#x6027;&#x80FD;&#x6D4B;&#x8BD5;">4.2 cpu&#x6027;&#x80FD;&#x6D4B;&#x8BD5;</h3>
+<p>cpu&#x6D4B;&#x8BD5;&#x4E3B;&#x8981;&#x662F;&#x8FDB;&#x884C;&#x7D20;&#x6570;&#x7684;&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6307;&#x5B9A;&#x4E86;&#x6700;&#x5927;&#x7684;&#x7D20;&#x6570;&#x4E3A; 50000&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x673A;&#x5668;cpu&#x7684;&#x6027;&#x80FD;&#x6765;&#x9002;&#x5F53;&#x8C03;&#x6574;&#x6570;&#x503C;&#x3002;</p>
+<pre class="language-"><code>[root@nazeebo bin]# sysbench --test=cpu --cpu-max-prime=50000 run
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 50000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:    98.53
+
+General statistics:
+    total time:                          10.0047s
+    total number of events:              986
+
+Latency (ms):
+         min:                                  9.92
+         avg:                                 10.14
+         max:                                 11.98
+         95th percentile:                     10.46
+         sum:                              10000.88
+
+Threads fairness:
+    events (avg/stddev):           986.0000/0.00
+    execution time (avg/stddev):   10.0009/0.00
+
+[root@nazeebo bin]# cd /test/
+[root@nazeebo test]# sysbench --test=cpu --cpu-max-prime=50000 run
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 50000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:    98.72
+
+General statistics:
+    total time:                          10.0058s
+    total number of events:              988
+
+Latency (ms):
+         min:                                  9.93
+         avg:                                 10.12
+         max:                                 12.01
+         95th percentile:                     10.46
+         sum:                              10001.83
+
+Threads fairness:
+    events (avg/stddev):           988.0000/0.00
+    execution time (avg/stddev):   10.0018/0.00
+</code></pre><h3 id="43-&#x7EBF;&#x7A0B;&#x6D4B;&#x8BD5;">4.3 &#x7EBF;&#x7A0B;&#x6D4B;&#x8BD5;</h3>
+<pre class="language-"><code>[root@nazeebo test]# sysbench --test=threads --num-threads=64 --thread-yields=100 --thread-locks=2 run
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+WARNING: --num-threads is deprecated, use --threads instead
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 64
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+
+General statistics:
+    total time:                          10.0051s
+    total number of events:              74954
+
+Latency (ms):
+         min:                                  0.04
+         avg:                                  8.54
+         max:                                252.31
+         95th percentile:                     39.65
+         sum:                             640079.38
+
+Threads fairness:
+    events (avg/stddev):           1171.1562/78.04
+    execution time (avg/stddev):   10.0012/0.00
+
+[root@nazeebo test]# sysbench --test=threads --num-threads=64 --thread-yields=100 --thread-locks=2 run
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+WARNING: --num-threads is deprecated, use --threads instead
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 64
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+
+General statistics:
+    total time:                          10.0048s
+    total number of events:              73762
+
+Latency (ms):
+         min:                                  0.04
+         avg:                                  8.68
+         max:                                236.43
+         95th percentile:                     41.10
+         sum:                             640055.68
+
+Threads fairness:
+    events (avg/stddev):           1152.5312/92.49
+    execution time (avg/stddev):   10.0009/0.00
+</code></pre><h3 id="44-&#x78C1;&#x76D8;io&#x6027;&#x80FD;&#x6D4B;&#x8BD5;">4.4 &#x78C1;&#x76D8;IO&#x6027;&#x80FD;&#x6D4B;&#x8BD5;</h3>
+<h4 id="441-&#x51C6;&#x5907;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;">4.4.1 &#x51C6;&#x5907;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;</h4>
+<pre class="language-"><code>[root@nazeebo test]# sysbench --test=fileio --file-num=4 --file-block-size=8K --file-total-size=2G --file-test-mode=rndrw --file-extra-flags=direct --max-requests=0 --max-time=100 --num-threads=2 prepare 
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+WARNING: --num-threads is deprecated, use --threads instead
+WARNING: --max-time is deprecated, use --time instead
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+4 files, 524288Kb each, 2048Mb total
+Creating files for the test...
+Extra file open flags: 3
+Creating file test_file.0
+
+Creating file test_file.1
+Creating file test_file.2
+Creating file test_file.3
+2147483648 bytes written in 217.06 seconds (9.44 MiB/sec).
+[root@nazeebo test]# 
+[root@nazeebo test]# ll
+total 2097168
+-rw------- 1 root root 536870912 Jul 24 16:04 test_file.0
+-rw------- 1 root root 536870912 Jul 24 16:05 test_file.1
+-rw------- 1 root root 536870912 Jul 24 16:06 test_file.2
+-rw------- 1 root root 536870912 Jul 24 16:07 test_file.3
+</code></pre><h4 id="442-&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;">4.4.2 &#x5F00;&#x59CB;&#x6D4B;&#x8BD5;</h4>
+<pre class="language-"><code>[root@nazeebo test]# sysbench --test=fileio --file-num=4 --file-block-size=8K --file-total-size=2G --file-test-mode=rndrw --file-extra-flags=direct --max-requests=0 --max-time=30 --num-threads=4 --report-interval=3 run
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+WARNING: --num-threads is deprecated, use --threads instead
+WARNING: --max-time is deprecated, use --time instead
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 4
+Report intermediate results every 3 second(s)
+Initializing random number generator from current time
+
+
+Extra file open flags: 3
+4 files, 512MiB each
+2GiB total file size
+Block size 8KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...
+
+Threads started!
+
+[ 3s ] reads: 9.69 MiB/s writes: 6.46 MiB/s fsyncs: 82.61/s latency (ms,95%): 2.184
+[ 6s ] reads: 9.69 MiB/s writes: 6.46 MiB/s fsyncs: 82.67/s latency (ms,95%): 1.960
+[ 9s ] reads: 9.67 MiB/s writes: 6.45 MiB/s fsyncs: 81.34/s latency (ms,95%): 2.032
+[ 12s ] reads: 9.69 MiB/s writes: 6.46 MiB/s fsyncs: 82.67/s latency (ms,95%): 1.996
+[ 15s ] reads: 9.69 MiB/s writes: 6.46 MiB/s fsyncs: 82.67/s latency (ms,95%): 2.032
+[ 18s ] reads: 9.69 MiB/s writes: 6.46 MiB/s fsyncs: 82.66/s latency (ms,95%): 1.891
+[ 21s ] reads: 9.46 MiB/s writes: 6.31 MiB/s fsyncs: 81.33/s latency (ms,95%): 2.861
+[ 24s ] reads: 9.47 MiB/s writes: 6.32 MiB/s fsyncs: 81.34/s latency (ms,95%): 2.264
+[ 27s ] reads: 9.68 MiB/s writes: 6.45 MiB/s fsyncs: 82.66/s latency (ms,95%): 2.389
+[ 30s ] reads: 9.69 MiB/s writes: 6.46 MiB/s fsyncs: 82.67/s latency (ms,95%): 2.264
+
+File operations:
+    reads/s:                      1234.25
+    writes/s:                     822.80
+    fsyncs/s:                     82.26
+
+Throughput:
+    read, MiB/s:                  9.64
+    written, MiB/s:               6.43
+
+General statistics:
+    total time:                          30.0020s
+    total number of events:              64187
+
+Latency (ms):
+         min:                                  0.02
+         avg:                                  1.87
+         max:                                 93.20
+         95th percentile:                      2.18
+         sum:                             119914.00
+
+Threads fairness:
+    events (avg/stddev):           16046.7500/174.99
+    execution time (avg/stddev):   29.9785/0.00
+</code></pre><p>&#x4E0A;&#x8FF0;&#x6D4B;&#x8BD5;&#x968F;&#x673A;&#x8BFB;&#x5199;&#x7684;&#x901F;&#x5EA6;&#x5206;&#x522B;&#x5728;9.64MB/s&#xFF0C;6.43MB/s
+&#xFF08;9.64MB/s <em> 1024 / 8KB =1233.92&#xFF09;&#x6362;&#x7B97;&#x540E;&#x5F97;&#x5230;&#x7684;&#x503C;&#x5C31;&#x662F;IOPS&#xFF0C;&#x7EA6;&#x7B49;&#x4E8E;&#x4E0A;&#x9762;&#x7684;1234.25&#x3002;
+&#xFF08;6.43MB/s </em> 1024 / 8KB =823.04&#xFF09;&#x6362;&#x7B97;&#x540E;&#x5F97;&#x5230;&#x7684;&#x503C;&#x5C31;&#x662F;IOPS&#xFF0C;&#x7EA6;&#x7B49;&#x4E8E;&#x4E0A;&#x9762;&#x7684;822.80&#x3002;</p>
+<h4 id="443-cleanup&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;">4.4.3 cleanup&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;</h4>
+<pre class="language-"><code>[root@nazeebo test]#  sysbench --test=fileio --file-num=4 --file-block-size=8K --file-total-size=2G --file-test-mode=rndrw --file-extra-flags=direct --max-requests=0 --max-time=100 --num-threads=2 cleanup
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+WARNING: --num-threads is deprecated, use --threads instead
+WARNING: --max-time is deprecated, use --time instead
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Removing test files...
+[root@nazeebo test]# ls
+[root@nazeebo test]#
+</code></pre><h3 id="45-&#x5185;&#x5B58;&#x6D4B;&#x8BD5;">4.5 &#x5185;&#x5B58;&#x6D4B;&#x8BD5;</h3>
+<p>&#x6307;&#x5B9A;&#x672C;&#x6B21;&#x6D4B;&#x8BD5;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x662F;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x4F20;&#x8F93;20G &#x7684;&#x6570;&#x636E;&#x91CF;&#xFF0C;&#x6BCF;&#x4E2A; block &#x5927;&#x5C0F;&#x4E3A; 8K&#x3002;</p>
+<pre class="language-"><code>[root@nazeebo test]# sysbench --test=memory --memory-block-size=8k --memory-total-size=20G run
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Running memory speed test with the following options:
+  block size: 8KiB
+  total size: 20480MiB
+  operation: write
+  scope: global
+
+Initializing worker threads...
+
+Threads started!
+
+Total operations: 2621440 (1040027.08 per second)
+
+20480.00 MiB transferred (8125.21 MiB/sec)
+
+
+General statistics:
+    total time:                          2.5185s
+    total number of events:              2621440
+
+Latency (ms):
+         min:                                  0.00
+         avg:                                  0.00
+         max:                                  0.12
+         95th percentile:                      0.00
+         sum:                               1867.25
+
+Threads fairness:
+    events (avg/stddev):           2621440.0000/0.00
+    execution time (avg/stddev):   1.8673/0.00
+</code></pre><h3 id="46-oltp&#x6D4B;&#x8BD5;">4.6 OLTP&#x6D4B;&#x8BD5;</h3>
+<h4 id="461-&#x51C6;&#x5907;&#x6570;&#x636E;">4.6.1 &#x51C6;&#x5907;&#x6570;&#x636E;</h4>
+<p>&#x6267;&#x884C;&#x6A21;&#x5F0F;&#x4E3A;complex&#xFF0C;&#x4F7F;&#x7528;&#x4E86;10&#x4E2A;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x8868;&#x6709;10&#x4E07;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5E76;&#x53D1;&#x7EBF;&#x7A0B;&#x6570;&#x4E3A;10&#xFF0C;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x4E3A;120&#x79D2;&#xFF0C;&#x6BCF;10&#x79D2;&#x751F;&#x6210;&#x4E00;&#x6B21;&#x62A5;&#x544A;&#x3002;</p>
+<pre class="language-"><code>[root@nazeebo sysbench]#  sysbench /usr/share/sysbench/tests/include/oltp_legacy/oltp.lua --db-driver=mysql --mysql-host=nazeebo --mysql-port=3306 --mysql-user=root --mysql-password=123456 --oltp-test-mode=complex --oltp-tables-count=10 --oltp-table-size=100000 --threads=10 --time=120 --report-interval=10 prepare
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Creating table &apos;sbtest1&apos;...
+Inserting 100000 records into &apos;sbtest1&apos;
+Creating secondary indexes on &apos;sbtest1&apos;...
+Creating table &apos;sbtest2&apos;...
+Inserting 100000 records into &apos;sbtest2&apos;
+Creating secondary indexes on &apos;sbtest2&apos;...
+Creating table &apos;sbtest3&apos;...
+Inserting 100000 records into &apos;sbtest3&apos;
+Creating secondary indexes on &apos;sbtest3&apos;...
+Creating table &apos;sbtest4&apos;...
+Inserting 100000 records into &apos;sbtest4&apos;
+Creating secondary indexes on &apos;sbtest4&apos;...
+Creating table &apos;sbtest5&apos;...
+Inserting 100000 records into &apos;sbtest5&apos;
+Creating secondary indexes on &apos;sbtest5&apos;...
+Creating table &apos;sbtest6&apos;...
+Inserting 100000 records into &apos;sbtest6&apos;
+Creating secondary indexes on &apos;sbtest6&apos;...
+Creating table &apos;sbtest7&apos;...
+Inserting 100000 records into &apos;sbtest7&apos;
+Creating secondary indexes on &apos;sbtest7&apos;...
+Creating table &apos;sbtest8&apos;...
+Inserting 100000 records into &apos;sbtest8&apos;
+Creating secondary indexes on &apos;sbtest8&apos;...
+Creating table &apos;sbtest9&apos;...
+Inserting 100000 records into &apos;sbtest9&apos;
+Creating secondary indexes on &apos;sbtest9&apos;...
+Creating table &apos;sbtest10&apos;...
+Inserting 100000 records into &apos;sbtest10&apos;
+Creating secondary indexes on &apos;sbtest10&apos;...
+[root@nazeebo sysbench]#
+</code></pre><h4 id="462-&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;">4.6.2 &#x5F00;&#x59CB;&#x6D4B;&#x8BD5;</h4>
+<pre class="language-"><code>[root@nazeebo test]#  sysbench /usr/share/sysbench/tests/include/oltp_legacy/oltp.lua --db-driver=mysql --mysql-host=nazeebo --mysql-port=3306 --mysql-user=root --mysql-password=123456 --oltp-test-mode=complex --oltp-tables-count=10 --oltp-table-size=100000 --threads=10 --time=120 --report-interval=10 run &gt;&gt; /test/mysbtest.log
+</code></pre><p>&#x6253;&#x5F00;log&#x67E5;&#x770B;&#xFF1A;</p>
+<pre class="language-"><code>Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 10s ] thds: 10 tps: 408.79 qps: 8194.76 (r/w/o: 5737.04/1639.15/818.58) lat (ms,95%): 37.56 err/s: 0.00 reconn/s: 0.00
+[ 20s ] thds: 10 tps: 501.80 qps: 10033.31 (r/w/o: 7023.91/2005.80/1003.60) lat (ms,95%): 31.94 err/s: 0.00 reconn/s: 0.00
+[ 30s ] thds: 10 tps: 512.10 qps: 10240.38 (r/w/o: 7168.98/2047.20/1024.20) lat (ms,95%): 31.37 err/s: 0.00 reconn/s: 0.00
+[ 40s ] thds: 10 tps: 506.10 qps: 10123.40 (r/w/o: 7086.07/2025.12/1012.21) lat (ms,95%): 31.94 err/s: 0.00 reconn/s: 0.00
+[ 50s ] thds: 10 tps: 518.51 qps: 10365.70 (r/w/o: 7255.67/2073.22/1036.81) lat (ms,95%): 30.81 err/s: 0.00 reconn/s: 0.00
+[ 60s ] thds: 10 tps: 512.90 qps: 10260.06 (r/w/o: 7182.17/2051.89/1026.00) lat (ms,95%): 30.81 err/s: 0.00 reconn/s: 0.00
+[ 70s ] thds: 10 tps: 494.97 qps: 9899.78 (r/w/o: 6930.16/1979.68/989.94) lat (ms,95%): 30.81 err/s: 0.00 reconn/s: 0.00
+[ 80s ] thds: 10 tps: 466.83 qps: 9339.69 (r/w/o: 6536.52/1869.52/933.66) lat (ms,95%): 30.26 err/s: 0.00 reconn/s: 0.00
+[ 90s ] thds: 10 tps: 520.30 qps: 10404.67 (r/w/o: 7284.85/2079.21/1040.61) lat (ms,95%): 30.26 err/s: 0.00 reconn/s: 0.00
+[ 100s ] thds: 10 tps: 518.90 qps: 10380.23 (r/w/o: 7265.22/2077.21/1037.80) lat (ms,95%): 30.26 err/s: 0.00 reconn/s: 0.00
+[ 110s ] thds: 10 tps: 510.68 qps: 10211.31 (r/w/o: 7148.02/2041.92/1021.36) lat (ms,95%): 31.37 err/s: 0.00 reconn/s: 0.00
+[ 120s ] thds: 10 tps: 515.91 qps: 10319.65 (r/w/o: 7223.07/2064.85/1031.72) lat (ms,95%): 30.81 err/s: 0.00 reconn/s: 0.00
+SQL statistics:
+    queries performed:
+        read:                            838432
+        write:                           239552
+        other:                           119776
+        total:                           1197760
+    transactions:                        59888  (499.03 per sec.)
+    queries:                             1197760 (9980.60 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          120.0071s
+    total number of events:              59888
+
+Latency (ms):
+         min:                                  6.18
+         avg:                                 20.03
+         max:                                943.21
+         95th percentile:                     31.37
+         sum:                            1199820.15
+
+Threads fairness:
+    events (avg/stddev):           5988.8000/37.32
+    execution time (avg/stddev):   119.9820/0.00
+</code></pre><p>&#x7ED3;&#x679C;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x5C31;&#x5728;&#x6700;&#x540E;&#x51E0;&#x53E5;&#x4E2D;&#x3002;</p>
+<h4 id="463-&#x6E05;&#x9664;&#x6D4B;&#x8BD5;&#x6570;&#x636E;">4.6.3 &#x6E05;&#x9664;&#x6D4B;&#x8BD5;&#x6570;&#x636E;</h4>
+<pre class="language-"><code>[root@nazeebo test]# sysbench /usr/share/sysbench/tests/include/oltp_legacy/oltp.lua --db-driver=mysql --mysql-host=nazeebo --mysql-port=3306 --mysql-user=root --mysql-password=123456 cleanup
+sysbench 1.0.9 (using system LuaJIT 2.0.4)
+
+Dropping table &apos;sbtest1&apos;...
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; suredandan 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">UpdateTime: 
+2018-11-28 06:34:25
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="15.backuprecoverpxb.html" class="navigation navigation-prev " aria-label="Previous page: 15.备份恢复-pxb">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="17.performancetest.html" class="navigation navigation-next " aria-label="Next page: 17.性能测试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"16.基准测试","level":"1.17","depth":1,"next":{"title":"17.性能测试","level":"1.18","depth":1,"path":"17.performancetest.md","ref":"17.performancetest.md","articles":[]},"previous":{"title":"15.备份恢复-pxb","level":"1.16","depth":1,"path":"15.backuprecoverpxb.md","ref":"15.backuprecoverpxb.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","prism-themes","-highlight","codesnippet","splitter","simple-page-toc","page-toc-button","back-to-top-button","-lunr","-search","search-plus","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","theme-default","sitemap-general"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © suredandan 2018","modify_label":"UpdateTime: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"http://www.googlebaba.io/mysql/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"_CAPTION_"}},"theme":"default","author":"suredandan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"MySQL搬砖","language":"zh-hans","gitbook":"*","description":"MySQL进阶指南"},"file":{"path":"16.basetest.md","mtime":"2018-11-27T22:34:25.961Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T13:30:33.979Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

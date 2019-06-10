@@ -1,0 +1,1422 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.MySQL介绍与安装 · MySQL搬砖</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suredandan">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.connectandrole.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+        <link rel="shortcut icon" href='favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="1.introduceandinstall.html">
+            
+                <a href="1.introduceandinstall.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    1.MySQL介绍与安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.connectandrole.html">
+            
+                <a href="2.connectandrole.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    2.MySQL的连接与权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.parameterintro.html">
+            
+                <a href="3.parameterintro.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    3.MySQL参数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.jiagoujieshao.html">
+            
+                <a href="4.jiagoujieshao.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    4.MySQL体系介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.cuncunyinqin.html">
+            
+                <a href="5.cuncunyinqin.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    5.MySQL的存储引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.duoshili.html">
+            
+                <a href="6.duoshili.html">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    6.MySQL多实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.aboutssl.html">
+            
+                <a href="7.aboutssl.html">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    7.MySQL的SSL相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.datatypeintro.html">
+            
+                <a href="8.datatypeintro.html">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    8.MySQL的数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9.createtable.html">
+            
+                <a href="9.createtable.html">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    9.表的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.sqlselect.html">
+            
+                <a href="10.sqlselect.html">
+            
+                    
+                        <b>1.11.</b>
+                    
+                    10.SQL之select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.sqldml.html">
+            
+                <a href="11.sqldml.html">
+            
+                    
+                        <b>1.12.</b>
+                    
+                    11.SQL之增删改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12.sqlextra.html">
+            
+                <a href="12.sqlextra.html">
+            
+                    
+                        <b>1.13.</b>
+                    
+                    12.SQL其他补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13.cfqandccgc.html">
+            
+                <a href="13.cfqandccgc.html">
+            
+                    
+                        <b>1.14.</b>
+                    
+                    13.触发器存储过程函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14.backrecover.html">
+            
+                <a href="14.backrecover.html">
+            
+                    
+                        <b>1.15.</b>
+                    
+                    14.备份与恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="15.backuprecoverpxb.html">
+            
+                <a href="15.backuprecoverpxb.html">
+            
+                    
+                        <b>1.16.</b>
+                    
+                    15.备份恢复-pxb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="16.basetest.html">
+            
+                <a href="16.basetest.html">
+            
+                    
+                        <b>1.17.</b>
+                    
+                    16.基准测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="17.performancetest.html">
+            
+                <a href="17.performancetest.html">
+            
+                    
+                        <b>1.18.</b>
+                    
+                    17.性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="18.replication.html">
+            
+                <a href="18.replication.html">
+            
+                    
+                        <b>1.19.</b>
+                    
+                    18.主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="19.haintro.html">
+            
+                <a href="19.haintro.html">
+            
+                    
+                        <b>1.20.</b>
+                    
+                    19.高可用选型介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="20.performance.html">
+            
+                <a href="20.performance.html">
+            
+                    
+                        <b>1.21.</b>
+                    
+                    20.优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="21.sqltunning.html">
+            
+                <a href="21.sqltunning.html">
+            
+                    
+                        <b>1.22.</b>
+                    
+                    21.SQL优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="22.mysqlfaq.html">
+            
+                <a href="22.mysqlfaq.html">
+            
+                    
+                        <b>1.23.</b>
+                    
+                    22.MySQL_FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="fulu.html">
+            
+                <a href="fulu.html">
+            
+                    
+                        <b>1.24.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="f_lvsvsnginxvshaproxy.html">
+            
+                <a href="f_lvsvsnginxvshaproxy.html">
+            
+                    
+                        <b>1.24.1.</b>
+                    
+                    附录1-三大软负载均衡器对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" data-path="f_mysql5.7.html">
+            
+                <a href="f_mysql5.7.html">
+            
+                    
+                        <b>1.24.2.</b>
+                    
+                    附录2-MySQL5.7新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.3" data-path="f_sampleschema.html">
+            
+                <a href="f_sampleschema.html">
+            
+                    
+                        <b>1.24.3.</b>
+                    
+                    附录3-MySQL的sample数据库安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4" data-path="f_youhuakuangjia.html">
+            
+                <a href="f_youhuakuangjia.html">
+            
+                    
+                        <b>1.24.4.</b>
+                    
+                    附录4-MySQL优化框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.5" data-path="f_usingprofile4sql.html">
+            
+                <a href="f_usingprofile4sql.html">
+            
+                    
+                        <b>1.24.5.</b>
+                    
+                    附录5-使用profile分析sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6" data-path="f_mysqlcheck.html">
+            
+                <a href="f_mysqlcheck.html">
+            
+                    
+                        <b>1.24.6.</b>
+                    
+                    附录6-mysqlcheck的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.7" data-path="f_mha.html">
+            
+                <a href="f_mha.html">
+            
+                    
+                        <b>1.24.7.</b>
+                    
+                    附录7-mha配置.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >1.MySQL介绍与安装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#%E4%B8%80mysql%E7%89%88%E6%9C%AC%E7%9A%84%E9%80%89%E6%8B%A9">&#x4E00;&#x3001;MySQL&#x7248;&#x672C;&#x7684;&#x9009;&#x62E9;</a></li>
+<li><a href="#%E4%BA%8C%E5%AE%98%E7%BD%91%E4%BB%8B%E7%BB%8D">&#x4E8C;&#x3001;&#x5B98;&#x7F51;&#x4ECB;&#x7ECD;</a><ul>
+<li><a href="#1%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99-httpsdevmysqlcom">1.&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF1A; https://dev.mysql.com/</a></li>
+<li><a href="#2%E4%BC%81%E4%B8%9A%E7%89%88%E7%95%A5%E8%BF%87">2.&#x4F01;&#x4E1A;&#x7248;&#xFF1A;&#x7565;&#x8FC7;</a></li>
+<li><a href="#3%E7%A4%BE%E5%8C%BA%E7%89%88%E4%BB%8B%E7%BB%8D">3.&#x793E;&#x533A;&#x7248;&#x4ECB;&#x7ECD;</a></li>
+<li><a href="#4mysql%E6%96%87%E6%A1%A3">4.MySQL&#x6587;&#x6863;</a></li>
+<li><a href="#5mysql%E4%B8%8B%E8%BD%BD%E4%BB%8B%E7%BB%8D">5.MySQL&#x4E0B;&#x8F7D;&#x4ECB;&#x7ECD;</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%B9%E5%BC%8F%E7%9A%84mysql%E5%AE%89%E8%A3%85">&#x4E09;&#x3001;&#x4E8C;&#x8FDB;&#x5236;&#x65B9;&#x5F0F;&#x7684;MySQL&#x5B89;&#x88C5;</a><ul>
+<li><a href="#1%E4%B8%8B%E8%BD%BD%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8C%85">1.&#x4E0B;&#x8F7D;&#x4E8C;&#x8FDB;&#x5236;&#x5305;</a></li>
+<li><a href="#2%E9%98%85%E8%AF%BB%E5%AE%98%E6%96%B9%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3">2.&#x9605;&#x8BFB;&#x5B98;&#x65B9;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;</a></li>
+<li><a href="#3%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%8C%85">3.&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;</a></li>
+<li><a href="#4%E5%88%9B%E5%BB%BAmysql%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84">4.&#x521B;&#x5EFA;mysql&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;</a></li>
+<li><a href="#5%E8%A7%A3%E5%8E%8B%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E7%9B%AE%E5%BD%95">5.&#x89E3;&#x538B;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;</a></li>
+<li><a href="#6%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%AE%E5%BD%95">6.&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x76EE;&#x5F55;</a></li>
+<li><a href="#7%E9%85%8D%E7%BD%AEmycnf">7.&#x914D;&#x7F6E;my.cnf</a></li>
+<li><a href="#8%E5%88%9D%E5%A7%8B%E5%8C%96">8.&#x521D;&#x59CB;&#x5316;</a></li>
+<li><a href="#9%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1">9.&#x914D;&#x7F6E;&#x670D;&#x52A1;</a></li>
+<li><a href="#10%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1">10.&#x542F;&#x52A8;&#x670D;&#x52A1;</a></li>
+<li><a href="#11%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">11.&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li>
+<li><a href="#12%E8%BF%9B%E8%A1%8C%E5%AE%89%E5%85%A8%E7%9A%84%E9%85%8D%E7%BD%AE">12.&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x7684;&#x914D;&#x7F6E;</a></li>
+<li><a href="#13%E5%B0%86%E6%97%B6%E5%8C%BA%E5%AF%BC%E5%85%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93">13.&#x5C06;&#x65F6;&#x533A;&#x5BFC;&#x5165;mysql&#x6570;&#x636E;&#x5E93;</a></li>
+<li><a href="#14%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85">14.&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">&#x53C2;&#x8003;</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E8%A6%81%E5%B9%B2%E7%9A%84%E4%BA%8B%E6%83%85">&#x56DB;&#x3001;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x8981;&#x5E72;&#x7684;&#x4E8B;&#x60C5;</a></li>
+<li><a href="#%E4%BA%94mycnf%E5%8F%82%E6%95%B0%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E">&#x4E94;&#x3001;my.cnf&#x53C2;&#x6570;&#x7B80;&#x8981;&#x8BF4;&#x660E;</a><ul>
+<li><a href="#1%E5%B8%B8%E8%A7%84%E9%83%A8%E5%88%86">1.&#x5E38;&#x89C4;&#x90E8;&#x5206;</a></li>
+<li><a href="#2%E6%97%A5%E5%BF%97%E8%AE%BE%E5%AE%9A%E9%83%A8%E5%88%86">2.&#x65E5;&#x5FD7;&#x8BBE;&#x5B9A;&#x90E8;&#x5206;</a></li>
+<li><a href="#3%E5%A4%8D%E5%88%B6%E9%83%A8%E5%88%86">3.&#x590D;&#x5236;&#x90E8;&#x5206;</a></li>
+<li><a href="#4innodb%E4%B8%93%E5%B1%9E%E9%83%A8%E5%88%86">4.innodb&#x4E13;&#x5C5E;&#x90E8;&#x5206;</a></li>
+<li><a href="#5-57%E7%89%88%E6%9C%AC%E4%B8%93%E5%B1%9E">5. 5.7&#x7248;&#x672C;&#x4E13;&#x5C5E;</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%AD%E5%85%B6%E4%BB%96">&#x516D;&#x3001;&#x5176;&#x4ED6;</a></li>
+<li><a href="#%E4%B8%83%E5%8D%87%E7%BA%A7%E4%B8%8E%E9%99%8D%E7%BA%A7">&#x4E03;&#x3001;&#x5347;&#x7EA7;&#x4E0E;&#x964D;&#x7EA7;</a><ul>
+<li><a href="#1%E5%8D%87%E7%BA%A7%E6%96%B9%E6%B3%95">1.&#x5347;&#x7EA7;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#2%E5%8D%87%E7%BA%A7%E8%B7%AF%E5%BE%84">2.&#x5347;&#x7EA7;&#x8DEF;&#x5F84;</a></li>
+<li><a href="#3%E5%8D%87%E7%BA%A7%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87">3.&#x5347;&#x7EA7;&#x524D;&#x7684;&#x51C6;&#x5907;</a></li>
+<li><a href="#4%E5%8D%87%E7%BA%A7%E6%AD%A5%E9%AA%A4">4.&#x5347;&#x7EA7;&#x6B65;&#x9AA4;</a></li>
+<li><a href="#%E9%99%8D%E7%BA%A7%E6%AD%A5%E9%AA%A4">&#x964D;&#x7EA7;&#x6B65;&#x9AA4;</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%AB%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7">&#x516B;&#x3001;&#x5E38;&#x7528;&#x5DE5;&#x5177;</a></li>
+</ul>
+<!-- tocstop -->
+<hr>
+<h2 id="&#x4E00;&#x3001;mysql&#x7248;&#x672C;&#x7684;&#x9009;&#x62E9;">&#x4E00;&#x3001;MySQL&#x7248;&#x672C;&#x7684;&#x9009;&#x62E9;</h2>
+<p>MySQL5.6&#x4EE5;&#x540E;&#xFF0C;&#x63A8;&#x8350;&#x91C7;&#x7528;&#x5B98;&#x65B9;&#x7684;&#x7248;&#x672C;
+percona&#xFF1A;percona&#x63D0;&#x4F9B;&#x7684;&#x5DE5;&#x5177;&#x96C6;&#x5F88;&#x591A;&#x53EF;&#x4EE5;&#x591A;&#x591A;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x7528;&#x5B98;&#x65B9;&#x7684;&#x5427;
+mariadb&#xFF1A;&#x65E0;innodb&#xFF1B;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x8F83;&#x8001;</p>
+<h2 id="&#x4E8C;&#x3001;&#x5B98;&#x7F51;&#x4ECB;&#x7ECD;">&#x4E8C;&#x3001;&#x5B98;&#x7F51;&#x4ECB;&#x7ECD;</h2>
+<h3 id="1&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF1A;-httpsdevmysqlcom">1.&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF1A; <a href="https://dev.mysql.com/" target="_blank">https://dev.mysql.com/</a></h3>
+<p><img src="images/screenshot_1528704760455.png" alt=""></p>
+<h3 id="2&#x4F01;&#x4E1A;&#x7248;&#xFF1A;&#x7565;&#x8FC7;">2.&#x4F01;&#x4E1A;&#x7248;&#xFF1A;&#x7565;&#x8FC7;</h3>
+<h3 id="3&#x793E;&#x533A;&#x7248;&#x4ECB;&#x7ECD;">3.&#x793E;&#x533A;&#x7248;&#x4ECB;&#x7ECD;</h3>
+<p><img src="images/screenshot_1528704882046.png" alt="">
+<img src="images/screenshot_1528704941926.png" alt=""></p>
+<ul>
+<li>MySQL Community Server&#xFF1A; MySQL server</li>
+<li>MySQL Cluster&#xFF1A; MySQL Cluster&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x65F6;&#x7684;&#x4E8B;&#x52A1;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E13;&#x4E3A;&#x5728;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x6761;&#x4EF6;&#x4E0B;&#x5FEB;&#x901F;&#x3001;&#x59CB;&#x7EC8;&#x5F00;&#x542F;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x800C;&#x8BBE;&#x8BA1;</li>
+<li>MySQL Router &#xFF1A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x53EF;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x548C;&#x4EFB;&#x4F55;&#x540E;&#x7AEF;MySQL&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x63D0;&#x4F9B;&#x900F;&#x660E;&#x8DEF;&#x7531;&#x3002;</li>
+<li>MySQL Shell&#xFF1A;MySQL Shell&#x662F;&#x4E00;&#x4E2A;&#x4EA4;&#x4E92;&#x5F0F;Javascript&#xFF0C;Python&#x6216;SQL&#x63A5;&#x53E3;&#xFF0C;&#x652F;&#x6301;MySQL&#x670D;&#x52A1;&#x5668;&#x7684;&#x5F00;&#x53D1;&#x548C;&#x7BA1;&#x7406;&#xFF0C;&#x5E76;&#x4E14;&#x662F;MySQL&#x670D;&#x52A1;&#x5668;&#x7684;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x3002;</li>
+<li>MySQL Workbench &#xFF1A;MySQL Workbench&#x662F;&#x65B0;&#x4E00;&#x4EE3;&#x53EF;&#x89C6;&#x5316;&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x9AD8;&#x6548;&#x8BBE;&#x8BA1;&#xFF0C;&#x7BA1;&#x7406;&#x548C;&#x8BB0;&#x5F55;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x5F0F;&#x3002;</li>
+<li>MySQL Connectors&#xFF1A;MySQL&#x63D0;&#x4F9B;&#x6807;&#x51C6;&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x8FDE;&#x63A5;&#xFF0C;&#x4EE5;&#x4FBF;&#x5C06;MySQL&#x4E0E;&#x5177;&#x6709;&#x4E0E;&#x884C;&#x4E1A;&#x6807;&#x51C6;ODBC&#x548C;JDBC&#x517C;&#x5BB9;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x548C;&#x5DE5;&#x5177;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</li>
+<li>MySQL Utilities &#xFF1A;MySQL&#x5E94;&#x7528;&#x7684;&#x7A0B;&#x5E8F;&#x5305;&#xFF0C;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x8FC1;&#x79FB;&#x5230;MySQL shell&#x4E0A;&#x9762;&#x53BB;&#x4E86;&#x3002;</li>
+</ul>
+<h3 id="4mysql&#x6587;&#x6863;">4.MySQL&#x6587;&#x6863;</h3>
+<p><a href="https://dev.mysql.com/doc/" target="_blank">https://dev.mysql.com/doc/</a>
+<img src="images/screenshot_1528705514341.png" alt="">
+&#x79BB;&#x7EBF;&#x6587;&#x6863;&#x4E0B;&#x8F7D;&#xFF1A;
+<img src="images/screenshot_1528705662866.png" alt=""></p>
+<h3 id="5mysql&#x4E0B;&#x8F7D;&#x4ECB;&#x7ECD;">5.MySQL&#x4E0B;&#x8F7D;&#x4ECB;&#x7ECD;</h3>
+<p><img src="images/screenshot_1528705760930.png" alt=""></p>
+<blockquote>
+<p>&#x63A8;&#x8350;&#x4E0B;&#x8F7D;linux-generic&#x7684;&#x7248;&#x672C;
+source&#x7248;&#x672C;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x8C03;&#x8BD5;&#xFF0C;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#x5BF9;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x4E0D;&#x660E;&#x663E;&#x800C;&#x4E14;&#x8017;&#x65F6;&#x95F4;
+&#x63A8;&#x8350;&#x4F7F;&#x7528;5.6&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x73B0;&#x5728;8.0&#x5DF2;&#x7ECF;GA&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x66F4;&#x8981;&#x7528;&#x9AD8;&#x7248;&#x672C;&#x4E86;&#xFF01;</p>
+</blockquote>
+<h2 id="&#x4E09;&#x3001;&#x4E8C;&#x8FDB;&#x5236;&#x65B9;&#x5F0F;&#x7684;mysql&#x5B89;&#x88C5;">&#x4E09;&#x3001;&#x4E8C;&#x8FDB;&#x5236;&#x65B9;&#x5F0F;&#x7684;MySQL&#x5B89;&#x88C5;</h2>
+<h3 id="1&#x4E0B;&#x8F7D;&#x4E8C;&#x8FDB;&#x5236;&#x5305;">1.&#x4E0B;&#x8F7D;&#x4E8C;&#x8FDB;&#x5236;&#x5305;</h3>
+<p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank">https://dev.mysql.com/downloads/mysql/</a>  </p>
+<p><a href="https://dev.mysql.com/downloads/mysql/5.7.html#downloads" target="_blank">https://dev.mysql.com/downloads/mysql/5.7.html#downloads</a>
+linux&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0B;,&#x4E0B;&#x8F7D;linux-generic</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;! &#x4E0D;&#x8981;&#x7528;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#x7684;!&#x76F4;&#x63A5;&#x7528;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x7248;&#x672C;&#x5373;&#x53EF;!!!</strong></p>
+</blockquote>
+<h3 id="2&#x9605;&#x8BFB;&#x5B98;&#x65B9;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;">2.&#x9605;&#x8BFB;&#x5B98;&#x65B9;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;</h3>
+<h4 id="&#x5927;&#x81F4;&#x7684;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;">&#x5927;&#x81F4;&#x7684;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;:</h4>
+<pre class="language-"><code>shell&gt; groupadd mysql
+shell&gt; useradd -r -g mysql -s /bin/false mysql
+shell&gt; cd /usr/local
+shell&gt; tar zxvf /path/to/mysql-VERSION-OS.tar.gz
+shell&gt; ln -s full-path-to-mysql-VERSION-OS mysql
+shell&gt; cd mysql
+shell&gt; mkdir mysql-files
+shell&gt; chown mysql:mysql mysql-files
+shell&gt; chmod 750 mysql-files
+shell&gt; bin/mysqld --initialize --user=mysql
+shell&gt; bin/mysql_ssl_rsa_setup               ## 5.6&#x8FD9;&#x4E00;&#x6B65;&#x662F;&#x53EF;&#x9009;&#x7684;,5.7&#x662F;&#x5FC5;&#x9700;&#x7684;!
+shell&gt; bin/mysqld_safe --user=mysql &amp;
+# Next command is optional
+shell&gt; cp support-files/mysql.server /etc/init.d/mysql.server
+</code></pre><p>5.6&#x7248;&#x672C;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x6709;&#x4E9B;&#x5DEE;&#x522B;&#xFF08;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65F6;&#x5019;&#x547D;&#x4EE4;&#x4E0D;&#x4E00;&#x6837;&#xFF09;</p>
+<pre class="language-"><code>shell&gt; groupadd mysql
+shell&gt; useradd -r -g mysql -s /bin/false mysql
+shell&gt; cd /usr/local
+shell&gt; tar zxvf /path/to/mysql-VERSION-OS.tar.gz
+shell&gt; ln -s full-path-to-mysql-VERSION-OS mysql
+shell&gt; cd mysql
+shell&gt; scripts/mysql_install_db --user=mysql
+shell&gt; bin/mysqld_safe --user=mysql &amp;
+# Next command is optional
+shell&gt; cp support-files/mysql.server /etc/init.d/mysql.server
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x62A5;&#x9519;:FATAL ERROR: please install the following Perl modules before executing scripts/mysql_install_db: Data::Dumper
+&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;&#x5B89;&#x88C5;&#x5305;autoconf</p>
+<pre class="language-"><code>&#x5378;&#x8F7D;&#x5DF2;&#x7ECF;&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;&#x7684;&#x5305;
+shell&gt; rpm -e --nodeps pks-name
+</code></pre><h3 id="3&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;">3.&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;</h3>
+<p>MySQL&#x4F9D;&#x8D56;&#x4E8E;libaio &#x5E93;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5E93;&#x6CA1;&#x6709;&#x5728;&#x672C;&#x5730;&#x5B89;&#x88C5;, &#x6570;&#x636E;&#x76EE;&#x5F55;&#x521D;&#x59CB;&#x5316;&#x548C;&#x540E;&#x7EED;&#x7684;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x6B65;&#x9AA4;&#x5C06;&#x4F1A;&#x5931;&#x8D25;&#x3002;<br>&#x6545;&#x9700;&#x8981;&#x5148;&#x5C06;&#x8FD9;&#x4E2A;&#x5305;&#x5B89;&#x88C5;&#x4E0A;&#x53BB;.</p>
+<pre class="language-"><code>shell&gt; yum install libaio
+</code></pre><h3 id="4&#x521B;&#x5EFA;mysql&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;">4.&#x521B;&#x5EFA;mysql&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;</h3>
+<pre class="language-"><code>shell&gt; groupadd mysql
+shell&gt; useradd -r -g mysql -s /bin/false mysql
+</code></pre><p><kbd>&#x56E0;&#x4E3A;&#x53EA;&#x60F3;&#x8BA9;mysql&#x7528;&#x6237;&#x4EC5;&#x7528;&#x4E8E;&#x8FD0;&#x884C;mysql&#x670D;&#x52A1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x767B;&#x5F55;&#xFF1B;&#x6B64;&#x4F7F;&#x7528;useradd -r&#x548C;-s /bin/false&#x7684;&#x547D;&#x4EE4;&#x9009;&#x9879;&#x6765;&#x521B;&#x5EFA;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x4E3B;&#x673A;&#x6CA1;&#x6709;&#x767B;&#x5F55;&#x6743;&#x9650;&#x7684;&#x7528;&#x6237;&#x3002;</kbd></p>
+<h3 id="5&#x89E3;&#x538B;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;">5.&#x89E3;&#x538B;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;</h3>
+<pre class="language-"><code>shell&gt; cd /usr/local
+shell&gt; tar zxvf /path/to/mysql-VERSION-OS.tar.gz
+shell&gt; ln -s full-path-to-mysql-VERSION-OS mysql
+</code></pre><h3 id="6&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x76EE;&#x5F55;">6.&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x76EE;&#x5F55;</h3>
+<pre class="language-"><code>&#x6570;&#x636E;&#x76EE;&#x5F55;&#xFF1A;/u01/mysql/mysql_data
+&#x53C2;&#x6570;&#x6587;&#x4EF6;my.cnf&#xFF1A;/etc/my.cnf
+&#x9519;&#x8BEF;&#x65E5;&#x5FD7;log-error&#xFF1A;/u01/mysql/log/mysql_error.log
+&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;log-bin&#xFF1A;/u01/mysql/log/mysql_bin.log
+&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;slow_query_log_file&#xFF1A;/u01/mysql/log/mysql_slow_query.log
+</code></pre><pre class="language-"><code>shell&gt; mkdir -p /u01/mysql/{mysql_data,log,mysql_undolog,mysql_redolog}
+shell&gt; chown -R mysql.mysql /u01/mysql
+</code></pre><blockquote>
+<p>&#x6CE8;&#x610F;:
+&#x5EFA;&#x8BAE;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5B89;&#x88C5;&#x7684;&#x65F6;&#x5019;,&#x5C06;data&#x76EE;&#x5F55;&#x548C;&#x65E5;&#x5FD7;&#x76EE;&#x5F55;&#x5355;&#x72EC;&#x5B58;&#x653E;,&#x8FD9;&#x6837;&#x5BF9;&#x5347;&#x7EA7;&#x8F83;&#x4E3A;&#x65B9;&#x4FBF;,&#x51CF;&#x5C11;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x9EBB;&#x70E6;
+&#x53E6;&#x5916;&#x4E00;&#x822C;&#x6765;&#x8BF4;,&#x53EA;&#x6709;data&#x76EE;&#x5F55;&#x7684;&#x662F;mysql.mysql,&#x5176;&#x5B9E;&#x662F;mysql.root</p>
+</blockquote>
+<h3 id="7&#x914D;&#x7F6E;mycnf">7.&#x914D;&#x7F6E;my.cnf</h3>
+<p>my.cnf&#x7684;&#x5185;&#x5BB9;,&#x5EFA;&#x8BAE;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code>[mysqld]
+########basic settings########
+server-id = 11
+port = 3306
+user = mysql
+#bind_address = 192.168.0.175
+#autocommit = 0
+character_set_server=utf8mb4
+skip_name_resolve = 1
+max_connections = 800
+max_connect_errors = 1000
+datadir = /u01/mysql/mysql_data/
+transaction_isolation = READ-COMMITTED
+explicit_defaults_for_timestamp = 1
+join_buffer_size = 134217728
+tmp_table_size = 67108864
+tmpdir = /tmp
+max_allowed_packet = 16777216
+sql_mode = &quot;STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER&quot;
+interactive_timeout = 1800
+wait_timeout = 1800
+read_buffer_size = 16777216
+read_rnd_buffer_size = 33554432
+sort_buffer_size = 33554432
+########log settings########
+log_error = /u01/mysql/log/mysql_error.log
+slow_query_log = 1
+slow_query_log_file = /u01/mysql/log/mysql_slow_query.log
+log_queries_not_using_indexes = 1
+log_slow_admin_statements = 1
+log_slow_slave_statements = 1
+log_throttle_queries_not_using_indexes = 10
+expire_logs_days = 90
+long_query_time = 2
+min_examined_row_limit = 100
+########replication settings########
+master_info_repository = TABLE
+relay_log_info_repository = TABLE
+log_bin = bin.log
+sync_binlog = 1
+gtid_mode = on
+enforce_gtid_consistency = 1
+log_slave_updates
+binlog_format = row
+relay_log = relay.log
+relay_log_recovery = 1
+binlog_gtid_simple_recovery = 1
+slave_skip_errors = ddl_exist_errors
+########innodb settings########
+innodb_page_size = 8192
+innodb_buffer_pool_size = 4G
+innodb_buffer_pool_instances = 8
+innodb_buffer_pool_load_at_startup = 1
+innodb_buffer_pool_dump_at_shutdown = 1
+innodb_lru_scan_depth = 2000
+innodb_lock_wait_timeout = 5
+innodb_io_capacity = 4000
+innodb_io_capacity_max = 8000
+innodb_flush_method = O_DIRECT
+innodb_file_format = Barracuda
+innodb_file_format_max = Barracuda
+innodb_log_group_home_dir = /u01/mysql/mysql_redolog/
+innodb_undo_directory = /u01/mysql/mysql_undolog/
+innodb_undo_logs = 128
+innodb_undo_tablespaces = 3
+innodb_flush_neighbors = 1
+innodb_log_file_size = 1G   #&#x6CE8;&#x610F;,&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5EFA;&#x8BAE;&#x8C03;&#x6210;4G+
+innodb_log_buffer_size = 16777216
+innodb_purge_threads = 4
+innodb_large_prefix = 1
+innodb_thread_concurrency = 64
+innodb_print_all_deadlocks = 1
+innodb_strict_mode = 1
+innodb_sort_buffer_size = 67108864
+########semi sync replication settings########
+plugin_dir=/usr/local/mysql/lib/plugin
+plugin_load = &quot;rpl_semi_sync_master=semisync_master.so;rpl_semi_sync_slave=semisync_slave.so&quot;
+loose_rpl_semi_sync_master_enabled = 1
+loose_rpl_semi_sync_slave_enabled = 1
+loose_rpl_semi_sync_master_timeout = 5000
+
+[mysqld-5.7]
+innodb_buffer_pool_dump_pct = 40
+innodb_page_cleaners = 4
+innodb_undo_log_truncate = 1
+innodb_max_undo_log_size = 2G
+innodb_purge_rseg_truncate_frequency = 128
+binlog_gtid_simple_recovery=1
+log_timestamps=system
+transaction_write_set_extraction=MURMUR32
+show_compatibility_56=on
+</code></pre><h3 id="8&#x521D;&#x59CB;&#x5316;">8.&#x521D;&#x59CB;&#x5316;</h3>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x662F;:5.7&#x8F83;5.6&#x7684;&#x6539;&#x8FDB;&#x548C;&#x66FF;&#x6362;&#x7684;&#x811A;&#x672C;</p>
+<pre class="language-"><code>5.7&#x7248;&#x672C;&#xFF1A;
+bin/mysqld --initialize --user=mysql  
+
+5.6&#x7248;&#x672C;&#xFF1A;
+scripts/mysql_install_db --user=mysql
+</code></pre><p>5.7&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x9ED8;&#x8BA4;&#x4F1A;&#x7ED9;root&#x7528;&#x6237;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;error.log&#x65E5;&#x5FD7;&#x4E2D;&#x627E;&#x5230;</p>
+<pre class="language-"><code>shell&gt; grep &apos;temporary password&apos; /u01/mysql/log/mysql_error.log
+</code></pre><p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x8981;&#x968F;&#x673A;&#x5BC6;&#x7801;&#xFF0C;&#x800C;&#x662F;&#x548C;5.6&#x4E00;&#x6837;&#x91C7;&#x7528;&#x514D;&#x5BC6;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x4E0A;&#x53C2;&#x6570;--initialize-insecure
+&#x751F;&#x6210;ssl</p>
+<pre class="language-"><code>shell&gt; bin/mysql_ssl_rsa_setup
+</code></pre><h3 id="9&#x914D;&#x7F6E;&#x670D;&#x52A1;">9.&#x914D;&#x7F6E;&#x670D;&#x52A1;</h3>
+<pre class="language-"><code>[root@nazeebo mysql]# cp support-files/mysql.server /etc/init.d/suremysql
+[root@nazeebo mysql]# chkconfig --add suremysql  ##&#x81EA;&#x542F;&#x52A8;
+[root@nazeebo mysql]# chkconfig --list
+</code></pre><p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x547D;&#x540D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;suremysql&#x662F;&#x81EA;&#x5DF1;&#x547D;&#x540D;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x751F;&#x4EA7;&#x4E0A;&#x770B;&#x9700;&#x8981;&#x6765;&#x81EA;&#x5B9A;&#x4E49;</p>
+<h3 id="10&#x542F;&#x52A8;&#x670D;&#x52A1;">10.&#x542F;&#x52A8;&#x670D;&#x52A1;</h3>
+<pre class="language-"><code>[root@nazeebo mysql]# service suremysql start
+Starting MySQL...                                          [  OK  ]
+[root@nazeebo mysql]# ps -ef | grep mysql
+root       333     1  1 15:32 pts/2    00:00:00 /bin/sh /usr/local/mysql/bin/mysqld_safe --datadir=/u01/mysql/mysql_data/ --pid-file=/u01/mysql/mysql_data//nazeebo.pid
+mysql     1300   333 33 15:32 pts/2    00:00:01 /usr/local/mysql/bin/mysqld --basedir=/usr/local/mysql --datadir=/u01/mysql/mysql_data --plugin-dir=/usr/local/mysql/lib/plugin --user=mysql --log-error=/u01/mysql/log/mysql_error.log --pid-file=/u01/mysql/mysql_data//nazeebo.pid --port=3306
+root      1345 32073  0 15:32 pts/2    00:00:00 grep mysql
+root     32697 32371  0 15:28 pts/3    00:00:00 tail -f mysql_error.log
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6309;&#x7167;&#x7B2C;9&#x6B65;&#x53BB;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;service&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;</p>
+<pre class="language-"><code>mysqld_safe --user=mysql &amp;
+</code></pre><p>&#x6765;&#x8FDB;&#x884C;&#x542F;&#x52A8;&#xFF0C;mysqld_safe&#x662F;&#x4E00;&#x4E2A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;</p>
+<h3 id="11&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;">11.&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<p>&#x5728;/etc/profile &#x4E2D;&#x52A0;&#x5165;:
+export PATH=$PATH:/usr/local/mysql/bin</p>
+<h3 id="12&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x7684;&#x914D;&#x7F6E;">12.&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x7684;&#x914D;&#x7F6E;</h3>
+<pre class="language-"><code>[root@nazeebo bin]# mysql_secure_installation
+
+Securing the MySQL server deployment.
+
+Enter password for user root:
+
+The existing password for the user account root has expired. Please set a new password.
+
+New password:
+
+Re-enter new password:
+
+VALIDATE PASSWORD PLUGIN can be used to test passwords
+and improve security. It checks the strength of password
+and allows the users to set only those passwords which are
+secure enough. Would you like to setup VALIDATE PASSWORD plugin?
+
+Press y|Y for Yes, any other key for No: y
+
+There are three levels of password validation policy:
+
+LOW    Length &gt;= 8
+MEDIUM Length &gt;= 8, numeric, mixed case, and special characters
+STRONG Length &gt;= 8, numeric, mixed case, special characters and dictionary                  file
+
+Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 0
+Using existing password for root.
+
+Estimated strength of the password: 100
+Change the password for root ? ((Press y|Y for Yes, any other key for No) : no
+
+ ... skipping.
+By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+
+Normally, root should only be allowed to connect from
+&apos;localhost&apos;. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+By default, MySQL comes with a database named &apos;test&apos; that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+ - Dropping test database...
+Success.
+
+ - Removing privileges on test database...
+Success.
+
+Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+All done!
+</code></pre><p>&#x6CE8;&#x610F;:&#x5728;MySQL5.7&#x4E2D;&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x7528;&#x4E0B;&#x9762;&#x7684;SQL&#x8BED;&#x53E5;:</p>
+<pre class="language-"><code>sql&gt; update mysql.user set authentication_string=password(&apos;123456&apos;) where user=&apos;root&apos;;
+
+&#x6216;&#x8005;:
+sql&gt; SET PASSWORD = &apos;new passwd&apos;;
+sql&gt; SET PASSWORD = PASSWORD(&#x2018;new password&#x2019;); #5.6&#x7684;&#x5199;&#x6CD5;
+</code></pre><h3 id="13&#x5C06;&#x65F6;&#x533A;&#x5BFC;&#x5165;mysql&#x6570;&#x636E;&#x5E93;">13.&#x5C06;&#x65F6;&#x533A;&#x5BFC;&#x5165;mysql&#x6570;&#x636E;&#x5E93;</h3>
+<pre class="language-"><code>shell&gt; mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
+</code></pre><blockquote>
+<p>&#x8BF4;&#x660E;:<br>mysql&#x5185;&#x90E8;&#x6709;&#x4E00;&#x4E2A;&#x65F6;&#x533A;&#x53D8;&#x91CF;time_zone&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x51FD;&#x6570;NOW()&#x4E0E;CURTIME()&#x7684;&#x663E;&#x793A;&#xFF0C;&#x800C;&#x4E14;&#x4F1A;&#x5F71;&#x54CD;TIMESTAMP&#x5217;&#x7684;&#x5B58;&#x50A8;&#xFF0C;&#x56E0;&#x4E3A;TIMESTAMP&#x5217;&#x7684;&#x503C;&#x5728;&#x5B58;&#x50A8;&#x65F6;&#x4F1A;&#x4ECE;&#x5F53;&#x524D;&#x65F6;&#x533A;&#x8F6C;&#x6362;&#x5230;UTC&#xFF0C;&#x53D6;&#x6570;&#x636E;&#x65F6;&#x518D;&#x4ECE;UTC&#x8F6C;&#x6362;&#x4E3A;&#x5F53;&#x524D;&#x65F6;&#x533A;&#x3002;
+time_zone&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x65F6;System&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&apos;+10:00&apos; or &apos;-8:00&apos;.&#x610F;&#x601D;&#x662F;&#x4E0E;UTC&#x7684;&#x504F;&#x79FB;&#x4E00;&#x6837;&#x3002;
+&#x5982;&#x679C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A;Europe/Helsinki&apos;, &apos;US/Eastern&apos;, or &apos;MET&apos;.&#x4E4B;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;load&#x6570;&#x636E;&#x5230;mysql&#x7684;time zone information table,&#x547D;&#x4EE4;&#x5982;&#x4E0A;&#x3002;</p>
+</blockquote>
+<h3 id="14&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;">14.&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;</h3>
+<pre class="language-"><code>[root@nazeebo bin]#  mysqladmin version -u root -p
+Enter password:
+mysqladmin  Ver 8.42 Distrib 5.7.21, for linux-glibc2.12 on x86_64
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Server version        5.7.21-log
+Protocol version    10
+Connection        Localhost via UNIX socket
+UNIX socket        /tmp/mysql.sock
+Uptime:            22 min 14 sec
+
+Threads: 1  Questions: 8648  Slow queries: 0  Opens: 121  Flush tables: 1  Open tables: 114  Queries per second avg: 6.482
+</code></pre><h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<blockquote>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/binary-installation.html" target="_blank">https://dev.mysql.com/doc/refman/5.7/en/binary-installation.html</a></p>
+</blockquote>
+<h2 id="&#x56DB;&#x3001;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x8981;&#x5E72;&#x7684;&#x4E8B;&#x60C5;">&#x56DB;&#x3001;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x8981;&#x5E72;&#x7684;&#x4E8B;&#x60C5;</h2>
+<ul>
+<li>1.&#x6CE8;&#x610F;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x7B2C;12&#x6B65;&#x201C;&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x7684;&#x914D;&#x7F6E;&#x201D;</li>
+<li>2.&#x4FEE;&#x6539;root&#x7528;&#x6237;&#x7684;&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;</li>
+<li>3.&#x521B;&#x5EFA;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x7684;&#x7528;&#x6237;</li>
+<li>4.&#x6388;&#x4E88;&#x6743;&#x9650;</li>
+</ul>
+<h2 id="&#x4E94;&#x3001;mycnf&#x53C2;&#x6570;&#x7B80;&#x8981;&#x8BF4;&#x660E;">&#x4E94;&#x3001;my.cnf&#x53C2;&#x6570;&#x7B80;&#x8981;&#x8BF4;&#x660E;</h2>
+<p>&#x4E0B;&#x9762;&#x5217;&#x4E3E;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<h3 id="1&#x5E38;&#x89C4;&#x90E8;&#x5206;">1.&#x5E38;&#x89C4;&#x90E8;&#x5206;</h3>
+<pre class="language-"><code>[mysqld]
+########basic settings########
+server-id = 11  //&#x7528;&#x4E8E;&#x6807;&#x8BC6;
+port = 3306 //&#x7AEF;&#x53E3;&#x53F7;
+user = mysql //&#x54EA;&#x4E2A;&#x7528;&#x6237;
+#bind_address = 192.168.0.175
+#autocommit = 0 //&#x662F;&#x5426;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#xFF0C;0&#x4EE3;&#x8868;&#x4E0D;&#x81EA;&#x52A8;&#xFF0C;1&#x4EE3;&#x8868;&#x81EA;&#x52A8;
+character_set_server=utf8mb4 //&#x5B57;&#x7B26;&#x96C6;
+skip_name_resolve = 1
+max_connections = 800 
+max_connect_errors = 1000
+datadir = /u01/mysql/mysql_data/
+transaction_isolation = READ-COMMITTED
+explicit_defaults_for_timestamp = 1
+join_buffer_size = 134217728
+tmp_table_size = 67108864
+tmpdir = /tmp
+max_allowed_packet = 16777216
+sql_mode = &quot;STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER&quot;
+interactive_timeout = 1800
+wait_timeout = 1800
+read_buffer_size = 16777216
+read_rnd_buffer_size = 33554432
+sort_buffer_size = 33554432
+</code></pre><h3 id="2&#x65E5;&#x5FD7;&#x8BBE;&#x5B9A;&#x90E8;&#x5206;">2.&#x65E5;&#x5FD7;&#x8BBE;&#x5B9A;&#x90E8;&#x5206;</h3>
+<pre class="language-"><code>########log settings########
+log_error = /u01/mysql/log/mysql_error.log
+slow_query_log = 1
+slow_query_log_file = /u01/mysql/log/mysql_slow_query.log
+log_queries_not_using_indexes = 1
+log_slow_admin_statements = 1
+log_slow_slave_statements = 1
+log_throttle_queries_not_using_indexes = 10
+expire_logs_days = 90
+long_query_time = 2
+min_examined_row_limit = 100
+</code></pre><h3 id="3&#x590D;&#x5236;&#x90E8;&#x5206;">3.&#x590D;&#x5236;&#x90E8;&#x5206;</h3>
+<pre class="language-"><code>########replication settings########
+master_info_repository = TABLE
+relay_log_info_repository = TABLE
+log_bin = bin.log
+sync_binlog = 1
+gtid_mode = on
+enforce_gtid_consistency = 1
+log_slave_updates
+binlog_format = row
+relay_log = relay.log
+relay_log_recovery = 1
+binlog_gtid_simple_recovery = 1
+slave_skip_errors = ddl_exist_errors
+
+########semi sync replication settings########
+plugin_dir=/usr/local/mysql/lib/plugin
+plugin_load = &quot;rpl_semi_sync_master=semisync_master.so;rpl_semi_sync_slave=semisync_slave.so&quot;
+loose_rpl_semi_sync_master_enabled = 1
+loose_rpl_semi_sync_slave_enabled = 1
+loose_rpl_semi_sync_master_timeout = 5000
+</code></pre><h3 id="4innodb&#x4E13;&#x5C5E;&#x90E8;&#x5206;">4.innodb&#x4E13;&#x5C5E;&#x90E8;&#x5206;</h3>
+<pre class="language-"><code>########innodb settings########
+innodb_page_size = 8192
+innodb_buffer_pool_size = 4G 
+innodb_buffer_pool_instances = 8
+innodb_buffer_pool_load_at_startup = 1
+innodb_buffer_pool_dump_at_shutdown = 1
+innodb_lru_scan_depth = 2000
+innodb_lock_wait_timeout = 5
+innodb_io_capacity = 4000
+innodb_io_capacity_max = 8000
+innodb_flush_method = O_DIRECT
+innodb_file_format = Barracuda
+innodb_file_format_max = Barracuda
+innodb_log_group_home_dir = /u01/mysql/mysql_redolog/
+innodb_undo_directory = /u01/mysql/mysql_undolog/
+innodb_undo_logs = 128 //&#x5EFA;&#x8BAE;&#x63D0;&#x524D;&#x89C4;&#x5212;&#x597D;&#xFF0C;&#x540E;&#x671F;&#x6539;&#x8F83;&#x4E3A;&#x9EBB;&#x70E6;
+innodb_undo_tablespaces = 3 //&#x5EFA;&#x8BAE;&#x63D0;&#x524D;&#x89C4;&#x5212;&#x597D;&#xFF0C;&#x540E;&#x671F;&#x6539;&#x8F83;&#x4E3A;&#x9EBB;&#x70E6;
+innodb_flush_neighbors = 1
+innodb_log_file_size = 1G   //&#x6CE8;&#x610F;,&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5EFA;&#x8BAE;&#x8C03;&#x6210;4G+
+innodb_log_buffer_size = 16777216
+innodb_purge_threads = 4
+innodb_large_prefix = 1
+innodb_thread_concurrency = 64
+innodb_print_all_deadlocks = 1
+innodb_strict_mode = 1
+innodb_sort_buffer_size = 67108864
+</code></pre><h3 id="5-57&#x7248;&#x672C;&#x4E13;&#x5C5E;">5. 5.7&#x7248;&#x672C;&#x4E13;&#x5C5E;</h3>
+<pre class="language-"><code>[mysqld-5.7]
+innodb_buffer_pool_dump_pct = 40
+innodb_page_cleaners = 4
+innodb_undo_log_truncate = 1
+innodb_max_undo_log_size = 2G
+innodb_purge_rseg_truncate_frequency = 128
+binlog_gtid_simple_recovery=1
+log_timestamps=system
+transaction_write_set_extraction=MURMUR32
+show_compatibility_56=on
+</code></pre><h2 id="&#x516D;&#x3001;&#x5176;&#x4ED6;">&#x516D;&#x3001;&#x5176;&#x4ED6;</h2>
+<p>&#x6709;&#x53EF;&#x80FD;&#x540C;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E0B;&#x6709;&#x591A;&#x4E2A;my.cnf&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;my.cnf&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;&#x987A;&#x5E8F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;</p>
+<pre class="language-"><code>[root@nazeebo ~]# mysqld --help -vv|grep my.cnf
+/etc/my.cnf /etc/mysql/my.cnf /usr/local/mysql/etc/my.cnf ~/.my.cnf 
+                      my.cnf, $MYSQL_TCP_PORT, /etc/services, built-in default
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;mysql&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x4E0A; --defaults-files&#x6765;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1B;
+&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x4F1A;&#x8BFB;&#x53D6;&#x6240;&#x6709;&#x7684;my.cnf&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x76F8;&#x540C;&#x7684;&#x9879;&#xFF0C;&#x5219;&#x4F1A;&#x8986;&#x76D6;&#x4E4B;&#x524D;&#x7684;&#x503C; </p>
+<h2 id="&#x4E03;&#x3001;&#x5347;&#x7EA7;&#x4E0E;&#x964D;&#x7EA7;">&#x4E03;&#x3001;&#x5347;&#x7EA7;&#x4E0E;&#x964D;&#x7EA7;</h2>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5EFA;&#x8BAE;&#x6570;&#x636E;&#x6587;&#x4EF6;(datadir&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;)&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#x548C;MySQL&#x7684;&#x76F8;&#x5173;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#x5206;&#x5F00;&#xFF0C;&#x8FD9;&#x6837;&#x65B9;&#x4FBF;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x505A;&#x7248;&#x672C;&#x7684;&#x5347;&#x7EA7;&#x548C;&#x964D;&#x7EA7;&#x3002;</p>
+<h3 id="1&#x5347;&#x7EA7;&#x65B9;&#x6CD5;">1.&#x5347;&#x7EA7;&#x65B9;&#x6CD5;</h3>
+<ul>
+<li><p>&#x5C31;&#x5730;&#x5347;&#x7EA7;&#xFF1A;&#x5173;&#x95ED;&#x65E7;&#x7684;MySQL&#x7248;&#x672C;&#xFF0C;&#x7528;&#x65B0;&#x7248;&#x672C;&#x66FF;&#x6362;&#x65E7;&#x7684;MySQL&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x6216;&#x5305;&#xFF0C;&#x5728;&#x73B0;&#x6709;&#x7684;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x4E0B;&#x91CD;&#x65B0;&#x542F;&#x52A8;MySQL&#xFF0C;&#x5E76;&#x8FD0;&#x884C; mysql_upgrade&#x3002;</p>
+</li>
+<li><p>&#x903B;&#x8F91;&#x5347;&#x7EA7;&#xFF1A;&#x4F7F;&#x7528; mysqldump&#x4ECE;&#x65E7;&#x7684;MySQL&#x7248;&#x672C;&#x5BFC;&#x51FA;&#x73B0;&#x6709;&#x6570;&#x636E; &#xFF0C;&#x5B89;&#x88C5;&#x65B0;&#x7684;MySQL&#x7248;&#x672C;&#xFF0C;&#x5C06;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x5230;&#x65B0;&#x7684;MySQL&#x7248;&#x672C;&#xFF0C;&#x5E76;&#x8FD0;&#x884C; mysql_upgrade&#x3002;</p>
+</li>
+</ul>
+<h3 id="2&#x5347;&#x7EA7;&#x8DEF;&#x5F84;">2.&#x5347;&#x7EA7;&#x8DEF;&#x5F84;</h3>
+<ul>
+<li>&#x4EC5;&#x5728;&#x901A;&#x7528;&#x53EF;&#x7528;&#x6027;&#xFF08;GA&#xFF09;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x652F;&#x6301;&#x5347;&#x7EA7;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x4ECE;MySQL 5.6&#x5347;&#x7EA7;&#x5230;5.7&#x3002;&#x5728;&#x5347;&#x7EA7;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x524D;&#xFF0C;&#x5EFA;&#x8BAE;&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x5347;&#x7EA7;&#x5230;MySQL 5.7&#x4E4B;&#x524D;&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x7684;MySQL 5.6&#x7248;&#x672C;&#x3002;</li>
+<li>&#x4E0D;&#x652F;&#x6301;&#x8DF3;&#x8FC7;&#x7248;&#x672C;&#x7684;&#x5347;&#x7EA7;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x4ECE;MySQL 5.5&#x76F4;&#x63A5;&#x5347;&#x7EA7;&#x5230;5.7&#x3002;</li>
+<li>&#x652F;&#x6301;&#x53D1;&#x5E03;&#x7CFB;&#x5217;&#x4E2D;&#x7684;&#x5347;&#x7EA7;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;MySQL 5.7.x&#x5230;5.7.y&#x88AB;&#x652F;&#x6301;&#x3002;&#x8DF3;&#x8FC7;&#x53D1;&#x5E03;&#x4E5F;&#x652F;&#x6301;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;MySQL 5.7.x&#x5230;5.7.z&#x3002;</li>
+</ul>
+<h3 id="3&#x5347;&#x7EA7;&#x524D;&#x7684;&#x51C6;&#x5907;">3.&#x5347;&#x7EA7;&#x524D;&#x7684;&#x51C6;&#x5907;</h3>
+<ul>
+<li><p>&#x5728;&#x5347;&#x7EA7;&#x4E4B;&#x524D;&#xFF0C;&#x521B;&#x5EFA;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x548C;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x7684;&#x5907;&#x4EFD;&#x3002;&#x5907;&#x4EFD;&#x5E94;&#x5305;&#x542B;mysql&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;MySQL&#x7CFB;&#x7EDF;&#x8868;&#x3002;</p>
+</li>
+<li><p>&#x67E5;&#x770B; release note&#xFF0C;&#x5176;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x6709;&#x5173;MySQL 5.7&#x4E2D;&#x65B0;&#x589E;&#x529F;&#x80FD;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6216;&#x4E0E;&#x8001;&#x7248;&#x672C;&#x4E2D;&#x7684;&#x529F;&#x80FD;&#x4E0D;&#x540C;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x66F4;&#x6539;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4E0D;&#x517C;&#x5BB9;&#x3002;</p>
+</li>
+<li><p>&#x53C2;&#x9605; <a href="https://dev.mysql.com/doc/refman/5.7/en/mysql-nutshell.html#mysql-nutshell-removals" target="_blank">MySQL 5.7&#x4E2D;&#x5220;&#x9664;&#x7684;&#x529F;&#x80FD;</a>&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x5176;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x9879;&#x529F;&#x80FD;&#xFF0C;&#x5347;&#x7EA7;&#x9700;&#x8981;&#x5BF9;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x66F4;&#x6539;&#x3002;</p>
+</li>
+<li><p>&#x53C2;&#x9605;<a href="https://dev.mysql.com/doc/refman/5.7/en/added-deprecated-removed.html" target="_blank">MySQL 5.7&#x4E2D;&#x6DFB;&#x52A0;&#xFF0C;&#x5F03;&#x7528;&#x6216;&#x5220;&#x9664;&#x670D;&#x52A1;&#x5668;&#x548C;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#x548C;&#x9009;&#x9879;</a>&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x9879;&#xFF0C;&#x5219;&#x5347;&#x7EA7;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x3002;</p>
+</li>
+<li><p>&#x53C2;&#x9605;<a href="https://dev.mysql.com/doc/refman/5.7/en/upgrading-from-previous-series.html" target="_blank">&#x5F71;&#x54CD;&#x5347;&#x7EA7;&#x5230;MySQL 5.7&#x7684;&#x66F4;&#x6539;</a>&#x3002;&#x6CE8;&#x610F;&#x5728;&#x5347;&#x7EA7;&#x4E4B;&#x524D;&#x6216;&#x4E4B;&#x540E;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x91C7;&#x53D6;&#x64CD;&#x4F5C;&#x7684;&#x66F4;&#x6539;&#x3002;</p>
+</li>
+<li><p>&#x53C2;&#x9605;<a href="https://dev.mysql.com/doc/refman/5.7/en/replication-upgrade.html" target="_blank">&#x5347;&#x7EA7;&#x590D;&#x5236;&#x8BBE;&#x7F6E;</a></p>
+</li>
+<li><p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x5206;&#x5E03;&#x5F0F;&#x4E8B;&#x52A1;InnoDB&#xFF0C;XA RECOVER&#x5728;&#x5347;&#x7EA7;&#x4E4B;&#x524D;&#x8FD0;&#x884C;&#x4EE5;&#x68C0;&#x67E5;&#x672A;&#x63D0;&#x4EA4;&#x7684;XA&#x4E8B;&#x52A1;&#x3002;&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x901A;&#x8FC7;&#x53D1;&#x51FA;XA COMMIT&#x6216; XA ROLLBACK&#x58F0;&#x660E;&#x6765;&#x63D0;&#x4EA4;&#x6216;&#x56DE;&#x6EDA;XA&#x4E8B;&#x52A1;&#x3002;</p>
+</li>
+<li><p>&#x5EFA;&#x8BAE;&#x5728;&#x5B89;&#x88C5;&#x6216;&#x5347;&#x7EA7;&#x5230;&#x65B0;&#x7684;MySQL&#x7248;&#x672C;&#x65F6;&#x91CD;&#x5EFA;&#x548C;&#x91CD;&#x65B0;&#x5B89;&#x88C5;MySQL&#x8BED;&#x8A00;&#x754C;&#x9762;&#x3002;&#x8FD9;&#x9002;&#x7528;&#x4E8E;MySQL&#x63A5;&#x53E3;&#xFF0C;&#x4F8B;&#x5982;PHP mysql&#x6269;&#x5C55;&#xFF0C;Perl DBD::mysql&#x6A21;&#x5757;&#x548C;Python MySQLdb&#x6A21;&#x5757;&#x3002;</p>
+</li>
+</ul>
+<h3 id="4&#x5347;&#x7EA7;&#x6B65;&#x9AA4;">4.&#x5347;&#x7EA7;&#x6B65;&#x9AA4;</h3>
+<p>&#x4E0B;&#x9762;&#x5C06;&#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#xFF0C;&#x76EE;&#x6807;&#x662F;&#x5C06;5.6.40&#x5347;&#x7EA7;&#x5230;5.7.22&#x3002;
+&#x5927;&#x81F4;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x5B89;&#x5168;&#x7684;&#x505C;&#x5E93;</li>
+<li>&#x53BB;&#x6389;mysql&#x7684;&#x8F6F;link</li>
+<li>&#x7528;&#x65B0;&#x7684;&#x7248;&#x672C;link mysql (&#x8FD9;&#x4E2A;&#x7C7B;&#x4F3C;Oracle&#x7684;&#x6570;&#x636E;&#x5E93;&#x8F6F;&#x4EF6;&#x5347;&#x7EA7;)</li>
+<li>&#x4FEE;&#x6539;&#x76F8;&#x5E94;&#x7684;my.cnf&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x542F;&#x52A8;mysql&#x670D;&#x52A1;</li>
+<li>&#x67E5;&#x770B;mysql&#x7684;err log</li>
+<li>upgrade&#x7CFB;&#x7EDF;&#x8868; (&#x8FD9;&#x4E2A;&#x7C7B;&#x4F3C;Oracle&#x7684;&#x6570;&#x636E;&#x5E93;&#x5B9E;&#x4F8B;&#x5347;&#x7EA7;)</li>
+</ol>
+<h4 id="41-&#x73AF;&#x5883;&#xFF1A;">4.1 &#x73AF;&#x5883;&#xFF1A;</h4>
+<pre class="language-"><code>//&#x8F6F;&#x4EF6;
+[root@nazeebo local]# ll |grep mysql
+lrwxrwxrwx   1 root root        35 Jun 13 14:09 mysql -&gt; mysql-5.6.40-linux-glibc2.12-x86_64
+drwxr-xr-x  13 root root      4096 Jun 13 14:23 mysql-5.6.40-linux-glibc2.12-x86_64
+-rw-r--r--   1 root root 328563044 Feb 26 20:10 mysql-5.6.40-linux-glibc2.12-x86_64.tar.gz
+-rw-r--r--   1 root root 643790848 Mar  4 21:18 mysql-5.7.22-linux-glibc2.12-x86_64.tar.gz
+
+//&#x7248;&#x672C;
+[root@nazeebo local]# mysqladmin version -u root -p
+Enter password: 
+mysqladmin  Ver 8.42 Distrib 5.6.40, for linux-glibc2.12 on x86_64
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Server version        5.6.40-log
+Protocol version    10
+Connection        Localhost via UNIX socket
+UNIX socket        /tmp/mysql.sock
+Uptime:            20 min 55 sec
+
+Threads: 2  Questions: 10  Slow queries: 0  Opens: 70  Flush tables: 1  Open tables: 63  Queries per second avg: 0.007
+[root@nazeebo local]#
+</code></pre><h4 id="42-&#x5B89;&#x5168;&#x5730;&#x505C;&#x5E93;">4.2 &#x5B89;&#x5168;&#x5730;&#x505C;&#x5E93;</h4>
+<pre class="language-"><code>[root@nazeebo local]# systemctl stop suremysql
+
+[root@nazeebo log]# tail -f  /u01/mysql/log/mysql_error.log 
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;CSV&apos;
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;MEMORY&apos;
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;MRG_MYISAM&apos;
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;MyISAM&apos;
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;sha256_password&apos;
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;mysql_old_password&apos;
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;mysql_native_password&apos;
+2018-06-13 14:53:34 23144 [Note] Shutting down plugin &apos;binlog&apos;
+2018-06-13 14:53:34 23144 [Note] /usr/local/mysql/bin/mysqld: Shutdown complete
+</code></pre><h4 id="43-unlink-mysql">4.3 unlink mysql</h4>
+<pre class="language-"><code>[root@nazeebo local]# unlink mysql
+[root@nazeebo local]# ll
+total 949620
+drwxr-xr-x   5 root root      4096 Jun 13 11:42 aegis
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 bin
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 etc
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 games
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 include
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 lib
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 lib64
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 libexec
+drwxr-xr-x  13 root root      4096 Jun 13 14:23 mysql-5.6.40-linux-glibc2.12-x86_64
+-rw-r--r--   1 root root 328563044 Feb 26 20:10 mysql-5.6.40-linux-glibc2.12-x86_64.tar.gz
+-rw-r--r--   1 root root 643790848 Mar  4 21:18 mysql-5.7.22-linux-glibc2.12-x86_64.tar.gz
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 sbin
+drwxr-xr-x.  6 root root      4096 Jun 13 11:42 share
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 src
+</code></pre><h4 id="44-&#x94FE;&#x63A5;&#x65B0;&#x7684;&#x7248;&#x672C;&#x76EE;&#x5F55;&#x4E3A;mysql">4.4 &#x94FE;&#x63A5;&#x65B0;&#x7684;&#x7248;&#x672C;&#x76EE;&#x5F55;&#x4E3A;mysql</h4>
+<pre class="language-"><code>[root@nazeebo local]# ln -s mysql-5.7.22-linux-glibc2.12-x86_64 mysql
+[root@nazeebo local]# ll
+total 949624
+drwxr-xr-x   5 root root      4096 Jun 13 11:42 aegis
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 bin
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 etc
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 games
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 include
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 lib
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 lib64
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 libexec
+lrwxrwxrwx   1 root root        35 Jun 13 14:57 mysql -&gt; mysql-5.7.22-linux-glibc2.12-x86_64
+drwxr-xr-x  13 root root      4096 Jun 13 14:23 mysql-5.6.40-linux-glibc2.12-x86_64
+-rw-r--r--   1 root root 328563044 Feb 26 20:10 mysql-5.6.40-linux-glibc2.12-x86_64.tar.gz
+drwxr-xr-x   9 root root      4096 Jun 13 14:56 mysql-5.7.22-linux-glibc2.12-x86_64
+-rw-r--r--   1 root root 643790848 Mar  4 21:18 mysql-5.7.22-linux-glibc2.12-x86_64.tar.gz
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 sbin
+drwxr-xr-x.  6 root root      4096 Jun 13 11:42 share
+drwxr-xr-x.  2 root root      4096 Nov  5  2016 src
+[root@nazeebo local]#
+</code></pre><p>&#x6CE8;&#x610F;&#x6B64;&#x65F6;&#x53EA;&#x662F;&#x8F6F;&#x4EF6;&#x7684;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x5230;&#x4E86;5.7.22&#xFF0C;&#x800C;&#x4E4B;&#x95F4;&#x5EFA;&#x7ACB;&#x597D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x672C;&#x8EAB;&#x8FD8;&#x662F;&#x5728;5.6</p>
+<h4 id="45-&#x542F;&#x52A8;mysql&#x6570;&#x636E;&#x5E93;">4.5 &#x542F;&#x52A8;mysql&#x6570;&#x636E;&#x5E93;</h4>
+<pre class="language-"><code>&#x56E0;&#x4E3A;&#x53EA;&#x662F;&#x91CD;&#x65B0;&#x94FE;&#x63A5;&#x4E86;mysql&#x7684;&#x76EE;&#x5F55;&#x5230;&#x65B0;&#x7684;&#x7248;&#x672C;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3001;&#x670D;&#x52A1;&#x4E4B;&#x7C7B;&#x7684;&#x4E0D;&#x9700;&#x8981;&#x53D8;&#x66F4;
+[root@nazeebo local]# systemctl start suremysql
+</code></pre><h4 id="46-&#x67E5;&#x770B;mysql&#x7684;error&#x65E5;&#x5FD7;">4.6 &#x67E5;&#x770B;mysql&#x7684;error&#x65E5;&#x5FD7;</h4>
+<pre class="language-"><code>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5728;mysql&#x7684;error&#x65E5;&#x5FD7;&#x4E2D;&#x4F1A;&#x53D1;&#x73B0;&#x6709;&#x5927;&#x91CF;&#x7684;&#x62A5;&#x9519;&#xFF0C;&#x6211;&#x4EEC;&#x63A5;&#x4E0B;&#x6765;&#x9700;&#x8981;upgrade&#x6570;&#x636E;&#x5B57;&#x5178;
+2018-06-13T15:00:18.514744+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;replication_group_member_stats&apos; has the wrong structure
+2018-06-13T15:00:18.514765+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;prepared_statements_instances&apos; has the wrong structure
+2018-06-13T15:00:18.514791+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;user_variables_by_thread&apos; has the wrong structure
+2018-06-13T15:00:18.514818+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;status_by_account&apos; has the wrong structure
+2018-06-13T15:00:18.514844+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;status_by_host&apos; has the wrong structure
+2018-06-13T15:00:18.514865+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;status_by_thread&apos; has the wrong structure
+2018-06-13T15:00:18.514885+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;status_by_user&apos; has the wrong structure
+2018-06-13T15:00:18.514905+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;global_status&apos; has the wrong structure
+2018-06-13T15:00:18.514923+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;session_status&apos; has the wrong structure
+2018-06-13T15:00:18.514940+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;variables_by_thread&apos; has the wrong structure
+2018-06-13T15:00:18.514969+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;global_variables&apos; has the wrong structure
+2018-06-13T15:00:18.514990+08:00 0 [ERROR] Native table &apos;performance_schema&apos;.&apos;session_variables&apos; has the wrong structure
+2018-06-13T15:00:18.515103+08:00 0 [ERROR] Incorrect definition of table mysql.db: expected column &apos;User&apos; at position 2 to have type char(32), found type char(16).
+2018-06-13T15:00:18.515124+08:00 0 [ERROR] mysql.user has no `Event_priv` column at position 28
+2018-06-13T15:00:18.515265+08:00 0 [ERROR] Event Scheduler: An error occurred when initializing system tables. Disabling the Event Scheduler.
+2018-06-13T15:00:18.515461+08:00 0 [Note] /usr/local/mysql/bin/mysqld: ready for connections.
+Version: &apos;5.7.22-log&apos;  socket: &apos;/tmp/mysql.sock&apos;  port: 3306  MySQL Community Server (GPL)
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x6B64;&#x65F6;&#x8FDB;&#x53BB;&#x770B;database&#x7684;&#x5217;&#x8868;</p>
+<pre class="language-"><code>mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.00 sec)
+</code></pre><p>&#x53D1;&#x73B0;5.7&#x7684;sys&#x5E93;&#x8FD8;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x4E0A;</p>
+<h4 id="47-upgrade&#x7CFB;&#x7EDF;&#x8868;">4.7 upgrade&#x7CFB;&#x7EDF;&#x8868;</h4>
+<pre class="language-"><code>[root@nazeebo local]# mysql_upgrade -s -p
+Enter password: 
+The --upgrade-system-tables option was used, databases won&apos;t be touched.
+Checking if update is needed.
+Checking server version.
+Running queries to upgrade MySQL server.
+Upgrading the sys schema.
+Upgrade process completed successfully.
+Checking if update is needed.
+</code></pre><blockquote>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x53C2;&#x6570;-s &#x4E00;&#x5B9A;&#x8981;&#x52A0;&#xFF0C;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x53EA;&#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x8868;&#xFF0C;&#x4E0D;&#x4F1A;&#x53BB;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x8868;
+&#x5982;&#x679C;&#x4E0D;&#x52A0;-s&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x4F1A;&#x5C06;&#x5E93;&#x91CC;&#x9762;&#x7684;&#x6240;&#x6709;&#x8868;&#x90FD;&#x662F;5.7.22&#x7684;&#x65B9;&#x5F0F;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x6B21;&#xFF0C;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x614E;&#x7528;&#xFF01;
+&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x9700;&#x5347;&#x7EA7;
+&#x552F;&#x4E00;&#x4E0D;&#x9700;&#x8981;&#x52A0;-s&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#x662F;&#xFF1A;&#x5BF9;&#x4E00;&#x4E9B;&#x8001;&#x7248;&#x672C;&#x7684;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x9700;&#x8981;&#x65B0;&#x7684;&#x7279;&#x6027;&#x6765;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x7684;&#x65F6;&#x5019;</p>
+</blockquote>
+<p>&#x5B8C;&#x6210;upgrade&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x8FDB;&#x53BB;&#x67E5;&#x8BE2;&#x7248;&#x672C;&#x548C;&#x5E93;&#x7684;&#x5217;&#x8868;</p>
+<pre class="language-"><code>[root@nazeebo local]# mysql -uroot -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.7.22-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql&gt; select version();
++------------+
+| version()  |
++------------+
+| 5.7.22-log |
++------------+
+1 row in set (0.00 sec)
+</code></pre><p>&#x53D1;&#x73B0;&#x5DF2;&#x7ECF;&#x591A;&#x51FA;&#x4E86;5.7&#x4E13;&#x6709;&#x7684;sys&#x5E93;&#xFF0C;&#x4EE5;&#x53CA;&#x7248;&#x672C;&#x4EE5;&#x53CA;&#x53D8;&#x66F4;&#x4E3A;5.7.22
+&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x67E5;&#x8BE2;&#x4E00;&#x4E0B;error&#x65E5;&#x5FD7;&#xFF0C;&#x770B;&#x662F;&#x5426;&#x8FD8;&#x6709;&#x62A5;&#x9519;&#x7B49;&#x5F85;&#x53BB;&#x89E3;&#x51B3;&#x3002;</p>
+<h3 id="&#x964D;&#x7EA7;&#x6B65;&#x9AA4;">&#x964D;&#x7EA7;&#x6B65;&#x9AA4;</h3>
+<p>&#x4E0E;&#x5347;&#x7EA7;&#x7684;&#x6B65;&#x9AA4;&#x7C7B;&#x4F3C;&#xFF0C;&#x6700;&#x540E;&#x7684;upgrade&#xFF0C;&#x66FF;&#x6362;&#x4E3A;&#x6267;&#x884C;&#x4E00;&#x6BB5;downgrade&#x7684;&#x811A;&#x672C;&#xFF0C;&#x6765;&#x8BA9;&#x7CFB;&#x7EDF;&#x8868;&#x56DE;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x7248;&#x672C;&#x53BB;</p>
+<h2 id="&#x516B;&#x3001;&#x5E38;&#x7528;&#x5DE5;&#x5177;">&#x516B;&#x3001;&#x5E38;&#x7528;&#x5DE5;&#x5177;</h2>
+<p>workbench&#x7684;&#x4F7F;&#x7528; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; suredandan 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">UpdateTime: 
+2018-11-28 06:33:58
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.connectandrole.html" class="navigation navigation-next " aria-label="Next page: 2.MySQL的连接与权限">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.MySQL介绍与安装","level":"1.2","depth":1,"next":{"title":"2.MySQL的连接与权限","level":"1.3","depth":1,"path":"2.connectandrole.md","ref":"2.connectandrole.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","prism-themes","-highlight","codesnippet","splitter","simple-page-toc","page-toc-button","back-to-top-button","-lunr","-search","search-plus","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","theme-default","sitemap-general"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © suredandan 2018","modify_label":"UpdateTime: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"http://www.googlebaba.io/mysql/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"_CAPTION_"}},"theme":"default","author":"suredandan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"MySQL搬砖","language":"zh-hans","gitbook":"*","description":"MySQL进阶指南"},"file":{"path":"1.introduceandinstall.md","mtime":"2018-11-27T22:33:58.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T13:30:33.979Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
